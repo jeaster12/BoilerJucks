@@ -116,7 +116,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('sassProd', ['sass'], function() {
-    return gulp.src(dev.sass + 'app.css')
+    return gulp.src(dev.sass + '**/*.css')
         .pipe(minifyCSS())
         .pipe(gulp.dest(prod.sass));
 });
