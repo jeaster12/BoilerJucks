@@ -1,0 +1,152 @@
+/*
+    Widget - Page Summary
+    ========================================================================== */
+
+/*
+    Common
+    ------------------------------------- */
+	.widget-page-summary{
+
+		background: $page-summary-bg;
+		@include box-shadow(0 1px 1px rgba(0,0,0,.1));
+
+		.page-summary-info-switcher{
+			background: $page-summary-switcher-bg;
+			border: 1px solid $page-summary-switcher-bd;
+		}
+
+		.page-sub-title{
+
+			span{
+				color: darken($page-sub-title-c, 6%);
+			}
+		}
+
+		.switcherySettings{ color: $page-switchery-settings-c; }
+		.switcheryUnits{ color: $page-switchery-unit-c; }
+
+
+		// Chart Colors
+		.rickshaw-views     { color: $page-summary-views-c; }
+		.rickshaw-followers { color: $page-summary-followers-c; }
+		.rickshaw-comments  { color: $page-summary-comments-c; }
+
+		.update-status-settings{
+			a{
+				color: $page-summary-update-chart-i-c;
+
+				&:hover{
+					color: $page-summary-update-chart-i-ho;
+				}
+			}
+		}
+	}
+
+	.summary-chart{
+		i{
+			color: $page-summary-chart-i-c;
+		}
+
+		&.chart-views:hover i     { color: $page-summary-views-c; }
+		&.chart-followers:hover i { color: $page-summary-followers-c; }
+		&.chart-comments:hover i  { color: $page-summary-comments-c; }
+	}
+
+	.clock-wrapper{
+
+		.jqclock {
+			border-right: 1px solid $page-summary-clock-bd;
+		}
+	}
+
+
+//  State
+//  -------------------------------------
+	.is-page-summary{
+
+	}
+
+	.is-page-summary{
+
+	}
+
+
+/*
+    Page Summary in Header
+    ------------------------------------- */
+	.page-summary-in-header{
+
+	}
+
+
+/*
+    Page Summary in Box
+    ------------------------------------- */
+	.page-summary-in-box{
+
+	}
+
+
+/*
+    Page Summary in Sidebar
+    ------------------------------------- */
+	.page-summary-in-side{
+
+	}
+
+//  Compact State
+//  -------------------------------------
+
+	.l-sidebar-compact-left,
+	.l-sidebar-compact-right{
+
+	}
+
+//  Collapsed State
+//  -------------------------------------
+
+	.l-sidebar-collapsed-left,
+	.l-sidebar-collapsed-right{
+
+	}
+
+
+//  Theme
+//  -------------------------------------
+	.t-page-summary-1{
+
+	}
+
+	.t-page-summary-2{
+
+	}
+
+	.t-page-summary-3{
+
+	}
+
+
+
+
+
+//  Media Queries
+//  ==========================================================================
+	@include breakpoint($screen-lg-maxx){
+
+	}
+
+	@include breakpoint($screen-md-maxx){
+
+	}
+
+	@include breakpoint($screen-sm-maxx){
+
+	}
+
+	@include breakpoint($screen-xs-maxx){
+		.clock-wrapper{
+			.jqclock{
+				border-right: none;
+			}
+		}
+	}

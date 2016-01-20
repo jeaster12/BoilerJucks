@@ -1,0 +1,70 @@
+/*
+    Page Layouts - General Site Containers for Layout
+    ========================================================================== */
+
+/*
+    Page Heading
+    ------------------------------------- */
+
+	.l-page-header{
+		background: $page-header-bg;
+		@include box-shadow(0 1px 1px rgba(0,0,0,.1));
+	}
+
+
+/*
+	Scroll Up
+	------------------------------------- */
+
+	#scrollUp{
+		color: $page-scroll-up-c;
+		background: $page-scroll-up-bg;
+		@include border-radius($s-radius);
+
+		&:hover{
+			color: $page-scroll-up-ho;
+			background: $page-scroll-up-bg-ho;
+		}
+	}
+
+
+//  Theme
+//  ==========================================================================
+	.t-boxed{
+		background: $boxed-bg;
+
+		// With Shadow
+		// @include box-shadow(1px 0 1px rgba(0, 0, 0, 0.1), -1px 0 1px rgba(0, 0, 0, 0.1));
+
+		// With Border
+		border-left: 1px solid $boxed-bd;
+		border-right: 1px solid $boxed-bd;
+	}
+
+	.t-boxed-2{
+		background: $boxed-bg-2;
+
+		// With Border
+		border-left: 1px solid $boxed-bd-2;
+		border-right: 1px solid $boxed-bd-2;
+	}
+
+
+//  Media Queries
+//  ==========================================================================
+
+	@include breakpoint($screen-lg-maxx){
+
+	}
+
+	@include breakpoint($screen-md-maxx){
+
+	}
+
+	@include breakpoint($screen-sm-maxx){
+
+	}
+
+	@include breakpoint($screen-xs-maxx){
+
+	}

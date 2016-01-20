@@ -1,0 +1,178 @@
+/*
+    Widget - Stats 2
+    ========================================================================== */
+
+/*
+    Common
+    ------------------------------------- */
+	.widget-stats-2{
+		color: $stat-2-c;
+
+		.stats-2-header{
+			border-bottom: 1px solid $stat-2-sep-bd;
+		}
+
+		.stats-2-toggler,
+		.stats-2-header,
+		.stats-2-body{
+			background: $stat-2-bg;
+		}
+	}
+
+//  State
+//  -------------------------------------
+	.is-stats-2{
+
+	}
+
+	.is-stats-2{
+
+	}
+
+
+/*
+    Stats 2 in Header
+    ------------------------------------- */
+	.stats-2-in-header{
+
+	}
+
+
+/*
+    Stats 2 in Box
+    ------------------------------------- */
+	.stats-2-in-box{
+
+	}
+
+
+/*
+    Stats 2 in Sidebar
+    ------------------------------------- */
+	.stats-2-in-side{
+
+	}
+
+//  Compact State
+//  -------------------------------------
+
+	.l-sidebar-compact-left,
+	.l-sidebar-compact-right{
+
+	}
+
+//  Collapsed State
+//  -------------------------------------
+
+	.l-sidebar-collapsed-left,
+	.l-sidebar-collapsed-right{
+
+	}
+
+
+//  Theme
+//  -------------------------------------
+	.t-stats-2-1{
+		color: $stat-2-t-1-c;
+
+		.stats-2-header{
+			border-bottom: 1px solid $stat-2-t-1-sep-bd;
+		}
+
+		.stats-2-toggler,
+		.stats-2-header,
+		.stats-2-body{
+			background: $stat-2-t-1-bg;
+		}
+
+	}
+
+	.t-stats-2-2{
+		color: $stat-2-t-2-c;
+
+		.stats-2-header{
+			border-bottom: 1px solid $stat-2-t-2-sep-bd;
+		}
+
+		.stats-2-toggler,
+		.stats-2-header,
+		.stats-2-body{
+			background: $stat-2-t-2-bg;
+		}
+
+	}
+
+	.t-stats-2-3{
+		color: $stat-2-t-3-c;
+
+		.stats-2-header{
+			border-bottom: 1px solid $stat-2-t-3-sep-bd;
+		}
+
+		.stats-2-toggler,
+		.stats-2-header,
+		.stats-2-body{
+			background: $stat-2-t-3-bg;
+		}
+	}
+
+	.t-stats-2-4{
+		color: $stat-2-t-4-c;
+
+		.stats-2-header{
+			border-bottom: 1px solid $stat-2-t-4-sep-bd;
+		}
+
+		.stats-2-toggler,
+		.stats-2-header,
+		.stats-2-body{
+			background: $stat-2-t-4-bg;
+		}
+	}
+
+	.t-stats-2-5{
+		color: $stat-2-t-5-c;
+
+		.stats-2-header{
+			border-bottom: 1px solid $stat-2-t-5-sep-bd;
+		}
+
+		.stats-2-toggler,
+		.stats-2-header,
+		.stats-2-body{
+			background: $stat-2-t-5-bg;
+		}
+	}
+
+	.t-stats-2-6{
+		color: $stat-2-t-6-c;
+
+		.stats-2-header{
+			border-bottom: 1px solid $stat-2-t-6-sep-bd;
+		}
+
+		.stats-2-toggler,
+		.stats-2-header,
+		.stats-2-body{
+			background: $stat-2-t-6-bg;
+		}
+	}
+
+
+//  Media Queries
+//  ==========================================================================
+	@include breakpoint($screen-lg-maxx){
+
+	}
+
+	@include breakpoint($screen-md-maxx){
+
+	}
+
+	@include breakpoint($screen-sm-maxx){
+
+	}
+
+	@include breakpoint($screen-xs-maxx){
+
+	}

@@ -1,0 +1,205 @@
+/*
+    Pricing Tables
+    ========================================================================== */
+
+/*
+    Progressbar - Bootstrap
+    ------------------------------------- */
+
+    .plans{
+
+        .plan-bordered{
+
+            border: 1px solid $plan-bordered;
+        }
+
+    }
+
+	/* Plan 1 */
+	.plans-1{
+
+		.plan{
+			background: $plan-1-bg;
+		}
+
+		.title{ }
+
+		.price{
+			color: $plan-1-price-c;
+			background: $plan-1-price-bg;
+		}
+
+		.btn{
+			border: 1px solid $plan-1-btn-bd;
+
+			&:hover{
+				background: $plan-1-btn-bg-ho;
+			}
+		}
+
+		.btn-cont{
+
+		}
+
+		.best{
+
+			.title{
+				color: $plan-1-title-c;
+				background: $plan-1-title-bg;
+			}
+
+			.price{
+				background: $plan-1-best-price-bg;
+			}
+
+			.btn{
+				color: $plan-1-best-btn-c;
+				background: $plan-1-best-btn-bg;
+				border: 1px solid $plan-1-best-btn-bd;
+
+				&:hover{
+					background: $plan-1-best-btn-bg-ho;
+				}
+			}
+
+		}
+	}
+
+	/* Plan 2 */
+	.plans-2{
+
+		.plan{
+			color: $plan-2-c;
+			background: $plan-2-bg;
+		}
+
+		.plan-bordered{
+			border: 2px solid $plan-2-bd;
+		}
+
+		.title {  background: $plan-2-title-bg; }
+		.price{
+			background: $plan-2-price-bd;
+
+			.nr{
+				color: $plan-2-price-nr-c;
+			}
+		}
+
+		.btn{
+			color: $plan-2-btn-c;
+			background: $plan-2-btn-bg;
+			border: 1px solid $plan-2-btn-bd;
+
+			&:hover{
+				background: $plan-2-btn-bg-ho;
+				border: 1px solid $plan-2-btn-bd-ho;
+			}
+
+		}
+
+		.best {
+			&.plan-bordered{
+				border: 2px solid $plan-2-best-bd;
+			}
+
+			.title {
+				color: $plan-2-best-c;
+				background: $plan-2-best-title-bg;
+			}
+			.price {
+				color: $plan-2-best-c;
+				background: $plan-2-best-price-bd;
+
+				.nr{
+					color: $plan-2-best-price-nr-c;
+				}
+			}
+
+			.btn {
+				color: $plan-2-best-btn-c;
+				background: $plan-2-best-btn-bg;
+				border: 1px solid $plan-2-best-btn-bd;
+
+				&:hover{
+					background: $plan-2-btn-bg-ho;
+					border: 1px solid $plan-2-btn-bd-ho;
+				}
+
+			}
+
+		}
+
+	}
+
+	/* Plan 3 */
+	.plans-3{
+		.plan{
+			background: $plan-3-bg;
+		}
+
+		.plan-bordered{
+			border-color: $plan-3-bd;
+		}
+
+		.title{
+			border-bottom: 1px solid $plan-3-title-bd;
+		}
+
+		.btn{
+			color: $plan-3-btn-c;
+			background: $plan-3-btn-bg;
+			border: 1px solid $plan-3-btn-bd;
+
+			&:hover{
+				background: $plan-3-btn-bg-ho;
+				border: 1px solid $plan-3-btn-bd-ho;
+			}
+
+		}
+
+		.best{
+
+			background: $plan-3-best-bg;
+
+			.btn {
+				color: $plan-3-best-btn-c;
+				background: $plan-3-best-btn-bg;
+				border: 1px solid $plan-3-best-btn-bd;
+
+				&:hover{
+					background: $plan-3-best-btn-bg-ho;
+					border: 1px solid $plan-3-best-btn-bd-ho;
+				}
+
+			}
+		}
+
+	}
+
+
+//  Theme
+//  ==========================================================================
+
+	.t-pt-row-1{
+		background: $t-pt-row-1;
+	}
+
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }

@@ -1,0 +1,76 @@
+/*
+    Chart - Other
+    ========================================================================== */
+
+/*
+    circliful
+    ------------------------------------- */
+    .circle-info, .circle-info-half {
+        color: #999;
+    }
+
+	.other-skill-1 { color: $other-skill-1-c; }
+	.other-skill-2 { color: $other-skill-2-c; }
+	.other-skill-3 { color: $other-skill-3-c; }
+	.other-skill-4 { color: $other-skill-4-c; }
+	.other-skill-5 { color: $other-skill-5-c; }
+
+	.other-spark-bar-1 { color: $other-spark-bar-1-c; }
+	.other-spark-bar-2 { color: $other-spark-bar-2-c; }
+
+	.other-spark-line-1 { color: $other-spark-line-1-c; }
+	.other-spark-line-2 { color: $other-spark-line-2-c; }
+	.other-spark-line-3 { color: $other-spark-line-3-c; }
+
+	.other-spark-bullet-1 { color: $other-spark-bullet-1-c; }
+	.other-spark-bullet-2 { color: $other-spark-bullet-2-c; }
+	.other-spark-bullet-3 { color: $other-spark-bullet-3-c; }
+	.other-spark-bullet-4 { color: $other-spark-bullet-4-c; }
+	.other-spark-bullet-5 { color: $other-spark-bullet-5-c; }
+
+	.other-spark-box-1 { color: $other-spark-box-1-c; }
+	.other-spark-box-2 { color: $other-spark-box-2-c; }
+	.other-spark-box-3 { color: $other-spark-box-3-c; }
+	.other-spark-box-4 { color: $other-spark-box-4-c; }
+	.other-spark-box-5 { color: $other-spark-box-5-c; }
+
+	.other-spark-pie-1 { color: $other-spark-pie-1-c; }
+	.other-spark-pie-2 { color: $other-spark-pie-2-c; }
+	.other-spark-pie-3 { color: $other-spark-pie-3-c; }
+	.other-spark-pie-4 { color: $other-spark-pie-4-c; }
+
+/*
+    sparkline
+    ------------------------------------- */
+
+	.sparklineTooltip {
+
+		.jqsfield{
+			color: white;
+			border: 1px solid white;
+			background: rgb(0, 0, 0) transparent;
+			background-color: rgba(0,0,0,0.6);
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+			-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+		}
+
+	}
+
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }

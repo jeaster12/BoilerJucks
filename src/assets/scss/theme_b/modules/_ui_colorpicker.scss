@@ -1,0 +1,159 @@
+/*
+    Colorpicker
+    ========================================================================== */
+
+/*
+    Colorpicker - Bootstrap
+    ------------------------------------- */
+
+	.colorpicker-saturation {
+		background-image: url("../img/plugins/colorpicker/bootstrap-colorpicker/saturation.png");
+		i {
+			border: 1px solid #000;
+			b {
+				border: 1px solid #fff;
+			}
+		}
+	}
+
+	.colorpicker-hue i, .colorpicker-alpha i {
+		background: #000;
+		border-top: 1px solid #fff;
+	}
+
+	.colorpicker-hue {
+		background-image: url("../img/plugins/colorpicker/bootstrap-colorpicker/hue.png");
+	}
+
+	.colorpicker-alpha {
+		background-image: url("../img/plugins/colorpicker/bootstrap-colorpicker/alpha.png");
+	}
+
+	.colorpicker {
+
+		background: $colorpicker-bg;
+		border: 1px solid $colorpicker-bd;
+
+		&:before {
+			border-right: 7px solid transparent;
+			border-bottom: 7px solid $colorpicker-bd;
+			border-left: 7px solid transparent;
+			border-bottom-color: rgba(0, 0, 0, 0.2);
+		}
+		&:after {
+			border-right: 6px solid transparent;
+			border-bottom: 6px solid $colorpicker-bg;
+			border-left: 6px solid transparent;
+		}
+	}
+
+	.colorpicker-color {
+		background-image: url("../img/plugins/colorpicker/bootstrap-colorpicker/alpha.png");
+	}
+	.colorpicker {
+
+		&.colorpicker-horizontal {
+			.colorpicker-hue i, .colorpicker-alpha i {
+				background: #ffffff;
+				border: none;
+			}
+			.colorpicker-hue {
+				background-image: url("../img/plugins/colorpicker/bootstrap-colorpicker/hue-horizontal.png");
+			}
+			.colorpicker-alpha {
+				background-image: url("../img/plugins/colorpicker/bootstrap-colorpicker/alpha-horizontal.png");
+			}
+		}
+	}
+
+/*
+    Colorpicker Slider - Bootstrap
+    ------------------------------------- */
+
+	.cp-container {
+
+		.cp-transparency, .cp-swatches .cp-swatch {
+			background: url(data:image/gif;base64,R0lGODlhBgAGAIABAMPDw////yH5BAEKAAEALAAAAAAGAAYAAAIKhIMGGMrs0pGgAAA7) repeat;
+		}
+		.cp-slider, .cp-preview {
+			border: 1px solid #dadada;
+		}
+		.cp-hsvpanel {
+			.cp-hsvpanel-sv, .cp-hsvpanel-h, .cp-hsvpanel-a {
+				border: 1px solid #dadada;
+			}
+		}
+
+		.cp-hsvpanel {
+			.cp-hsvpanel-h {
+				background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMCUiIHkyPSIxMDAlIj48c3RvcCBzdG9wLWNvbG9yPSIjZmYwMDAwIiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNmZmZmMDAiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwLjE2Njk5OTk5OTk5OTk5OTk4Ii8+PHN0b3Agc3RvcC1jb2xvcj0iIzAwZmYwMCIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAuMzMyOTk5OTk5OTk5OTk5OTYiLz48c3RvcCBzdG9wLWNvbG9yPSIjMDBmZmZmIiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMC41Ii8+PHN0b3Agc3RvcC1jb2xvcj0iIzAwMDBmZiIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAuNjY3Ii8+PHN0b3Agc3RvcC1jb2xvcj0iI2ZmMDBmZiIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAuODMzIi8+PHN0b3Agc3RvcC1jb2xvcj0iI2ZmMDAwMCIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+);
+				background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0, red), color-stop(0.167, yellow), color-stop(0.333, lime), color-stop(0.5, cyan), color-stop(0.667, blue), color-stop(0.833, magenta), color-stop(1, red));
+				background-image: -webkit-linear-gradient(top, red 0%, yellow 16.7%, lime 33.3%, cyan 50%, blue 66.7%, magenta 83.3%, red 100%);
+				background-image: linear-gradient(to bottom, red 0%, yellow 16.7%, lime 33.3%, cyan 50%, blue 66.7%, magenta 83.3%, red 100%);
+			}
+
+			.cp-hsvpanel-sv span {
+				background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjEwMCUiIHgyPSIwJSIgeTI9IjAlIj48c3RvcCBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMCIgb2Zmc2V0PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI3ZzZ2cpIiAvPjwvc3ZnPg==), url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjAlIj48c3RvcCBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMCIgb2Zmc2V0PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI3ZzZ2cpIiAvPjwvc3ZnPg==);
+				background-image: -webkit-gradient(linear, 0% 100%, 0% 0%, color-stop(0, rgb(0, 0, 0)), color-stop(1, rgba(0, 0, 0, 0))), -webkit-gradient(linear, 0% 0%, 100% 0%, color-stop(0, rgb(255, 255, 255)), color-stop(1, rgba(255, 255, 255, 0)));
+				background-image: -webkit-linear-gradient(bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%), -webkit-linear-gradient(left, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+				background-image: linear-gradient(to top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+			}
+		}
+
+		.cp-marker {
+			background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAMAAABVLlSxAAAAtFBMVEUAAAB1dXVsbGxwcHBqampoaGj+/v7r6+vw8PBmZmb6+vp/f39kZGTh4eGxsbHT09NlZWXX19dgYGBfX1/W1tb7+/vx8fHZ2dna2tqBgYFnZ2fg4ODe3t7j4+Pi4uL39/eampro6Ojl5eXy8vLt7e3p6emgoKCmpqatra1ra2v19fXm5ubz8/Pv7+9hYWFjY2N5eXlvb29zc3Ps7Ozd3d2ysrKCgoKDg4P9/f2zs7P4+Pj///83Bdu/AAAAAXRSTlMAQObYZgAAAGlJREFUeNo9ylcbgWAAhuG3ZZQoEkkhDe099P3//9Xg6j56Dh6cjkm623IsnTNIDsqlEsN1HBVI5evdDMtN0FOQKt14lWrArzLcnpZjvx9nshcA342jviO1hlHuTdlgVnzIt8VfNubiNwzmhAsoIAkssgAAAABJRU5ErkJggg==);
+		}
+		.cp-hsvmarker-vertical {
+			background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAALCAMAAABxsOwqAAAAbFBMVEUAAACysrLz8/NjY2Pw8PBmZmbe3t7////4+PiBgYHs7Oxra2t0dHSDg4Ozs7P9/f3p6enj4+Pa2trh4eFhYWFfX1/X19d5eXlvb2/7+/vm5ub19fXt7e2tra2mpqagoKCamprl5eXT09NwcHAw/sWYAAAAAXRSTlMAQObYZgAAAFtJREFUCNclzNsWQCAURdFDF1RIpZI7//+P6thP82GPBTjGiJtR8uL+Qcbztsa7LHVQPXFDAMLe1pu2nEA3NGNbi2QZQF9MRWKQXTXLSoUshQ6dic73CL+DUu8HF6YEcUMoNOYAAAAASUVORK5CYII=);
+		}
+		.cp-marker-point {
+			background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAALVBMVEX///8AAADX19d7e3t4eHhDQ0NnZ2dzc3NLS0tbW1tTU1POzs7AwMC0tLSoqKgWXydUAAAAAnRSTlN1ACTbQIsAAAA/SURBVAjXYxAUDBcUZBCUeOQIJNcyqAgySB4QZDJkyGYUFFBmMAKS2xiEFQR5JjIIOjHcAqoR0WsEkoKlgoIAHu8JgCiLy9kAAAAASUVORK5CYII=);
+		}
+		&.cp-unconvertible-cie-color .cp-slider {
+			&.cp-cielightness .cp-marker, &.cp-ciechroma .cp-marker, &.cp-ciehue .cp-marker {
+				background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAMAAABVLlSxAAAAvVBMVEUAAADLy8u8vLzZ2dlgYGDe3t5sbGxoaGjr6+vb29tqamrCwsJmZmZkZGTW1tbExMTw8PDj4+Pa2tpfX1/z8/PU1NTp6enX19fg4OBwcHDc3NzJycn4+Pj7+/v6+vrd3d3h4eH+/v6lpaWmpqaampqgoKBlZWWzs7Orq6tra2uxsbGBgYF1dXVnZ2d/f3/T09PMzMxhYWFjY2P19fXv7+9vb2/l5eVzc3P////n5+eysrKDg4OCgoJ5eXnoAACu7h75AAAAAXRSTlMAQObYZgAAAG1JREFUeNo1ytsaQkAAReGdkpRKRUTofEANBoOY93+sfMp/tS4WNqM4mSvSdJztEJPFkETyJNUYEmMtzvhApfsQN89cCXxJ3WOD1yXfRlx3Cv8NPK+pZedFFaCVnQ+8rGp02Kl8fPDX3Nvs/YYvAnQLhiGwga0AAAAASUVORK5CYII=);
+			}
+		}
+	}
+	.cp-container {
+		.cp-swatch {
+			border-color: $cp-swatch-bd;
+		}
+		.cp-swatches .cp-swatch.actual {
+			border-color: $cp-swatches-bd;
+			@include box-shadow(0 0 5px $cp-swatches-shadow);
+		}
+	}
+
+	.cp-container {
+		.cp-pills {
+
+			li {
+				a {
+					color: #000;
+					&:hover, &.active {
+						background-color: #02afff;
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }

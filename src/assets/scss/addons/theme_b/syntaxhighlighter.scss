@@ -1,0 +1,31 @@
+/*  ==========================================================================
+    syntaxhighlighter
+    ========================================================================== */
+
+//  Libraries
+//  ==========================================================================
+@import "../../common/libs/compass";
+@import "../../common/libs/scut";
+@import "../../common/libs/jeet";
+@import "../../common/libs/breakpoint";
+
+
+//  Configuration
+//  ==========================================================================
+@import "../../common/config/config";
+@import "../../common/config/mixins";
+
+
+//  Theme Configuration
+//  ==========================================================================
+@import "../../theme_b/config/config";
+@import "../../theme_b/config/color";
+
+
+//  General
+//  ==========================================================================
+
+
+//  Theme
+//  ==========================================================================
+@import "../../theme_b/addons/syntaxhighlighter/shThemeRDark";

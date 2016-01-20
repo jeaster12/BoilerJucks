@@ -1,0 +1,33 @@
+/*
+    Form - Upload
+    ========================================================================== */
+
+/*
+    Bootstrap File Upload
+    ------------------------------------- */
+	.btn-file {
+
+		input[type=file] {
+			background: white;
+		}
+	}
+
+
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }

@@ -1,0 +1,102 @@
+/*
+    Widget - Notification
+    ========================================================================== */
+
+
+/*
+	Notification
+	------------------------------------- */
+
+	.widget-notification{
+
+		.label{
+			@include transition($transition-value);
+		}
+
+		p{
+			margin-bottom: 0;
+		}
+
+		.nft-icon{
+			text-align: center;
+		}
+
+		.nft-status{
+			text-align: center;
+		}
+
+		a{
+			display: block;
+			padding: 14px 0;
+		}
+
+		.dropdown-menu-header{
+			margin-bottom: 0;
+		}
+
+	}
+
+	.notification-in-header{
+
+		.dropdown-menu{
+			min-width:350px;
+			padding: 0;
+		}
+
+		.nft-content{
+		}
+
+	}
+
+	.notification-in-side{
+		padding:10px;
+
+		.nft-content{
+			max-height:350px;
+			overflow: hidden;
+			position: relative;
+		}
+
+		.dropdown-menu-header{
+			padding: 10px 0 13px !important;
+		}
+
+		.dropdown-menu-footer a {
+			padding: 12px 0px !important;
+		}
+	}
+
+	.notification-in-box{
+		.dropdown-menu-header{
+			padding: 10px 0 13px !important;
+		}
+
+		.dropdown-menu-footer a {
+			padding: 12px 0px !important;
+		}
+	}
+
+
+//  Media Queries
+//  ==========================================================================
+	@include breakpoint($screen-lg-maxx){
+
+	}
+
+	@include breakpoint($screen-md-maxx){
+
+	}
+
+	@include breakpoint($screen-sm-maxx){
+
+	}
+
+	@include breakpoint($screen-xs-maxx){
+		.notification-in-header{
+
+			.dropdown-menu{
+				min-width:100%;
+			}
+
+		}
+	}

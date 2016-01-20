@@ -1,0 +1,58 @@
+/*
+    Form - Validation
+    ========================================================================== */
+
+/*
+    Parsley Validation
+    ------------------------------------- */
+    .parsley-errors-list {
+        margin: 10px 0 5px 0;
+        padding: 0;
+        list-style-type: none;
+        line-height: 0.9em;
+
+        @include font-size(13px);
+        @include opacity(0);
+        @include transition(all .3s ease-in);
+
+        &.filled{
+            opacity: 1;
+        }
+    }
+
+/*
+    Validate Validation
+    ------------------------------------- */
+    .validate{
+
+        input.error{
+
+        }
+
+        label.error {
+            display: none;
+            font-weight: normal;
+            // display: block !important;
+            margin: 5px 0 10px;
+            @include clearfix();
+        }
+
+    }
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }

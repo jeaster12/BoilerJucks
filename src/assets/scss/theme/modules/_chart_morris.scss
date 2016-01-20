@@ -1,0 +1,52 @@
+/*
+    Chart - Morris
+    ========================================================================== */
+
+/*
+    Morris
+    ------------------------------------- */
+
+	.morris-hover {
+		&.morris-default-style {
+			background: rgba(255, 255, 255, 0.8);
+			border: solid 1px rgba(230, 230, 230, 0.8);
+		}
+	}
+
+	// Colors
+	.morris-area-1 { color: $morris-area-1-c; }
+	.morris-area-2 { color: $morris-area-2-c; }
+	.morris-area-3 { color: $morris-area-3-c; }
+
+	.morris-bar-1 { color: $morris-bar-1-c; }
+	.morris-bar-2 { color: $morris-bar-2-c; }
+	.morris-bar-3 { color: $morris-bar-3-c; }
+
+	.morris-stacked-1 { color: rgba($morris-stacked-1-c, 0.5); }
+	.morris-stacked-2 { color: rgba($morris-stacked-2-c, 0.5); }
+	.morris-stacked-3 { color: rgba($morris-stacked-3-c, 0.5); }
+
+	.morris-donut-1 { color: $morris-donut-1-c; }
+	.morris-donut-2 { color: $morris-donut-2-c; }
+	.morris-donut-3 { color: $morris-donut-3-c; }
+	.morris-donut-4 { color: $morris-donut-4-c; }
+
+	.morris-line-1 { color: $morris-line-1-c; }
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }

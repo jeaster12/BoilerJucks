@@ -1,0 +1,135 @@
+/*
+    Widget - Info
+    ========================================================================== */
+
+/*
+    Common
+    ------------------------------------- */
+	.widget-info-wrapper{
+		@include group;
+	}
+
+	.widget-info{
+		padding: 15px 0;
+		position: relative;
+		overflow: hidden;
+		@include border-radius($s-radius);
+		@include group;
+
+		.progress{ margin-bottom: 0; }
+
+		hr{
+			margin: 5px 0;
+		}
+
+		.widget-info-details{
+			min-height: 130px;
+			padding: 10px 30px;
+
+			h4{
+				margin: 0;
+				@include font-size(42px);
+				font-family: font-family(light);
+			}
+
+			p{
+
+				font-family: font-family(semibold);
+				@include font-size(20px);
+				padding: 10px 0 5px;
+
+				span{
+					font-family: font-family(light);
+				}
+			}
+		}
+
+		.progress-wrapper{
+
+		}
+
+
+		.info-chart{
+			text-align: center;
+			display: none;
+		}
+	}
+
+
+
+
+//  State
+//  -------------------------------------
+	.is-info{
+
+	}
+
+	.is-info{
+
+	}
+
+
+/*
+    Info in Header
+    ------------------------------------- */
+	.info-in-header{
+
+	}
+
+/*
+    Info in Sidebar
+    ------------------------------------- */
+	.info-in-side{
+
+	}
+
+/*
+    Info in Box
+    ------------------------------------- */
+	.info-in-box{
+
+	}
+
+//  Theme
+//  -------------------------------------
+	.t-info-1{
+
+	}
+
+	.t-info-2{
+
+	}
+
+	.t-info-3{
+
+	}
+
+	.t-info-4{
+
+	}
+
+
+
+//  Media Queries
+//  ==========================================================================
+	@include breakpoint($screen-lg-maxx){
+
+	}
+
+	@include breakpoint($screen-md-maxx){
+		.widget-info{
+
+			.widget-info-details{
+				min-height: 150px;
+			}
+
+		}
+	}
+
+	@include breakpoint($screen-sm-maxx){
+
+	}
+
+	@include breakpoint($screen-xs-maxx){
+
+	}

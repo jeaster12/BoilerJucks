@@ -1,0 +1,249 @@
+/*
+    Widget - Activity
+    ========================================================================== */
+
+/*
+    Common
+    ------------------------------------- */
+	.widget-activity{
+		margin-bottom: 5px;
+	}
+
+	.widget-activity-header{
+		@include group;
+		padding: 15px 15px 15px 30px;
+
+		h4{
+			margin: 6px 0;
+		}
+
+		a{
+			padding: 6px 15px;
+		}
+	}
+
+	.widget-activity-body{
+
+		.activity-text{
+			@include span(7/10);
+			
+			a{
+				font-family: font-family(semibold);
+			}
+		}
+
+		.activity-status{
+			@include span(3/10);
+
+			li{
+				text-align: center;
+				margin-bottom: 5px;
+
+				&:first-child{
+					margin-top: 8px;
+				}
+			}
+			i{
+				@include font-size(16px);
+			}
+		}
+	}
+
+	.widget-activity-item{
+		margin: 10px 20px 20px;
+		padding: 10px;
+		@include border-radius($s-radius);
+		@include group;
+	}
+
+
+//  State
+//  -------------------------------------
+	.is-activity{
+
+	}
+
+	.is-activity{
+
+	}
+
+
+/*
+    Activity in Header
+    ------------------------------------- */
+	.activity-in-header{
+
+	}
+
+/*
+    Activity in Box
+    ------------------------------------- */
+	.activity-in-box{
+
+	}
+
+/*
+    Activity in Sidebar
+    ------------------------------------- */
+	.activity-in-side{
+
+	}
+
+//  Compact State
+//  -------------------------------------
+
+	.l-sidebar-compact-left,
+	.l-sidebar-compact-right{
+
+		.widget-activity-header {
+			padding: 10px;
+			text-align: center;
+
+			.activity-title,
+			.btn{
+				float: none !important;
+			}
+		}
+
+		.widget-activity-item{
+			position: relative;
+			margin: 10px 10px 20px;
+
+			&:hover{
+				.activity-text{
+					display: block;
+				}
+			}
+		}
+
+		.activity-text{
+			display: none;
+			position: absolute;
+			top: 0;
+			width: 300px;
+			padding: 12px;
+		}
+
+		.activity-status{
+			text-align: center;
+			width: 100%;
+		}
+	}
+
+	.l-sidebar-compact-left{ .activity-text{ left: 78px; } }
+	.l-sidebar-compact-right { .activity-text{ right: 78px; } }
+
+//  Collapsed State
+//  -------------------------------------
+
+	.l-sidebar-collapsed-left,
+	.l-sidebar-collapsed-right{
+
+		.widget-activity-header {
+			padding: 10px 0;
+			text-align: center;
+
+			.activity-title{
+				float: none !important;
+				@include font-size(12px);
+			}
+			.btn{
+				display: none;
+			}
+		}
+
+		.widget-activity-item{
+			margin: 10px 0 20px;
+			padding: 5px;
+			position: relative;
+
+			&:hover{
+				.activity-text{
+					display: block;
+				}
+			}
+		}
+
+		.activity-text{
+			display: none;
+			position: absolute;
+			top: 0;
+			width: 300px;
+			padding: 12px;
+		}
+
+		.activity-status{
+			text-align: center;
+			width: 100%;
+
+			li:last-child{
+				display: none;
+			}
+		}
+	}
+
+	.l-sidebar-collapsed-left{ .activity-text{ left: 48px; } }
+	.l-sidebar-collapsed-right { .activity-text{ right: 48px; } }
+
+
+//  Theme
+//  -------------------------------------
+	.t-activity-1{
+
+	}
+
+	.t-activity-2{
+
+	}
+
+	.t-activity-3{
+
+	}
+
+
+
+//  Media Queries
+//  ==========================================================================
+	@include breakpoint($screen-lg-maxx){
+
+	}
+
+	@include breakpoint($screen-md-maxx){
+		.widget-activity-body{
+
+			.activity-text{
+				@include stack();
+			}
+
+			.activity-status{
+				margin-top: 20px;
+				padding-top: 10px;
+				@include stack();
+			}
+		}
+
+		.l-sidebar-compact-left,
+		.l-sidebar-compact-right,
+		.l-sidebar-collapsed-left,
+		.l-sidebar-collapsed-right{
+
+			.activity-status{
+				padding-top: 0;
+				margin-top: 0;
+			}
+
+			.activity-text{
+				display: none;
+				width: 300px;
+			}
+
+		}
+	}
+
+	@include breakpoint($screen-sm-maxx){
+
+	}
+
+	@include breakpoint($screen-xs-maxx){
+
+	}

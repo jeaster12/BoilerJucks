@@ -1,0 +1,87 @@
+/*
+    Widget - Revenue
+    ========================================================================== */
+
+/*
+    Common
+    ------------------------------------- */
+	.widget-revenue{
+		padding: 15px 0;
+		position: relative;
+
+		.revenue-chart{
+			padding: 0 20px;
+		}
+
+		.c3 svg {			
+			@include font-size(11px);
+			font-family: font-family(semibold);
+		}
+	}
+
+
+//  State
+//  -------------------------------------
+	.is-revenue{
+
+	}
+
+	.is-revenue{
+
+	}
+
+
+/*
+    Revenue in Header
+    ------------------------------------- */
+	.revenue-in-header{
+
+	}
+
+/*
+    Revenue in Sidebar
+    ------------------------------------- */
+	.revenue-in-side{
+
+	}
+
+/*
+    Revenue in Box
+    ------------------------------------- */
+	.revenue-in-box{
+
+	}
+
+//  Theme
+//  -------------------------------------
+	.t-revenue-1{
+
+	}
+
+	.t-revenue-2{
+
+	}
+
+	.t-revenue-3{
+
+	}
+
+
+
+//  Media Queries
+//  ==========================================================================
+	@include breakpoint($screen-lg-maxx){
+
+	}
+
+	@include breakpoint($screen-md-maxx){
+
+	}
+
+	@include breakpoint($screen-sm-maxx){
+
+	}
+
+	@include breakpoint($screen-xs-maxx){
+
+	}

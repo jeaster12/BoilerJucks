@@ -1,0 +1,45 @@
+/*
+    Maps
+    ========================================================================== */
+
+/*
+    Google Map
+    ------------------------------------- */
+    .map-overlay{
+    }
+
+    .map-overlay{
+
+        color: color(white);
+        background: rgba($map-mu, 0.8);
+        border: 1px solid shade(rgba($map-mu, 0.8),10%);
+
+        &:after {
+            border-color: rgba(136, 183, 213, 0);
+            border-top-color: shade(rgba($map-mu, 0.8),10%);
+        }
+
+        &:before {
+            border-color: rgba(194, 225, 245, 0);
+            border-top-color: shade(rgba($map-mu, 0.8),10%);
+        }
+    }
+
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }

@@ -1,0 +1,322 @@
+/*
+    Tabs
+    ========================================================================== */
+
+/*
+    Bootstrap Tabs
+    ------------------------------------- */
+
+
+
+/*
+    Easy Responsive Tabs
+    ------------------------------------- */
+
+	ul.resp-tabs-list{
+		margin: 0px;
+		padding: 0px;
+	}
+
+	.resp-tabs-list li {
+
+		display: inline-block;
+		padding: 13px 15px;
+		margin: 0 0 -1px;
+		list-style: none;
+		cursor: pointer;
+		float: left;
+		@include transition(color $transition-value);
+
+	}
+
+	.resp-tabs-container {
+		padding: 0px;
+		clear: left;
+	}
+
+	h2.resp-accordion {
+		@include font-size(14px);
+		cursor: pointer;
+		padding: 5px;
+		display: none;
+	}
+
+	.resp-tab-content {
+		display: none;
+		padding: 15px;
+	}
+
+	.resp-tab-active {
+		border-bottom: none;
+		margin-bottom: -1px !important;
+		padding: 12px 14px 14px 14px !important;
+		border-bottom: none;
+	}
+
+	.resp-content-active, .resp-accordion-active {
+		display: block;
+	}
+
+	h2 {
+		&.resp-accordion {
+			margin: 0px;
+			padding: 10px 15px;
+		}
+		&.resp-tab-active {
+			margin-bottom: 0px !important;
+			padding: 10px 15px !important;
+		}
+	}
+
+	/*----- Vertical tabs -----*/
+
+	.resp-vtabs {
+		ul.resp-tabs-list {
+			float: left;
+			width: 30%;
+		}
+		.resp-tabs-list li {
+			display: block;
+			padding: 15px 15px !important;
+			margin: 0;
+			cursor: pointer;
+			float: none;
+		}
+		.resp-tabs-container {
+			padding: 0px;
+			float: left;
+			width: 68%;
+			min-height: 250px;
+			border-radius: 4px;
+			clear: none;
+		}
+		.resp-tab-content {
+			border: none;
+		}
+		li.resp-tab-active {
+			border-right: none;
+			position: relative;
+			z-index: 1;
+			margin-right: -1px !important;
+			padding: 14px 15px 15px 14px !important;
+		}
+	}
+
+	.resp-arrow {
+		width: 0;
+		height: 0;
+		float: right;
+		margin-top: 3px;
+		border-left: 6px solid transparent;
+		border-right: 6px solid transparent;
+	}
+
+	h2.resp-tab-active {
+		span.resp-arrow {
+			margin-top: 1px;
+			border: none;
+			border-left: 6px solid transparent;
+			border-right: 6px solid transparent;
+		}
+	}
+
+	/*----- Accordion styles -----*/
+
+	.resp-easy-accordion {
+		h2.resp-accordion {
+			display: block;
+		}
+	}
+
+	.resp-jfit {
+		width: 100%;
+		margin: 0px;
+	}
+
+	.resp-tab-content-active {
+		display: block;
+	}
+
+
+/*
+    Responsive Tabs
+    ------------------------------------- */
+
+	.r-tabs {
+
+		position: relative;
+
+		.r-tabs-nav {
+			margin: 0;
+			padding: 0;
+
+			.r-tabs-tab {
+				position: relative;
+				top: 1px;
+				display: inline-block;
+				margin: 0;
+				list-style: none;
+			}
+
+			.r-tabs-anchor {
+				margin-bottom: 1px;
+				padding: 10px 12px;
+				display: inline-block;
+				text-decoration: none;
+			}
+
+			.r-tabs-state-active {
+				margin-bottom: -1px;
+			}
+
+			.r-tabs-state-disabled {
+				opacity: 0.5;
+
+				a{
+					cursor: default;
+				}
+			}
+
+		}
+
+		.r-tabs-panel {
+
+			margin-bottom: 3px;
+			padding: 15px;
+			display: none;
+
+			.r-tabs-state-active {
+				display: block;
+			}
+		}
+
+		.r-tabs-accordion-title {
+
+			display: none;
+
+			.r-tabs-anchor {
+				display: block;
+				padding: 10px;
+				text-decoration: none;
+				margin-bottom: 3px;
+			}
+			&.r-tabs-state-disabled {
+				opacity: 0.5;
+			}
+			&.r-tabs-state-active .r-tabs-anchor {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+/*
+    Tabslet
+    ------------------------------------- */
+
+	.tabslet{
+
+		.vertical { /* Vertical */
+			margin: 0
+		}
+
+		.horizontal { /* Horizontal */
+			display: inline;
+			margin: 0;
+
+			> li {
+				display: inline-block;
+
+				/* IE */
+				*margin: 1px;
+				zoom: 1;
+				*display: inline;
+			}
+		}
+
+		.tabs-nav{
+
+
+			li {
+				margin:0 5px 5px 0;
+			}
+
+			&.vertical{
+				li{
+					margin-right: 0;
+				}
+			}
+
+			a{
+				display: block;
+				padding: 10px 12px;
+				text-decoration: none;
+
+				@include font-size(13px);
+			}
+
+		}
+
+		.tabs-panel{
+			padding: 15px;
+		}
+
+	}
+
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    /*
+        Easy Responsive Tabs
+        ------------------------------------- */
+
+		ul.resp-tabs-list {
+			display: none;
+		}
+
+		h2.resp-accordion {
+			display: block;
+		}
+
+		.resp-vtabs {
+			.resp-tabs-container {
+				border: none;
+				float: none;
+				width: 100%;
+				min-height: initial;
+				clear: none;
+			}
+		}
+
+		.resp-accordion-closed {
+			display: none !important;
+		}
+
+		/*
+			Responsive Tabs
+			------------------------------------- */
+        .r-tabs{
+
+            .r-tabs-nav {
+                display: none;
+            }
+
+            .r-tabs-accordion-title {
+                display: block;
+            }
+        }
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }

@@ -1,0 +1,135 @@
+/*
+    Widget - Active Users
+    ========================================================================== */
+
+/*
+    Common
+    ------------------------------------- */
+	.widget-active-users{
+
+		li{
+			border-bottom: 1px solid $active-users-bd;
+
+			&:first-child{
+				border-top: 1px solid $active-users-bd;
+			}
+		}
+
+		a{
+			&:hover{
+				background: $active-users-bg;
+
+				.active-users-img{
+					border: 1px solid transparent;
+				}
+			}
+		}
+	}
+
+	.active-users-main-title{
+		@include box-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
+	}
+
+	.active-users-img{
+		border: 1px solid $active-users-img-bd;
+	}
+
+	.active-users-info{
+
+		p{
+			color: $active-users-info-c;
+		}
+
+		.time{
+			color: $active-users-time-c;
+		}
+
+	}
+
+
+//  State
+//  -------------------------------------
+	.is-active-users{
+
+	}
+
+	.is-active-users{
+
+	}
+
+
+/*
+    Active Users in Header
+    ------------------------------------- */
+	.active-users-in-header{
+
+	}
+
+
+/*
+    Active Users in Box
+    ------------------------------------- */
+	.active-users-in-box{
+
+	}
+
+
+/*
+    Active Users in Sidebar
+    ------------------------------------- */
+	.active-users-in-side{
+
+	}
+
+//  Compact State
+//  -------------------------------------
+
+	.l-sidebar-compact-left,
+	.l-sidebar-compact-right{
+
+	}
+
+//  Collapsed State
+//  -------------------------------------
+
+	.l-sidebar-collapsed-left,
+	.l-sidebar-collapsed-right{
+
+	}
+
+
+//  Theme
+//  -------------------------------------
+	.t-active-users-1{
+
+	}
+
+	.t-active-users-2{
+
+	}
+
+	.t-active-users-3{
+
+	}
+
+
+
+
+
+//  Media Queries
+//  ==========================================================================
+	@include breakpoint($screen-lg-maxx){
+
+	}
+
+	@include breakpoint($screen-md-maxx){
+
+	}
+
+	@include breakpoint($screen-sm-maxx){
+
+	}
+
+	@include breakpoint($screen-xs-maxx){
+
+	}

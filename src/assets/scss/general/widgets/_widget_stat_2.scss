@@ -1,0 +1,257 @@
+/*
+    Widget - Stats 2
+    ========================================================================== */
+
+/*
+    Common
+    ------------------------------------- */
+	.widget-stats-2{
+		position: relative;
+	}
+
+	.stats-2-toggler{
+		cursor: pointer;
+		display: none;
+		line-height: 1;
+		margin: 10px 0;
+		padding: 4px 0;
+		text-align: center;
+		@include border-radius($s-radius);
+		@include font-size(17px);
+	}
+
+	.stats-2-content{
+
+	}
+
+	.stats-2-header{
+		padding: 10px 20px;
+		line-height: 1;
+		@include font-size(20px);
+		@include border-radius($s-radius $s-radius 0 0);
+	}
+
+	.stats-2-body{
+		padding: 20px;
+		@include border-radius( 0 0 $s-radius $s-radius);
+	}
+
+	.stats-2-title{
+		h4{
+			margin: 3px 0 0;
+			font-family: font-family(light);
+		}
+	}
+
+	.stats-2-icon{
+		text-align: right;
+	}
+
+	.stats-2-info{
+		font-family: font-family(semibold);
+		@include font-size(20px);
+	}
+
+	.stats-2-change{
+		text-align: right;
+		@include font-size(17px);
+
+		i{
+			margin-right: 5px;
+			@include font-size(18px);
+		}
+	}
+
+
+//  State
+//  -------------------------------------
+	.is-stats-2{
+
+	}
+
+	.is-stats-2{
+
+	}
+
+
+/*
+    Stats 2 in Header
+    ------------------------------------- */
+	.stats-2-in-header{
+
+		margin: 5px;
+		width: 250px;
+
+		.stats-2-header{
+			padding: 5px 20px;
+		}
+
+		.stats-2-body{
+			padding:5px 20px;
+		}
+	}
+
+
+/*
+    Stats 2 in Box
+    ------------------------------------- */
+	.stats-2-in-box{
+
+	}
+
+
+/*
+    Stats 2 in Sidebar
+    ------------------------------------- */
+	.stats-2-in-side{
+		margin: 10px;
+	}
+
+//  Compact State
+//  -------------------------------------
+
+	.l-sidebar-compact-left,
+	.l-sidebar-compact-right{
+
+		.stats-2-header{
+			padding: 10px 5px;
+			text-align: center;
+		}
+
+		.stats-2-body{
+			padding: 5px;
+			text-align: center;
+		}
+
+		.stats-2-title{
+			width: 100%;
+			h4{
+				margin: 0;
+				@include font-size(15px);
+			}
+		}
+
+		.stats-2-icon{
+			display: none;
+		}
+
+		.stats-2-info{
+			width: 100%;
+			font-family: font-family(regular);
+			@include font-size(18px);
+		}
+
+		.stats-2-change{
+			display: none;
+		}
+
+	}
+
+//  Collapsed State
+//  -------------------------------------
+
+	.l-sidebar-collapsed-left,
+	.l-sidebar-collapsed-right{
+
+		.stats-2-toggler{
+			display: block;
+		}
+
+		.stats-2-content{
+			display: none;
+			position: absolute;
+			top: 0;
+			width: 325px;
+			z-index: 1;
+		}
+
+		.stats-2-icon{
+			display: none;
+		}
+
+		.widget-stats-2:hover{
+			.stats-2-content{
+				display: block;
+			}
+		}
+	}
+
+	.l-sidebar-collapsed-left{
+
+		.stats-2-content{
+			padding-left: 20px;
+			left: 28px;
+		}
+	}
+
+	.l-sidebar-collapsed-right{
+
+		.stats-2-content{
+			padding-right: 20px;
+			right: 30px;
+		}
+	}
+
+
+
+//  Theme
+//  -------------------------------------
+	.t-stats-2-1{
+
+	}
+
+	.t-stats-2-2{
+
+	}
+
+	.t-stats-2-3{
+
+	}
+
+	.t-stats-2-4{
+
+	}
+
+
+
+//  Media Queries
+//  ==========================================================================
+	@include breakpoint($screen-lg-maxx){
+
+	}
+
+	@include breakpoint($screen-md-maxx){
+
+	}
+
+	@include breakpoint($screen-sm-maxx){
+
+	}
+
+	@include breakpoint($screen-xs-maxx){
+
+		.stats-2-title,
+		.stats-2-icon,
+		.stats-2-info,
+		.stats-2-change{
+			text-align: center;
+		}
+
+		.stats-2-title{
+			padding-bottom: 10px;
+		}
+
+		.stats-2-info{
+			padding-bottom: 15px;
+		}
+
+
+		.l-sidebar-collapsed-left,
+		.l-sidebar-collapsed-right{
+
+			.stats-2-content{
+				width: 220px;
+			}
+		}
+
+	}

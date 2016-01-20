@@ -1,0 +1,76 @@
+/*
+    Search Result
+    ========================================================================== */
+
+/*
+    Classic Search
+    ------------------------------------- */
+
+	.classic-search-container{
+
+		.search-row{
+			border-bottom: 1px solid $search-page-classic-row-bd;
+		}
+	}
+
+/*
+    Grid/List Search
+    ------------------------------------- */
+
+	.gridlist-search-container{
+
+		h2{
+		}
+
+		// List view
+		.list-view{
+
+		}
+
+		.search-header{
+			border-bottom: 1px solid $search-page-grid-list-row-bd;
+		}
+
+		.search-row{
+			border-bottom: 1px solid $search-page-grid-list-row-bd;
+		}
+
+
+		// Grid view
+		.grid-view{
+
+		}
+
+		.search-col{
+			border-bottom: 1px solid $search-page-grid-list-row-bd;
+		}
+
+		.img-container{
+
+		}
+	}
+
+
+/*
+    User Search
+    ------------------------------------- */
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+		.sort{
+			border-bottom: 1px solid $search-page-grid-list-row-bd;
+		}
+    }

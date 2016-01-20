@@ -1,0 +1,343 @@
+/*
+    Widget - Page Summary
+    ========================================================================== */
+
+/*
+    Common
+    ------------------------------------- */
+	.widget-page-summary{
+		padding: 0 25px 0 15px;
+		position: relative;
+		@include group;
+
+		.page-summary-info-switcher{
+			padding: 10px 15px;
+			position: absolute;
+			right: 15px;
+			top: 30px;
+			display: none;
+		}
+
+		.page-title{
+			font-family: font-family(light);
+			@include font-size(29px);
+
+			span{
+				font-family: font-family(bold);
+			}
+		}
+
+		.page-sub-title{
+			font-family: font-family(light);
+			margin-bottom: 20px;
+
+			span{
+				font-family: font-family(semibold);
+			}
+
+			.morphext > .animated {
+				display: inline-block;
+			}
+		}
+
+		.page-summary-info{
+			text-align: right;
+
+			.rickshaw_graph .detail .x_label { display: none }
+		}
+
+		.page-summary-settings{
+			padding: 5px 2px 0 0;
+
+			li{
+				display: inline-block;
+				margin-left: 10px;
+
+				&.last-status{
+					margin-right: 10px;
+				}
+
+				&.last{
+					margin-left: 0;
+				}
+			}
+
+			.update-status-settings{
+				i{
+					@include font-size(11px);
+				}
+
+				a{
+					vertical-align: text-top;
+				}
+			}
+			.time-status-toggle{
+				display: none;
+			}
+
+		}
+	}
+
+	.summary-chart{
+		margin-top: 10px;
+
+		i{
+			margin-right: 8px;
+			@include transition($transition-value);
+		}
+
+		span{
+			font-family: font-family(semibold);
+			@include font-size(22px);
+			vertical-align: middle;
+		}
+
+		p{
+			margin: 3px 0 0;
+			font-size: 12px;
+			text-transform: uppercase;
+		}
+
+		.chart-info{
+			margin-right: 10px;
+		}
+	}
+
+	.summary-time-status{
+		display: none;
+	}
+
+	.weather-wrapper{
+		i{
+			@include font-size(70px);
+		}
+
+		.weather-temp{
+			font-family: font-family(bold);
+			@include font-size(30px);
+			padding: 0;
+			line-height: 2;
+		}
+
+		.weather-location{
+			margin: 10px 0 5px;
+			font-family: font-family(light);
+			@include font-size(20px);
+		}
+
+		.weather-description{
+			padding-bottom: 0;
+		}
+
+	}
+
+	.clock-wrapper{
+		margin-top: 10px;
+
+		.jqclock{
+			@include font-size(18px);
+			padding-right: 5%;
+
+			.clockdate{
+				display: block;
+				@include font-size(20px);
+				font-family: font-family(light);
+				padding-bottom: 5px;
+			}
+
+			.clocktime{
+				display: block;
+				font-family: font-family(semibold);
+			}
+		}
+	}
+
+	.rotating {
+		display: inline-block;
+		-webkit-transform-style: preserve-3d;
+		-moz-transform-style: preserve-3d;
+		-ms-transform-style: preserve-3d;
+		-o-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+		-webkit-transform: rotateX(0) rotateY(0) rotateZ(0);
+		-moz-transform: rotateX(0) rotateY(0) rotateZ(0);
+		-ms-transform: rotateX(0) rotateY(0) rotateZ(0);
+		-o-transform: rotateX(0) rotateY(0) rotateZ(0);
+		transform: rotateX(0) rotateY(0) rotateZ(0);
+		-webkit-transition: 0.5s;
+		-moz-transition: 0.5s;
+		-ms-transition: 0.5s;
+		-o-transition: 0.5s;
+		transition: 0.5s;
+		-webkit-transform-origin-x: 50%;
+		&.flip {
+			position: relative;
+		}
+		.front, .back {
+			left: 0;
+			top: 0;
+			-webkit-backface-visibility: hidden;
+			-moz-backface-visibility: hidden;
+			-ms-backface-visibility: hidden;
+			-o-backface-visibility: hidden;
+			backface-visibility: hidden;
+		}
+		.front {
+			position: absolute;
+			display: inline-block;
+			-webkit-transform: translate3d(0, 0, 1px);
+			-moz-transform: translate3d(0, 0, 1px);
+			-ms-transform: translate3d(0, 0, 1px);
+			-o-transform: translate3d(0, 0, 1px);
+			transform: translate3d(0, 0, 1px);
+		}
+		&.flip .front {
+			z-index: 1;
+		}
+		.back {
+			display: block;
+			opacity: 0;
+		}
+		&.spin {
+			-webkit-transform: rotate(360deg) scale(0);
+			-moz-transform: rotate(360deg) scale(0);
+			-ms-transform: rotate(360deg) scale(0);
+			-o-transform: rotate(360deg) scale(0);
+			transform: rotate(360deg) scale(0);
+		}
+		&.flip {
+			.back {
+				z-index: 2;
+				display: block;
+				opacity: 1;
+				-webkit-transform: rotateY(180deg) translate3d(0, 0, 0);
+				-moz-transform: rotateY(180deg) translate3d(0, 0, 0);
+				-ms-transform: rotateY(180deg) translate3d(0, 0, 0);
+				-o-transform: rotateY(180deg) translate3d(0, 0, 0);
+				transform: rotateY(180deg) translate3d(0, 0, 0);
+			}
+			&.up .back {
+				-webkit-transform: rotateX(180deg) translate3d(0, 0, 0);
+				-moz-transform: rotateX(180deg) translate3d(0, 0, 0);
+				-ms-transform: rotateX(180deg) translate3d(0, 0, 0);
+				-o-transform: rotateX(180deg) translate3d(0, 0, 0);
+				transform: rotateX(180deg) translate3d(0, 0, 0);
+			}
+			&.cube {
+				.front {
+					-webkit-transform: translate3d(0, 0, 100px) scale(0.9, 0.9);
+					-moz-transform: translate3d(0, 0, 100px) scale(0.85, 0.85);
+					-ms-transform: translate3d(0, 0, 100px) scale(0.85, 0.85);
+					-o-transform: translate3d(0, 0, 100px) scale(0.85, 0.85);
+					transform: translate3d(0, 0, 100px) scale(0.85, 0.85);
+				}
+				.back {
+					-webkit-transform: rotateY(180deg) translate3d(0, 0, 100px) scale(0.9, 0.9);
+					-moz-transform: rotateY(180deg) translate3d(0, 0, 100px) scale(0.85, 0.85);
+					-ms-transform: rotateY(180deg) translate3d(0, 0, 100px) scale(0.85, 0.85);
+					-o-transform: rotateY(180deg) translate3d(0, 0, 100px) scale(0.85, 0.85);
+					transform: rotateY(180deg) translate3d(0, 0, 100px) scale(0.85, 0.85);
+				}
+				&.up .back {
+					-webkit-transform: rotateX(180deg) translate3d(0, 0, 100px) scale(0.9, 0.9);
+					-moz-transform: rotateX(180deg) translate3d(0, 0, 100px) scale(0.85, 0.85);
+					-ms-transform: rotateX(180deg) translate3d(0, 0, 100px) scale(0.85, 0.85);
+					-o-transform: rotateX(180deg) translate3d(0, 0, 100px) scale(0.85, 0.85);
+					transform: rotateX(180deg) translate3d(0, 0, 100px) scale(0.85, 0.85);
+				}
+			}
+		}
+	}
+
+
+//  State
+//  -------------------------------------
+	.is-page-summary{
+
+	}
+
+	.is-page-summary{
+
+	}
+
+
+/*
+    Page Summary in Header
+    ------------------------------------- */
+	.page-summary-in-header{
+
+	}
+
+
+/*
+    Page Summary in Box
+    ------------------------------------- */
+	.page-summary-in-box{
+
+	}
+
+
+/*
+    Page Summary in Sidebar
+    ------------------------------------- */
+	.page-summary-in-side{
+
+	}
+
+//  Compact State
+//  -------------------------------------
+
+	.l-sidebar-compact-left,
+	.l-sidebar-compact-right{
+
+	}
+
+//  Collapsed State
+//  -------------------------------------
+
+	.l-sidebar-collapsed-left,
+	.l-sidebar-collapsed-right{
+
+	}
+
+
+//  Theme
+//  -------------------------------------
+	.t-page-summary-1{
+
+	}
+
+	.t-page-summary-2{
+
+	}
+
+	.t-page-summary-3{
+
+	}
+
+
+
+//  Media Queries
+//  ==========================================================================
+	@include breakpoint($screen-lg-maxx){
+
+	}
+
+	@include breakpoint($screen-md-maxx){
+		.page-summary-info{
+			margin-bottom: $s-gutter-p;
+			display: none;
+		}
+		.widget-page-summary .page-summary-info-switcher{ display: block; }
+	}
+
+	@include breakpoint($screen-sm-maxx){
+	}
+
+	@include breakpoint($screen-xs-maxx){
+		.clock-wrapper{
+			.jqclock{
+				padding-right:0;
+			}
+		}
+	}

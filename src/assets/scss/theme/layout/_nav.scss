@@ -1,0 +1,181 @@
+/*
+	Navigation
+	========================================================================== */
+
+	.cupcake-nav{
+
+		background: $nav-bg;
+
+		ul{
+			background: $nav-bg;
+		}
+
+
+		&>li>a{
+
+			&:hover{
+				color: 	$nav-open-c;
+				background: $nav-bg-ho;
+			}
+		}
+
+
+		a{
+
+			color: $nav-c;
+			&:hover{
+				color: $nav-ho;
+			}
+		}
+
+		.info{
+			background: $nav-info-bg;
+			color: $nav-info-c;
+		}
+
+		.new{
+			background: $nav-new-bg;
+			color: $nav-new-c;
+		}
+
+		.soon{
+			background: $nav-soon-bg;
+			color: $nav-soon-c;
+		}
+
+		.open{
+			//background: $nav-open-c;
+			ul {
+				background:$nav-lvl1-open-bg;
+			}
+			> a{
+				background:	$nav-open-bg;
+				color: $nav-open-c;
+
+			}
+		}
+
+		.active>a{
+
+			color: $nav-active-c;
+			&:hover{
+
+			}
+		}
+
+
+		.level-1{
+			a { padding-left: 44px; }
+			.divider{ border-top: 1px solid $nav-lvl1-open-bg; }
+			.open{
+				> a, > ul {
+					background: $nav-lvl1-open-bg;
+				}
+			}
+		}
+
+		.level-2{
+			a { padding-left: 64px; }
+			.divider{ border-top: 1px solid $nav-lvl2-open-bg; }
+			.open{
+				> a, > ul {
+					background: $nav-lvl2-open-bg;
+				}
+			}
+		}
+
+
+		.level-3{
+			a { padding-left: 84px; }
+			.divider{ border-top: 1px solid $nav-lvl3-open-bg; }
+			.open{
+				> a, > ul {
+					background: $nav-lvl3-open-bg;
+				}
+			}
+		}
+
+		.level-4 {
+			a { padding-left: 104px; }
+		}
+
+		// Other menu elements
+
+	}
+
+//  Default State
+//  ==========================================================================
+	.l-sidebar-left,
+	.l-sidebar-right {
+
+	}
+
+	.l-sidebar-left{
+		.cupcake-nav {	}
+	}
+
+	.l-sidebar-right{
+		.cupcake-nav { }
+	}
+
+//  Compact State
+//  ==========================================================================
+
+/*
+	Compact Nav State
+	------------------------------------- */
+	.l-sidebar-compact-left,
+	.l-sidebar-compact-right {
+
+		.cupcake-nav {
+
+			.level-1{ a { padding-left: 20px; }	}
+			.level-2{ a { padding-left: 40px; }	}
+			.level-3{ a { padding-left: 60px; }	}
+			.level-4{ a { padding-left: 80px; }	}
+		}
+	}
+
+//  Collapsed State
+//  ==========================================================================
+
+/*
+	Collapsed Nav State
+	------------------------------------- */
+	.l-sidebar-collapsed-left,
+	.l-sidebar-collapsed-right{
+
+		.cupcake-nav{
+
+			.level-1{
+				a { padding-left: 20px; }
+				border-top: 1px solid $nav-lvl1-collapsed-bd;
+			}
+
+			.level-2{ a { padding-left: 35px; }	}
+			.level-3{ a { padding-left: 50px; }	}
+			.level-4{ a { padding-left: 65px; }	}
+
+		}
+	}
+
+
+
+//  Media Queries
+//  ==========================================================================
+
+	@include breakpoint($screen-lg-maxx){
+
+	}
+
+	@include breakpoint($screen-md-maxx){
+
+	}
+
+	@include breakpoint($screen-sm-maxx){
+
+	}
+
+	@include breakpoint($screen-xs-maxx){
+
+	}

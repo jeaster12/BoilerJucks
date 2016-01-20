@@ -1,0 +1,333 @@
+/*
+    Chart - Rickshaw
+    ========================================================================== */
+
+/*
+    Rickshaw
+    ------------------------------------- */
+
+	.rickshaw_graph {
+		.detail {
+			pointer-events: none;
+			position: absolute;
+			top: 0;
+			z-index: 2;
+			bottom: 0;
+			width: 1px;
+			transition: opacity 0.25s linear;
+			-moz-transition: opacity 0.25s linear;
+			-o-transition: opacity 0.25s linear;
+			-webkit-transition: opacity 0.25s linear;
+			&.inactive {
+				opacity: 0;
+			}
+			.item.active {
+				opacity: 1;
+			}
+			.x_label {
+				font-family: Arial, sans-serif;
+				border-radius: 3px;
+				padding: 6px;
+				opacity: 0.5;
+				@include font-size(12px);
+				position: absolute;
+				white-space: nowrap;
+				&.left {
+					left: 0;
+				}
+				&.right {
+					right: 0;
+				}
+			}
+			.item {
+				position: absolute;
+				z-index: 2;
+				border-radius: 3px;
+				padding: 0.25em;
+				@include font-size(12px);
+				font-family: Arial, sans-serif;
+				opacity: 0;
+				margin-left: 1em;
+				margin-right: 1em;
+				margin-top: -1em;
+				white-space: nowrap;
+				&.left {
+					left: 0;
+				}
+				&.right {
+					right: 0;
+				}
+				&.active {
+					opacity: 1;
+				}
+				&:after {
+					position: absolute;
+					display: block;
+					width: 0;
+					height: 0;
+					content: "";
+					border: 5px solid transparent;
+				}
+				&.left:after {
+					top: 1em;
+					left: -5px;
+					margin-top: -5px;
+					border-left-width: 0;
+				}
+				&.right:after {
+					top: 1em;
+					right: -5px;
+					margin-top: -5px;
+					border-right-width: 0;
+				}
+			}
+			.dot {
+				width: 4px;
+				height: 4px;
+				margin-left: -3px;
+				margin-top: -3.5px;
+				border-radius: 5px;
+				position: absolute;
+				box-sizing: content-box;
+				-moz-box-sizing: content-box;
+				border-width: 2px;
+				border-style: solid;
+				display: none;
+				background-clip: padding-box;
+				&.active {
+					display: block;
+				}
+			}
+		}
+
+
+		/* graph */
+		position: relative;
+
+		svg {
+			display: block;
+			overflow: hidden;
+			width: 100%;
+			//height: 100%;
+		}
+
+		/* ticks */
+		.x_tick {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 0px;
+			pointer-events: none;
+			.title {
+				position: absolute;
+				@include font-size(12px);
+				font-family: Arial, sans-serif;
+				opacity: 0.5;
+				white-space: nowrap;
+				margin-left: 3px;
+				bottom: 1px;
+			}
+		}
+	}
+
+	/* annotations */
+
+	.rickshaw_annotation_timeline {
+		height: 1px;
+		margin-top: 10px;
+		position: relative;
+		.annotation {
+			position: absolute;
+			height: 6px;
+			width: 6px;
+			margin-left: -2px;
+			top: -3px;
+			border-radius: 5px;
+		}
+	}
+
+	.rickshaw_graph {
+		.annotation_line {
+			position: absolute;
+			top: 0;
+			bottom: -6px;
+			width: 0px;
+			display: none;
+			&.active {
+				display: block;
+			}
+		}
+		.annotation_range {
+			display: none;
+			position: absolute;
+			top: 0;
+			bottom: -6px;
+			&.active {
+				display: block;
+				&.offscreen {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.rickshaw_annotation_timeline .annotation {
+		.content {
+			opacity: 0.9;
+//			padding: 5px 5px;
+			border-radius: 3px;
+			position: relative;
+			z-index: 20;
+			@include font-size(12px);
+			padding: 6px 8px 8px;
+			top: 18px;
+			left: -11px;
+			width: 160px;
+			display: none;
+			cursor: pointer;
+			&:before {
+				content: "\25b2";
+				position: absolute;
+				top: -11px;
+			}
+		}
+		&.active, &:hover {
+			cursor: none;
+		}
+		.content:hover {
+			z-index: 50;
+		}
+		&.active .content {
+			display: block;
+		}
+		&:hover .content {
+			display: block;
+			z-index: 50;
+		}
+	}
+
+	.rickshaw_graph {
+		.y_axis, .x_axis_d3 {
+			fill: none;
+		}
+		.y_ticks .tick line, .x_ticks_d3 .tick {
+			stroke-width: 2px;
+			shape-rendering: crisp-edges;
+			pointer-events: none;
+		}
+		.y_grid .tick, .x_grid_d3 .tick {
+			z-index: -1;
+			stroke-width: 1px;
+			stroke-dasharray: 1 1;
+		}
+		.y_grid {
+			.tick[data-y-value="0"] {
+				stroke-dasharray: 1 0;
+			}
+			path {
+				fill: none;
+				stroke: none;
+			}
+		}
+		.y_ticks text, .x_ticks_d3 text {
+			opacity: 0.5;
+			pointer-events: none;
+			@include font-size(12px);
+		}
+	}
+
+	.rickshaw_legend {
+		font-family: Arial;
+		@include font-size(12px);
+		display: inline-block;
+		padding: 12px 5px;
+		border-radius: 2px;
+		position: relative;
+		&:hover {
+			z-index: 10;
+		}
+		.swatch {
+			width: 10px;
+			height: 10px;
+		}
+		.line {
+			clear: both;
+			line-height: 140%;
+			padding-right: 15px;
+			.swatch {
+				display: inline-block;
+				margin-right: 3px;
+				border-radius: 2px;
+			}
+		}
+		.label {
+			margin: 0;
+			white-space: nowrap;
+			display: inline;
+			font-size: inherit;
+			background-color: transparent;
+			color: inherit;
+			font-weight: normal;
+			line-height: normal;
+			padding: 0px;
+			text-shadow: none;
+		}
+		.action {
+			&:hover {
+				opacity: 0.6;
+			}
+			margin-right: 0.2em;
+			// font-size: 10px;
+			@include font-size(14px);
+			opacity: 0.2;
+			cursor: pointer;
+		}
+		.line.disabled {
+			opacity: 0.4;
+		}
+		ul {
+			list-style-type: none;
+			// margin: 0;
+			padding: 0;
+			margin: 2px;
+			cursor: pointer;
+		}
+		li {
+			padding: 0 0 0 2px;
+			min-width: 80px;
+			white-space: nowrap;
+			&:hover {
+				border-radius: 3px;
+			}
+			&:active {
+				border-radius: 3px;
+			}
+		}
+	}
+
+	.custom_rickshaw_legend{
+		text-align: center;
+		width: 100%;
+
+		.line{
+			display: inline-block;
+		}
+	}
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }

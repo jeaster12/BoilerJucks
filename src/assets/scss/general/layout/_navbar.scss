@@ -1,0 +1,76 @@
+/*
+    Bootstrap Navigation
+    ========================================================================== */
+
+	//  cupcake navbar
+	//  -------------------------------------
+	.navbar-cupcake {
+
+		margin-bottom: 0;
+		@include border-radius(0);
+
+		.container-fluid,
+		.navbar-collapse{
+			padding: 0;
+		}
+
+
+		.navbar-brand{
+			display: none;
+			padding: 5px 15px;
+		}
+
+		.navbar-right{
+			margin-right: 0;
+		}
+
+		.navbar-toggle{
+			@include transition($transition-value);
+		}
+
+	}
+
+
+
+
+//  Media Queries
+//  ==========================================================================
+	@include breakpoint($screen-lg-maxx){
+
+	}
+
+	@include breakpoint($screen-md-maxx){
+
+	}
+
+	@include breakpoint($screen-sm-maxx){
+
+	}
+
+	@include breakpoint($screen-xs-maxx){
+
+		.navbar-cupcake {
+
+			.container-fluid,
+			.navbar-collapse{
+				padding: 0 15px;
+			}
+
+			.navbar-nav {
+				margin: 0 -15px;
+				text-align: center;
+			}
+
+			.navbar-brand{
+				display:block;
+//				width: 100%;
+				text-align: center;
+
+				> img{
+					display: inline-block;
+				}
+			}
+
+		}
+
+	}

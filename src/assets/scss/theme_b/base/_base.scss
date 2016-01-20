@@ -1,0 +1,48 @@
+/*  ==========================================================================
+    Base styles
+    ========================================================================== */
+
+    body{
+		background: $body-bg;
+        color: $body-c;
+    }
+
+    a{
+        color: $a-c;
+
+
+        &:hover{ color: $a-ho; }
+		&:focus { color: $a-ho; }
+    }
+
+    ::-moz-selection { background: $selection-bg; }
+    ::selection { background: $selection-bg; }
+
+    hr {
+        border-top: 1px solid $hr-bd;
+    }
+
+    .browsehappy {
+        background: $browsehappy-bg;
+        color: $browsehappy-c;
+    }
+
+
+//  Media Queries
+//  ==========================================================================
+
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }

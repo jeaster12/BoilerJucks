@@ -1,0 +1,181 @@
+/*
+    Bootstrap Navigation
+    ========================================================================== */
+
+	//  cupcake navbar
+	//  -------------------------------------
+	.navbar-cupcake {
+		background-color: $navbar-cupcake-bg;
+		border: none;
+
+		.navbar-brand {
+			color: $navbar-cupcake-brand-c;
+			&:hover,
+			&:focus {
+				color: $navbar-cupcake-brand-hover-c;
+				background-color: $navbar-cupcake-brand-hover-bg;
+			}
+		}
+
+		.navbar-text {
+			color: $navbar-cupcake-c;
+		}
+
+		.navbar-nav {
+			> li{
+
+				&:first-child{
+					border-top: none;
+				}
+
+				> a {
+					color: $navbar-cupcake-link-c;
+
+					&:hover,
+					&:focus {
+						color: $navbar-cupcake-link-hover-c;
+						background-color: $navbar-cupcake-link-hover-bg;
+					}
+				}
+			}
+			> .active > a {
+				&,
+				&:hover,
+				&:focus {
+					color: $navbar-cupcake-link-active-c;
+					background-color: $navbar-cupcake-link-active-bg;
+				}
+			}
+			> .disabled > a {
+				&,
+				&:hover,
+				&:focus {
+					color: $navbar-cupcake-link-disabled-c;
+					background-color: $navbar-cupcake-link-disabled-bg;
+				}
+			}
+
+			.open > a{
+
+				background: $navbar-cupcake-nav-a-bg-mu;
+				border-color: $navbar-cupcake-nav-a-bd-mu;
+
+				&:hover,
+				&:focus,{
+					background: $navbar-cupcake-nav-a-bg-mu;
+					border-color: $navbar-cupcake-nav-a-bd-mu;
+				}
+			}
+		}
+
+		.navbar-toggle {
+			border-color: $navbar-cupcake-toggle-bd;
+			&:hover,
+			&:focus {
+				background-color: $navbar-cupcake-toggle-hover-bg;
+			}
+			.icon-bar {
+				background-color: $navbar-cupcake-toggle-icon-bar-bg;
+			}
+		}
+
+		.navbar-collapse,
+		.navbar-form {
+			border-color: $navbar-cupcake-bd;
+		}
+
+		// Dropdown menu items
+		.navbar-nav {
+			> .open > a {
+				&,
+				&:hover,
+				&:focus {
+					background-color: $navbar-cupcake-link-active-bg;
+					color: $navbar-cupcake-link-active-c;
+				}
+			}
+		}
+
+
+		// Links in navbars
+		.navbar-link {
+			color: $navbar-cupcake-link-c;
+			&:hover {
+				color: $navbar-cupcake-link-hover-c;
+			}
+		}
+
+		.btn-link {
+			color: $navbar-cupcake-link-c;
+			&:hover,
+			&:focus {
+				color: $navbar-cupcake-link-hover-c;
+			}
+			&[disabled],
+			fieldset[disabled] & {
+				&:hover,
+				&:focus {
+					color: $navbar-cupcake-link-disabled-c;
+				}
+			}
+		}
+	}
+
+
+
+//  Media Queries
+//  ==========================================================================
+	@include breakpoint($screen-lg-maxx){
+
+	}
+
+	@include breakpoint($screen-md-maxx){
+
+	}
+
+	@include breakpoint($screen-sm-maxx){
+
+	}
+
+	@include breakpoint($screen-xs-maxx){
+
+		.navbar-cupcake {
+
+			// Dropdown menu items
+			.navbar-nav {
+				> li {
+
+					border-bottom: 1px solid $navbar-cupcake-nav-li-bd;
+				}
+				// Dropdowns get custom display when collapsed
+				.open .dropdown-menu {
+					> li > a {
+						color: $navbar-cupcake-link-c;
+						&:hover,
+						&:focus {
+							color: $navbar-cupcake-link-hover-c;
+							background-color: $navbar-cupcake-link-hover-bg;
+						}
+					}
+					> .active > a {
+						&,
+						&:hover,
+						&:focus {
+							color: $navbar-cupcake-link-active-c;
+							background-color: $navbar-cupcake-link-active-bg;
+						}
+					}
+					> .disabled > a {
+						&,
+						&:hover,
+						&:focus {
+							color: $navbar-cupcake-link-disabled-c;
+							background-color: $navbar-cupcake-link-disabled-bg;
+						}
+					}
+				}
+
+			}
+		}
+
+	}

@@ -1,0 +1,158 @@
+/*
+    Page Layouts - General Containers for Site Layout
+    ========================================================================== */
+
+/*
+	Main Containers
+	-------------------------------------  */
+	.l-main-container{
+		display: table;
+		position: relative;
+		height: 100%;
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	.l-container{
+		display: table-cell;
+		width: 100%;
+		height: 100%;
+	}
+
+
+/*
+	Boxed Layout
+	-------------------------------------  */
+
+    // assigned to 'body' tag
+    .l-boxed{
+        @include center($container-xl, $container-padding);
+    }
+
+    .section-title{
+
+        .view-all{
+            float: right;
+        }
+
+        .slider-nav{
+            float: right;
+            li{
+                display: inline-block;
+            }
+        }
+    }
+
+/*
+	Slide - Header, Footer, Side - Push Helper
+	-------------------------------------  */
+
+	.l-slide-push {
+		overflow-x: hidden;
+		position: relative;
+		left: 0;
+	}
+
+/*
+	Animation
+	-------------------------------------  */
+	.anim-off{ display: none; }
+
+
+
+/*
+    Element Spacing
+    ------------------------------------- */
+
+	/* Margin */
+    .l-spaced              { margin:        $s-gutter-p; }
+    .l-spaced-left         { margin-left:   $s-gutter-p; }
+    .l-spaced-right        { margin-right:  $s-gutter-p; }
+    .l-spaced-top          { margin-top:    $s-gutter-p; }
+    .l-spaced-bottom       { margin-bottom: $s-gutter-p; }
+    .l-spaced-half         { margin:        $s-gutter-half-p; }
+
+	.l-spaced-vertical     { margin-top:	$s-gutter-p; margin-bottom: $s-gutter-p; }
+	.l-spaced-horizontal   { margin-left:   $s-gutter-p; margin-right:  $s-gutter-p; }
+
+	/* Padding */
+    .l-spaced-p            { padding:        $s-gutter-p; }
+    .l-spaced-p-left       { padding-left:   $s-gutter-p; }
+    .l-spaced-p-right      { padding-right:  $s-gutter-p; }
+    .l-spaced-p-top        { padding-top:    $s-gutter-p; }
+    .l-spaced-p-bottom     { padding-bottom: $s-gutter-p; }
+    .l-spaced-p-half       { padding:        $s-gutter-half-p; }
+
+	.l-spaced-p-vertical   { padding-top:	 $s-gutter-p; padding-bottom: $s-gutter-p; }
+	.l-spaced-p-horizontal { padding-left:   $s-gutter-p; padding-right:  $s-gutter-p; }
+
+
+/*
+    Page Heading
+    ------------------------------------- */
+    .l-page-header{
+        padding: 0 $s-gutter-p;
+        @include clearfix;
+    }
+
+	.l-page-title{
+
+		font-family: font-family(light);
+
+		span{
+			font-family: font-family(bold);
+		}
+	}
+
+/*
+    Scroll Up
+    ------------------------------------- */
+	#scrollUp-active{ display: none; }
+
+	#scrollUp{
+		position: fixed;
+		right: 20px;
+		bottom: 43px;
+		z-index: 100;
+		text-align: center;
+		opacity: 0.6;
+		padding: 10px 15px;
+		display: block;
+
+		@include font-size(16px);
+		@include border-radius($s-radius);
+
+
+		&:hover{ opacity: 0.8; }
+
+	}
+
+
+//  Media Queries
+//  ==========================================================================
+
+    @include breakpoint($screen-lg-maxx){
+        .l-boxed{
+            @include center($container-lg, $container-padding);
+        }
+    }
+
+	@include breakpoint($screen-md-maxx){
+		.l-boxed{
+			@include center($container-md, $container-padding);
+	    }
+    }
+
+	@include breakpoint($screen-sm-maxx){
+		.l-boxed{
+			@include center($container-sm, $container-padding);
+	    }
+    }
+
+    @include breakpoint($screen-xs-maxx){
+		.l-container{
+			overflow: hidden;
+		}
+    }
+
+

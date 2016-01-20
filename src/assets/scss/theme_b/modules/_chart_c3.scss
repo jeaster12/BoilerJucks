@@ -1,0 +1,154 @@
+/*
+    Chart - C3
+    ========================================================================== */
+
+/*
+    C3
+    ------------------------------------- */
+
+	/*-- Chart --*/
+
+	.c3 {
+		path, line {
+			fill: none;
+			stroke: #000;
+		}
+	}
+
+	.c3-chart-arc {
+		path {
+			stroke: #fff;
+		}
+		text {
+			fill: #fff;
+		}
+	}
+
+	/*-- Axis --*/
+
+	.c3-axis-x .tick, .c3-axis-x-label, .c3-axis-y .tick, .c3-axis-y-label, .c3-axis-y2 .tick, .c3-axis-y2-label {}
+
+	/*-- Grid --*/
+
+	.c3-grid {
+		line {
+			stroke: #aaa;
+		}
+		text {
+			fill: #aaa;
+		}
+	}
+
+	/*-- Text on Chart --*/
+
+	.c3-text.c3-empty {
+		fill: #808080;
+	}
+
+
+	/*-- Point --*/
+
+	.c3-circle._expanded_ {
+		stroke: white;
+	}
+
+	.c3-selected-circle {
+		fill: white;
+	}
+
+	/*-- Region --*/
+
+	.c3-region {
+		fill: steelblue;
+	}
+
+	/*-- Legend --*/
+
+
+	.c3-legend-background {
+		fill: white;
+		stroke: lightgray;
+	}
+
+	/*-- Tooltip --*/
+
+	.c3-tooltip {
+		background-color: #fff;
+		@include box-shadow(0 1px 1px 0 rgba(0, 0, 0, 0.5));
+
+		tr {
+			// border: 1px solid #CCC;
+		}
+		th {
+			background-color: #333;
+			color: #FFF;
+		}
+		td {
+			background-color: #fff;
+			border-left: 1px dotted #999;
+		}
+	}
+
+	.c3-chart-arcs {
+		.c3-chart-arcs-background {
+			fill: #e0e0e0;
+			stroke: none;
+		}
+		.c3-chart-arcs-gauge-unit {
+			fill: #000;
+		}
+		.c3-chart-arcs-gauge-max, .c3-chart-arcs-gauge-min {
+			fill: #777;
+		}
+	}
+
+	.c3-chart-arc .c3-gauge-value {
+		fill: #000;
+	}
+
+	// Colors
+	.c3-line-1   { color: $c3-line-1-c; }
+	.c3-line-2   { color: $c3-line-2-c; }
+	.c3-line-3   { color: $c3-line-3-c; }
+
+	.c3-area-1   { color: $c3-area-1-c; }
+	.c3-area-2   { color: $c3-area-2-c; }
+
+	.c3-spline-1 { color: $c3-spline-1-c; }
+	.c3-spline-2 { color: $c3-spline-2-c; }
+	.c3-spline-3 { color: $c3-spline-3-c; }
+
+	.c3-mixed-1  { color: $c3-mixed-1-c; }
+	.c3-mixed-2  { color: $c3-mixed-2-c; }
+	.c3-mixed-3  { color: $c3-mixed-3-c; }
+
+	.c3-pie-1    { color: $c3-pie-1-c; }
+	.c3-pie-2    { color: $c3-pie-2-c; }
+	.c3-pie-3    { color: $c3-pie-3-c; }
+	.c3-pie-4    { color: $c3-pie-4-c; }
+	.c3-pie-5    { color: $c3-pie-5-c; }
+
+	.c3-donut-1  { color: $c3-donut-1-c; }
+	.c3-donut-2  { color: $c3-donut-2-c; }
+	.c3-donut-3  { color: $c3-donut-3-c; }
+	.c3-donut-4  { color: $c3-donut-4-c; }
+	.c3-donut-5  { color: $c3-donut-5-c; }
+
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }

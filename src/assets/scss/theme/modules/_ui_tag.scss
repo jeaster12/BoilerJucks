@@ -1,0 +1,163 @@
+/*
+    Tags
+    ========================================================================== */
+
+/*
+    Tag Editor
+    ------------------------------------- */
+
+	/* surrounding tag container */
+	.tag-editor {
+
+		background: $tags-bg;
+		border: 1px solid $tags-bd;
+		color: $tags-c;
+
+		/* core styles usually need no change */
+		.placeholder {
+			color: $tags-c-placeholder;
+		}
+
+		.tag-editor-spacer {
+			color: transparent;
+			background: none;
+		}
+
+		/* tag style */
+		.tag-editor-tag {
+			color: $tags-tag-c;
+			background: $tags-tag-bg;
+
+			&.active{
+				color: $tags-tag-active-c;
+			}
+		}
+
+		/* delete icon */
+		.tag-editor-delete {
+			background: $tags-delete-bg;
+		}
+
+	}
+
+	/* skin 1 */
+	.tag-skin-1 + .tag-editor {
+		background: $tags-s1-bg;
+
+		.tag-editor-tag {
+			color: $tags-s1-tag-c;
+			background: $tags-s1-tag-bg;
+
+			&.active{
+				color: $tags-s1-tag-active-c;
+			}
+		}
+	}
+
+
+	/* jQuery UI autocomplete for Tags Editor */
+	.tags-autocomplete{
+
+		.ui-widget-content {
+		  border: 1px solid $tags-autocomplete-bd;
+		  background: $tags-autocomplete-bg;
+		  color: $tags-autocomplete-c;
+		  a {
+			color: $tags-autocomplete-c;
+		  }
+		  .ui-state-hover {
+			background: $tags-autocomplete-bg-ho;
+		  }
+		}
+
+		.ui-widget-header .ui-state-hover,
+		.ui-state-focus,
+		.ui-widget-content .ui-state-focus,
+		.ui-widget-header .ui-state-focus {
+		  background: $tags-autocomplete-bg-ho;
+		}
+	}
+
+/*
+    Tagging
+    ------------------------------------- */
+
+	.tagging {
+		background: $tagging-bg;
+		border: 1px solid $tagging-bd;
+		color: $tagging-c;
+	}
+
+	.tag {
+		background: $tagging-tag-bg;
+		color: $tagging-tag-c;
+
+		span {
+			background:$tagging-tag-span-bg;
+		}
+		.tag-i {
+			color: $tagging-tagi-c;
+
+			&:hover {
+				color: $tagging-tagi-ho;
+			}
+		}
+	}
+
+	.type-zone {
+		background: $tagging-tag-input-bg;
+		border: none;
+		color: $tagging-tag-input-c;
+	}
+
+
+
+/*
+    Masterblaster
+    ------------------------------------- */
+
+	.mb-container.mb-error .mb-input {
+		border: 1px solid $mb-tag-error-bd;
+//		outline: red;
+	}
+
+	.mb-add-button {
+		color: $mb-add-button-c;
+		background: $mb-add-button-bg;
+
+		&:hover{
+			color: $mb-add-button-ho;
+			background: $mb-add-button-bg-ho;
+		}
+	}
+
+	.mb-container {
+		li.mb-tag {
+			color: $mb-tag-c;
+			background: $mb-tag-bg;
+			border: 1px solid $mb-tag-bd;
+		}
+		.mb-input {
+			border: 1px solid $mb-tag-bd;
+		}
+
+	}
+
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }

@@ -1,0 +1,42 @@
+/*
+    Progressbar
+    ========================================================================== */
+
+/*
+    Progressbar - Bootstrap
+    ------------------------------------- */
+    .progress{
+		@include border-radius($s-radius);
+		@include box-shadow(none);
+	}
+	.progress-bar{ @include box-shadow(none); }
+
+    .progress-mini{ height: 5px; }
+    .progress-small{ height: 10px; }
+    .progress-medium{ height: 15px; }
+    .progress-large{ height: 25px; }
+
+    .progress-radius-0{ @include border-radius(0); }
+    .progress-radius-2{ @include border-radius(2px); }
+    .progress-radius-4{ @include border-radius(4px); }
+    .progress-radius-6{ @include border-radius(6px); }
+    .progress-radius-8{ @include border-radius(8px); }
+    .progress-radius-10{ @include border-radius(10px); }
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }

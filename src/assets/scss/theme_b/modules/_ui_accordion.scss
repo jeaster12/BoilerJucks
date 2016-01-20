@@ -1,0 +1,94 @@
+/*
+    Accordions
+    ========================================================================== */
+
+/*
+    Bootstrap
+    ------------------------------------- */
+
+	.bs-accordion{
+
+	}
+
+/*
+    Collapse
+    ------------------------------------- */
+
+    .collapse-container{
+        h3 {
+			background: $acc-heading-bg;
+            line-height: 1.5;
+
+            a {
+//                background: url("../img/plugins/accordion/sprite.png") 15px 13px no-repeat;
+//                color: #fff;
+                border: 1px solid $acc-bd;
+            }
+
+            &:hover {
+                background: $acc-bg-ho;
+            }
+
+            &.open {
+                background: $acc-bg-open;
+            }
+        }
+
+		.content{
+			border: 1px solid $acc-bd;
+			border-top: transparent;
+		}
+    }
+
+    .animated-collapse{
+        h3 + div {
+            background: $acc-anim-bg;
+        }
+
+        h3.open + div {
+            background: $acc-anim-open-bg;
+        }
+    }
+
+
+/*
+    Collapsible
+    ------------------------------------- */
+    .collapsible-cointainer{
+
+        .collapsible, .page_collapsible {
+            color: $acc-c;
+            background: $acc-bg	;
+            border: 1px solid $acc-bd;
+        }
+
+        .collapse-open {
+            background: $acc-bg-open;
+            color: $acc-c;
+        }
+
+        div {
+          &.content {
+            background: $acc-bg;
+			border: 1px solid $acc-bd;
+          }
+        }
+    }
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }

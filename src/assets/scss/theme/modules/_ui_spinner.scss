@@ -1,0 +1,384 @@
+/*
+    Spinners
+    ========================================================================== */
+
+/*
+    Spinners
+    =============================================== */
+
+/*
+	Basic
+    ------------------------------------- */
+
+	.spinner {
+
+		&:before {
+			background-color: $spinner-overlay-color;
+			opacity: 0.3;
+		}
+
+		&:after {
+			border-top: $spinner-border-width solid $spinner-base-color;
+		}
+
+	}
+
+/*
+	Bar
+    ------------------------------------- */
+
+	.spinner.bar:after {
+		@include animation(bar 1s infinite linear);
+	}
+
+	@include keyframes(bar){
+		from { box-shadow: inset 0px 0px 0px $spinner-bar-color; }
+		to { box-shadow: inset ($spinner-width * 2) 0px 0px $spinner-bar-color; }
+	}
+
+/*
+	Blade
+    ------------------------------------- */
+
+	.spinner.blade:after {
+		border-bottom: $spinner-border-width solid $spinner-blade-color;
+	}
+
+
+/*
+	Double Up
+	------------------------------------- */
+
+	.spinner.double-up:after {
+		border-right: $spinner-border-width solid $spinner-double-up-color-one;
+		border-top: $spinner-border-width double $spinner-double-up-color-one;
+		border-left: $spinner-border-width double $spinner-double-up-color-one;
+		border-bottom: $spinner-border-width double $spinner-double-up-color-one;
+	}
+
+/*
+	Duo
+	------------------------------------- */
+
+	.spinner.duo:after {
+		border-right: $spinner-border-width solid $spinner-duo-color-one;
+		border-left: $spinner-border-width solid $spinner-duo-color-one;
+		border-top: $spinner-border-width solid $spinner-duo-color-two;
+		border-bottom: $spinner-border-width solid $spinner-duo-color-two;
+	}
+
+/*
+	Helicopter
+    ------------------------------------- */
+
+	.spinner.helicopter:after {
+		background-color: $spinner-helicopter-color;
+	}
+
+/*
+	Line
+    ------------------------------------- */
+
+	.spinner.line:after {
+		@include box-shadow(inset (-($spinner-width / 4)) 0px 0px $spinner-line-color);
+	}
+
+/*
+	Ringed
+    ------------------------------------- */
+	.spinner.ringed:after {
+		border-right: $spinner-border-width solid $spinner-ring-beam-color;
+		border-top: $spinner-border-width solid $spinner-ring-color;
+		border-left: $spinner-border-width solid $spinner-ring-color;
+		border-bottom: $spinner-border-width solid $spinner-ring-color;
+		opacity: 1;
+	}
+
+/*
+	Shadow
+    ------------------------------------- */
+
+	.spinner.shadow:after {
+		@include animation(spin-shadow .40s infinite linear);
+	}
+
+	@include keyframes(spin-shadow){
+		0% { box-shadow: inset ($spinner-width / 8) ($spinner-width / 8) ($spinner-width / 8) $spinner-box-shadow-color; }
+		25% { box-shadow: inset (-($spinner-width / 8)) ($spinner-width / 8) ($spinner-width / 8) $spinner-box-shadow-color; }
+		50% { box-shadow: inset (-($spinner-width / 8)) (-($spinner-width / 8)) ($spinner-width / 8) $spinner-box-shadow-color; }
+		100% { box-shadow: inset ($spinner-width / 8) (-($spinner-width / 8)) ($spinner-width / 8) $spinner-box-shadow-color; }
+	}
+
+/*
+	Sphere Horizontal
+	------------------------------------- */
+
+	.spinner.sphere:after {
+		@include animation(sphere .5s infinite);
+	}
+
+	@include keyframes(sphere){
+		from { box-shadow: inset ($spinner-width + 5px) 0px $spinner-width/4 $spinner-sphere-color; }
+		to { box-shadow: inset (-($spinner-width + 5px)) 0px $spinner-width/4 $spinner-sphere-color; }
+	}
+
+/*
+	Sphere Vertical
+	------------------------------------- */
+
+	.spinner.sphere.vertical:after {
+		@include animation(sphere-v .5s infinite);
+	}
+
+	@include keyframes(sphere-v){
+		from { box-shadow: inset 0px ($spinner-width + 5px) $spinner-width/4 $spinner-sphere-color; }
+		to { box-shadow: inset 0px (-($spinner-width + 5px)) $spinner-width/4 $spinner-sphere-color; }
+	}
+
+/*
+	Sphere Vertical
+	------------------------------------- */
+
+	.spinner.traditional:after {
+		border-right: $spinner-border-width solid $spinner-traditional-color-one;
+		border-top: $spinner-border-width solid $spinner-traditional-color-one;
+		border-left: $spinner-border-width solid $spinner-traditional-color-two;
+		border-bottom: $spinner-border-width solid $spinner-traditional-color-three;
+	}
+
+/*
+	Sphere Dashed
+	------------------------------------- */
+
+	.spinner.dashed:after{
+		border: dashed 1px $spinner-dashed-color;
+	}
+
+/*
+	Sphere Dashed Thick
+	------------------------------------- */
+
+	.spinner.dashed.thick:after{
+		border: dashed 2px $spinner-dashed-color;
+	}
+
+/*
+	AudioWave
+	------------------------------------- */
+
+	.spinner.audiowave:after{
+		$bg-list: ();
+		$size-list: ();
+		$n-bars: 5;
+		$bar-top-c: $spinner-audiowave-color-one;
+		$bar-bottom-c: $bar-top-c;
+		$bar-w: .5em;
+		$bar-h: 2em;
+		$bar-space: .125em;
+
+		@for $i from 0 to $n-bars {
+			$bg-list: $bg-list,
+			linear-gradient($bar-top-c, $bar-bottom-c)
+			if($i > 0, $i*($bar-w + $bar-space), 0) 50%;
+			$size-list: $size-list, $bar-w $bar-h/8;
+		}
+
+		background: $bg-list;
+		background-repeat: no-repeat;
+		background-size: $size-list;
+		border-radius: 0;
+		border-top: 0;
+		@include animation(audioWave 1.5s linear infinite);
+
+		@at-root {
+			@include keyframes(audioWave){
+				@for $i from 0 to $n-bars {
+					#{25% + $i*100%/8} {
+						$bg-list: ();
+						$size-list: ();
+						$bar-full-exp-top-c: $spinner-audiowave-color-two;
+						$bar-full-exp-bottom-c: $bar-full-exp-top-c;
+
+						@for $j from 0 to $n-bars {
+							$bar-curr-top-c: $bar-top-c;
+							$bar-curr-bottom-c: $bar-bottom-c;
+							$bar-curr-h: $bar-h/8;
+
+							@if $i == $j {
+								$bar-curr-top-c: $bar-full-exp-top-c;
+								$bar-curr-bottom-c: $bar-full-exp-bottom-c;
+								$bar-curr-h: $bar-h;
+							}
+
+							$bg-list: $bg-list,
+							linear-gradient($bar-curr-top-c, $bar-curr-bottom-c)
+							if($j > 0, $j*($bar-w + $bar-space), 0) 50%;
+							$size-list: $size-list,
+							$bar-w $bar-curr-h;
+						}
+
+						background: $bg-list;
+						background-repeat: no-repeat;
+						background-size: $size-list;
+					}
+				}
+			}
+		}
+	}
+
+/*
+	Snake
+	------------------------------------- */
+
+	.spinner.snake:after{
+		$n: 5;
+		$d: 1.25em;
+		$space: .125em;
+		$sh-list: ();
+		$base-angle: 360deg/$n;
+		$sh-c: $spinner-snake-color-three;
+
+		@for $i from 0 to $n {
+			$curr-angle: $i*$base-angle;
+			$curr-c: mix($spinner-snake-color-one, $spinner-snake-color-two, ($i + .5)/$n*100%);
+			$x: ($i + 1)*($d + $space);
+			$y: $d/4*sin($curr-angle);
+
+			$sh-list: $sh-list,
+			$x $y $curr-c, $x (-$y) $d/2 (-$d/4) $sh-c;
+		}
+
+		width: $d; height: $d;
+		border-radius: 50%;
+		border-top: 0;
+		box-shadow: $sh-list;
+		margin: -10px 0 0 -10px;
+		@include transform(translate(-($n + 1)*($d + $space)/2));
+		@include animation(snake 2s linear infinite);
+
+		@at-root {
+			@include keyframes(snake){
+				@for $j from 0 through $n {
+					#{$j*100%/$n} {
+						$sh-list: ();
+
+						@for $i from 0 to $n {
+							$curr-angle: ($i + $j)*$base-angle;
+							$curr-c: mix($spinner-snake-color-one, $spinner-snake-color-two, (($i + $j)%$n + .5)/$n*100%);
+							$x: ($i + 1)*($d + $space);
+							$y: $d/4*sin($curr-angle);
+
+							$sh-list: $sh-list,
+							$x $y $curr-c, $x (-$y) $d/2 (-$d/4) $sh-c;
+						}
+
+						box-shadow: $sh-list;
+					}
+				}
+			}
+		}
+	}
+
+
+/*
+	Spinning Disc
+	------------------------------------- */
+
+	.spinner.spinningdisc:after {
+		$d: 2em;
+		$bw: .5em;
+		$ccp: $spinner-spinningdisc-color-one;
+		$ccs: $spinner-spinningdisc-color-two;
+		$bcp: $spinner-spinningdisc-color-three;
+		$bcs: $ccp;
+
+		border: solid $bw $bcp;
+		border-right-color: transparent;
+		border-left-color: transparent;
+		padding: $bw;
+		border-radius: 50%;
+		background: $ccp;
+		background-clip: content-box;
+		@include animation(spinDisc 1.5s linear infinite);
+
+		@at-root {
+			@include keyframes(spinDisc){
+				50% {
+					border-top-color: $bcs;
+					border-bottom-color: $bcs;
+					background-color: $ccs;
+				}
+				100% { @include transform(rotate(1turn)); }
+			}
+		}
+	}
+
+/*
+	Glistening Window
+	------------------------------------- */
+
+	.spinner.glisteningwindow:after {
+		$d: .25em;
+		$k: 4;
+		$sh-list: ();
+		$c-list: $spinner-glisteningwindow-color-one $spinner-glisteningwindow-color-two $spinner-glisteningwindow-color-three $spinner-glisteningwindow-color-four;
+		$n: length($c-list);
+		$base-angle:360deg/$n;
+
+		@for $i from 0 to $n {
+			$curr-angle: ($i + .5)*$base-angle;
+
+			$sh-list: $sh-list,
+			$k*$d*cos($curr-angle) $k*$d*sin($curr-angle)
+			0 $d*sin($i*$base-angle/2)
+			nth($c-list, $i + 1);
+		}
+
+		width: $d; height: $d;
+		box-shadow: $sh-list;
+		border-top: 0;
+		border-radius: 0;
+		margin: 0;
+		@include animation(gw 1s ease-in-out infinite, rot 2.8s linear infinite);
+
+		@at-root {
+			@include keyframes(rot) { to { transform: rotate(360deg); } }
+
+			@include keyframes(gw) {
+				@for $j from 0 through $n {
+					#{$j*100%/$n} {
+						$sh-list: ();
+
+						@for $i from 0 to $n {
+							$curr-angle: ($i + .5)*$base-angle;
+
+							$sh-list: $sh-list,
+							$k*$d*cos($curr-angle) $k*$d*sin($curr-angle)
+							0 $d/2 + abs(3*$d/2*sin(($j + $i)*$base-angle/2))
+							nth($c-list, $i + 1);
+						}
+
+						box-shadow: $sh-list;
+					}
+				}
+			}
+		}
+	}
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }

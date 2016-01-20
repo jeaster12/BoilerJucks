@@ -1,0 +1,72 @@
+/*
+    Typography
+    ========================================================================== */
+
+    .sep-bottom{
+		border-bottom: 1px solid $sep-bottom;
+    }
+
+	mark{ background: $mark-bg; }
+
+	// Code
+	code{ color: $code-c; background: $code-bg; }
+
+	// Text
+	.text-primary{ color: $text-primary-c; }
+	.text-success{ color: $text-success-c; }
+	.text-info	 { color: $text-info-c; }
+	.text-warning{ color: $text-warning-c; }
+	.text-danger { color: $text-danger-c; }
+	.text-dark   { color: $text-dark-c; }
+
+	// Backgrounds
+	.bg-primary { background: $bg-primary-bg; color: $bg-primary-c; }
+	.bg-success { background: $bg-success-bg; }
+	.bg-info	{ background: $bg-info-bg; }
+	.bg-warning { background: $bg-warning-bg; }
+	.bg-danger  { background: $bg-danger-bg; }
+
+	// Labels and Badges
+	.label-default, .badge-default { background: $label-badge-default-bg; color: $label-badge-primary-c; }
+	.label-primary, .badge-primary { background: $label-badge-primary-bg; }
+	.label-success, .badge-success { background: $label-badge-success-bg; }
+	.label-info,    .badge-info    { background: $label-badge-info-bg;    }
+	.label-warning, .badge-warning { background: $label-badge-warning-bg; }
+	.label-danger,  .badge-danger  { background: $label-badge-danger-bg;  }
+	.label-dark,    .badge-dark    { background: $label-badge-dark-bg;  }
+
+	// Alerts
+	.alert .alert-link{
+		font-family: font-family(semibold);
+	}
+
+	.alert-success { @include alert-variant($alert-success-bg, $alert-success-bd, $alert-success-c); }
+	.alert-info    { @include alert-variant($alert-info-bg, $alert-info-bd, $alert-info-c); }
+	.alert-warning { @include alert-variant($alert-warning-bg, $alert-warning-bd, $alert-warning-c); }
+	.alert-danger  { @include alert-variant($alert-danger-bg, $alert-danger-bd, $alert-danger-c); }
+	.alert-dark    { @include alert-variant($alert-dark-bg, $alert-dark-bd, $alert-dark-c); }
+
+	//  Theme
+	//  ==========================================================================
+
+	.t-background{
+		text-indent: 10px;
+	}
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }

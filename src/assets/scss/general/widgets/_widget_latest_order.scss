@@ -1,0 +1,161 @@
+/*
+    Widget - Latest Orders
+    ========================================================================== */
+
+/*
+    Common
+    ------------------------------------- */
+	.widget-latest-orders{
+		padding: 15px 0;
+		position: relative;
+
+		h4{
+
+			.weekly{
+				float: right;
+				@include font-size(13px);
+				font-family: font-family(base);
+
+				span{
+					@include font-size(16px);
+					margin-right: 5px;
+				}
+			}
+		}
+
+		.widget-latest-orders-info{
+
+		}
+
+		td{
+			padding:15px 10px !important;
+		}
+		
+		th{
+		}
+
+		.view-all{
+			display: block;
+			padding:0 0 5px 30px;
+			i{
+				margin-right: 5px;
+			}
+		}
+
+		.total{
+			@include font-size(18px);
+			float: right;
+			padding-right: 30px;
+
+			span{
+				margin-left: 5px;
+				font-family: font-family(semibold);
+				@include font-size(20px);
+			}
+		}
+
+		.table-order-header{
+			margin-bottom: 0;
+		}
+
+		.table-order-body{
+			margin-bottom: 20px;
+
+			table{
+				margin-bottom: 0;
+			}
+		}
+
+
+		.tb-col-1{
+			width: 5%;
+			text-align: center;
+		}
+
+		.tb-col-2{
+			width: 30%;
+			font-family: font-family(semibold);
+		}
+
+		.tb-col-3{
+			width: 15%;
+			text-align: center;
+		}
+
+		.tb-col-4{
+			width: 25%;
+			text-align: center;
+		}
+
+		.tb-col-5{
+			width: 25%;
+			text-align: center;
+		}
+	}
+
+
+//  State
+//  -------------------------------------
+	.is-latest-orders{
+
+	}
+
+	.is-latest-orders{
+
+	}
+
+
+/*
+    Latest Orders in Header
+    ------------------------------------- */
+	.latest-orders-in-header{
+
+	}
+
+/*
+    Latest Orders in Sidebar
+    ------------------------------------- */
+	.latest-orders-in-side{
+
+	}
+
+/*
+    Latest Orders in Box
+    ------------------------------------- */
+	.latest-orders-in-box{
+
+	}
+
+//  Theme
+//  -------------------------------------
+	.t-latest-orders-1{
+
+	}
+
+	.t-latest-orders-2{
+
+	}
+
+	.t-latest-orders-3{
+
+	}
+
+
+
+//  Media Queries
+//  ==========================================================================
+	@include breakpoint($screen-lg-maxx){
+
+	}
+
+	@include breakpoint($screen-md-maxx){
+
+	}
+
+	@include breakpoint($screen-sm-maxx){
+
+	}
+
+	@include breakpoint($screen-xs-maxx){
+
+	}

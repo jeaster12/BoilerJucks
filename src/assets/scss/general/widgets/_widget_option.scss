@@ -1,0 +1,110 @@
+/*
+    Widget - Options
+    ========================================================================== */
+
+/*
+    Common
+    ------------------------------------- */
+	.widget-options{
+		position: absolute;
+		top: 5px;
+
+		ul{
+			li{
+				padding-bottom: 8px;
+			}
+		}
+
+		a{
+			width: 16px;
+			height: 16px;
+			display: block;
+			text-align: center;
+		}
+
+		.widget-info-header{
+			@include group;
+		}
+
+		.option-main-item,
+		.option-sub-item{
+			display: none;
+		}
+	}
+
+
+//  State
+//  -------------------------------------
+	.is-options-right{
+		right: 5px;
+
+		> li {
+			float: left;
+			padding-left: 8px;
+		}
+	}
+
+	.is-options-left{
+		left: 5px;
+
+		> li {
+			float: right;
+			padding-right: 8px;
+		}
+	}
+
+
+/*
+    Options in Header
+    ------------------------------------- */
+	.options-in-header{
+
+	}
+
+/*
+    Options in Sidebar
+    ------------------------------------- */
+	.options-in-side{
+
+	}
+
+/*
+    Options in Box
+    ------------------------------------- */
+	.options-in-box{
+
+	}
+
+//  Theme
+//  -------------------------------------
+	.t-options-1{
+
+	}
+
+	.t-options-2{
+
+	}
+
+	.t-options-3{
+
+	}
+
+
+
+//  Media Queries
+//  ==========================================================================
+	@include breakpoint($screen-lg-maxx){
+
+	}
+
+	@include breakpoint($screen-md-maxx){
+
+	}
+
+	@include breakpoint($screen-sm-maxx){
+
+	}
+
+	@include breakpoint($screen-xs-maxx){
+
+	}

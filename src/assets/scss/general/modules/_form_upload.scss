@@ -1,0 +1,423 @@
+/*
+    Form - Upload
+    ========================================================================== */
+
+
+/*
+    Bootstrap File Upload
+    ------------------------------------- */
+	.btn-file {
+		position: relative;
+		overflow: hidden;
+
+		input[type=file] {
+			position: absolute;
+			top: 0;
+			right: 0;
+			min-width: 100%;
+			min-height: 100%;
+			font-size: 100px;
+			text-align: right;
+			filter: alpha(opacity=0);
+			opacity: 0;
+			cursor: inherit;
+			display: block;
+		}
+	}
+
+	input[readonly] {
+		cursor: text !important;
+	}
+
+/*
+    jQuery File Upload
+    ------------------------------------- */
+
+
+	/*  ----- Basic Setup ----- */
+
+	.fileinput-button {
+		position: relative;
+		overflow: hidden;
+		input {
+			position: absolute;
+			top: 0;
+			right: 0;
+			margin: 0;
+			opacity: 0;
+			-ms-filter: 'alpha(opacity=0)';
+			font-size: 200px;
+			direction: ltr;
+			cursor: pointer;
+		}
+	}
+
+	/* Fixes for IE < 8 */
+	@media screen\9 {
+		.fileinput-button input {
+			filter: alpha(opacity=0);
+			font-size: 100%;
+			height: 100%;
+		}
+	}
+
+
+	/*  ----- UI Setup ----- */
+
+	.fileupload-buttonbar {
+		.btn, .toggle {
+			margin: 0 5px 5px 0;
+		}
+
+		i{
+			margin-right: 5px;
+			vertical-align: text-top;
+		}
+	}
+
+	.progress-animated {
+		.progress-bar, .bar {
+			background: url("../img/plugins/jquery_file_upload/progressbar.gif") !important;
+			filter: none;
+		}
+	}
+
+	.fileupload-process {
+		float: right;
+		display: none;
+	}
+
+	.fileupload-processing .fileupload-process {
+		display: block;
+		width: 32px;
+		height: 32px;
+		background: url("../img/plugins/jquery_file_upload/loading.gif") center no-repeat;
+		background-size: contain;
+	}
+
+	.files {
+		.processing .preview {
+			display: block;
+			width: 32px;
+			height: 32px;
+			background: url("../img/plugins/jquery_file_upload/loading.gif") center no-repeat;
+			background-size: contain;
+		}
+		audio, video {
+			max-width: 300px;
+		}
+	}
+
+	.template-upload,
+	.template-download{
+		.btn{
+			margin-right: 5px;
+		}
+
+		i{
+			margin-right: 5px;
+			vertical-align: text-top;
+		}
+	}
+
+/*
+    Blueimp Gallery for jQuery File Upload
+    ------------------------------------- */
+	.blueimp-gallery {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		/* Prevent artifacts in Mozilla Firefox: */
+		-moz-backface-visibility: hidden;
+		> .slides > .slide > .slide-content {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			/* Prevent artifacts in Mozilla Firefox: */
+			-moz-backface-visibility: hidden;
+			margin: auto;
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+			opacity: 1;
+		}
+		position: fixed;
+		z-index: 999999;
+		overflow: hidden;
+		background: #000;
+		background: rgba(0, 0, 0, 0.9);
+		opacity: 0;
+		display: none;
+		direction: ltr;
+		-ms-touch-action: none;
+		touch-action: none;
+	}
+
+	.blueimp-gallery-carousel {
+		position: relative;
+		z-index: auto;
+		margin: 1em auto;
+		/* Set the carousel width/height ratio to 16/9: */
+		padding-bottom: 56.25%;
+		box-shadow: 0 0 10px #000;
+		-ms-touch-action: pan-y;
+		touch-action: pan-y;
+	}
+
+	.blueimp-gallery-display {
+		display: block;
+		opacity: 1;
+	}
+
+	.blueimp-gallery > .slides {
+		position: relative;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	.blueimp-gallery-carousel > .slides {
+		position: absolute;
+	}
+
+	.blueimp-gallery {
+		> {
+			.slides > {
+				.slide {
+					position: relative;
+					float: left;
+					height: 100%;
+					text-align: center;
+					-webkit-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+					-moz-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+					-ms-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+					-o-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+					transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+					> .slide-content {
+						-webkit-transition: opacity 0.5s linear;
+						-moz-transition: opacity 0.5s linear;
+						-ms-transition: opacity 0.5s linear;
+						-o-transition: opacity 0.5s linear;
+						transition: opacity 0.5s linear;
+					}
+				}
+				.slide-loading {
+					background: url(../img/plugins/blueimp_gallery/loading.gif) center no-repeat;
+					background-size: 64px 64px;
+					> .slide-content {
+						opacity: 0;
+					}
+				}
+				.slide-error {
+					background: url(../img/plugins/blueimp_gallery/error.png) center no-repeat;
+					> .slide-content {
+						display: none;
+					}
+				}
+			}
+			.prev {
+				position: absolute;
+				top: 50%;
+				left: 15px;
+				width: 40px;
+				height: 40px;
+				margin-top: -23px;
+				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+				font-size: 60px;
+				font-weight: 100;
+				line-height: 30px;
+				color: #fff;
+				text-decoration: none;
+				text-shadow: 0 0 2px #000;
+				text-align: center;
+				background: #222;
+				background: rgba(0, 0, 0, 0.5);
+				-webkit-box-sizing: content-box;
+				-moz-box-sizing: content-box;
+				box-sizing: content-box;
+				border: 3px solid #fff;
+				-webkit-border-radius: 23px;
+				-moz-border-radius: 23px;
+				border-radius: 23px;
+				opacity: 0.5;
+				cursor: pointer;
+				display: none;
+			}
+			.next {
+				position: absolute;
+				top: 50%;
+				left: 15px;
+				width: 40px;
+				height: 40px;
+				margin-top: -23px;
+				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+				font-size: 60px;
+				font-weight: 100;
+				line-height: 30px;
+				color: #fff;
+				text-decoration: none;
+				text-shadow: 0 0 2px #000;
+				text-align: center;
+				background: #222;
+				background: rgba(0, 0, 0, 0.5);
+				-webkit-box-sizing: content-box;
+				-moz-box-sizing: content-box;
+				box-sizing: content-box;
+				border: 3px solid #fff;
+				-webkit-border-radius: 23px;
+				-moz-border-radius: 23px;
+				border-radius: 23px;
+				opacity: 0.5;
+				cursor: pointer;
+				display: none;
+				left: auto;
+				right: 15px;
+			}
+			.close, .title {
+				position: absolute;
+				top: 15px;
+				left: 15px;
+				margin: 0 40px 0 0;
+				font-size: 20px;
+				line-height: 30px;
+				color: #fff;
+				text-shadow: 0 0 2px #000;
+				opacity: 0.8;
+				display: none;
+			}
+			.close {
+				padding: 15px;
+				right: 15px;
+				left: auto;
+				margin: -15px;
+				font-size: 30px;
+				text-decoration: none;
+				cursor: pointer;
+			}
+			.play-pause {
+				position: absolute;
+				right: 15px;
+				bottom: 15px;
+				width: 15px;
+				height: 15px;
+				background: url(../img/plugins/blueimp_gallery/play-pause.png) 0 0 no-repeat;
+				cursor: pointer;
+				opacity: 0.5;
+				display: none;
+			}
+		}
+		-webkit-transition: opacity 0.5s linear;
+		-moz-transition: opacity 0.5s linear;
+		-ms-transition: opacity 0.5s linear;
+		-o-transition: opacity 0.5s linear;
+		transition: opacity 0.5s linear;
+	}
+
+	.blueimp-gallery-playing > .play-pause {
+		background-position: -15px 0;
+	}
+
+	.blueimp-gallery > {
+		.prev:hover, .next:hover, .close:hover, .title:hover, .play-pause:hover {
+			color: #fff;
+			opacity: 1;
+		}
+	}
+
+	.blueimp-gallery-controls > {
+		.prev, .next, .close, .title, .play-pause {
+			display: block;
+			/* Fix z-index issues (controls behind slide element) on Android: */
+			-webkit-transform: translateZ(0);
+			-moz-transform: translateZ(0);
+			-ms-transform: translateZ(0);
+			-o-transform: translateZ(0);
+			transform: translateZ(0);
+		}
+	}
+
+	.blueimp-gallery-single > .prev, .blueimp-gallery-left > .prev, .blueimp-gallery-single > .next, .blueimp-gallery-right > .next, .blueimp-gallery-single > .play-pause {
+		display: none;
+	}
+
+	.blueimp-gallery > {
+		.slides > .slide > .slide-content, .prev, .next, .close, .play-pause {
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+	}
+
+	/* Replace PNGs with SVGs for capable browsers (excluding IE<9) */
+
+	body:last-child {
+		.blueimp-gallery > {
+			.slides > .slide-error {
+				background-image: url(../img/plugins/blueimp_gallery/error.svg);
+			}
+			.play-pause {
+				width: 20px;
+				height: 20px;
+				background-size: 40px 20px;
+				background-image: url(../img/plugins/blueimp_gallery/play-pause.svg);
+			}
+		}
+		.blueimp-gallery-playing > .play-pause {
+			background-position: -20px 0;
+		}
+	}
+
+	/* IE7 fixes */
+
+	* + html .blueimp-gallery > .slides > .slide {
+		min-height: 300px;
+		> .slide-content {
+			position: relative;
+		}
+	}
+
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+    /*
+        jQuery File Upload
+        ------------------------------------- */
+
+        .fileupload-buttonbar .toggle {
+            display: none;
+        }
+        .files {
+            .toggle, .btn span {
+              display: none;
+            }
+            .name {
+              width: 80px;
+              word-wrap: break-word;
+            }
+            audio, video {
+              max-width: 80px;
+            }
+            img, canvas {
+              max-width: 100%;
+            }
+        }
+    }

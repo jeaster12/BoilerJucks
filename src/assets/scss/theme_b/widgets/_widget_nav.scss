@@ -1,0 +1,131 @@
+/*
+    Widget - Navigation
+    ========================================================================== */
+
+/*
+    Common
+    ------------------------------------- */
+	.widget-nav{
+
+	}
+
+//  State
+//  -------------------------------------
+	.is-nav{
+
+	}
+
+	.is-nav{
+
+	}
+
+
+/*
+    Navigation in Header
+    ------------------------------------- */
+	.nav-in-header{
+
+	}
+
+
+/*
+    Navigation in Box
+    ------------------------------------- */
+	.nav-in-box{
+
+	}
+
+
+/*
+    Navigation in Sidebar
+    ------------------------------------- */
+	.nav-in-side{
+
+	}
+
+//  Compact State
+//  -------------------------------------
+
+	.l-sidebar-compact-left,
+	.l-sidebar-compact-right{
+
+	}
+
+//  Collapsed State
+//  -------------------------------------
+
+	.l-sidebar-collapsed-left,
+	.l-sidebar-collapsed-right{
+
+		.nav-text{
+			background: $nav-t-1-a-ho;
+			border: 1px solid $nav-t-1-a-bd;
+		}
+
+	}
+
+
+//  Theme
+//  -------------------------------------
+	.t-nav-1{
+
+		a{
+			border-bottom: 1px solid $nav-t-1-a-bd;
+
+			&:hover{
+				background: $nav-t-1-a-ho;
+
+				.nav-icon{
+					i{
+						background: $nav-t-1-icon-bg-ho;
+						border: 1px solid $nav-t-1-icon-bd-ho;
+					}
+				}
+
+			}
+		}
+
+		.nav-icon{
+			i{
+				border: 1px solid $nav-t-1-icon-bd;
+			}
+		}
+	}
+
+	.t-nav-2{
+		a {
+			&:hover {
+				background: $nav-t-2-a-ho;
+			}
+		}
+	}
+
+	.t-nav-3{
+		a {
+			&:hover {
+				background: $nav-t-3-a-ho;
+			}
+		}
+	}
+
+
+
+
+
+//  Media Queries
+//  ==========================================================================
+	@include breakpoint($screen-lg-maxx){
+
+	}
+
+	@include breakpoint($screen-md-maxx){
+
+	}
+
+	@include breakpoint($screen-sm-maxx){
+
+	}
+
+	@include breakpoint($screen-xs-maxx){
+
+	}

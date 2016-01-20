@@ -1,0 +1,210 @@
+/*
+    Widget - Chat
+    ========================================================================== */
+
+/*
+    Common
+    ------------------------------------- */
+	.widget-chat{
+		margin-bottom: 5px;
+	}
+
+	.widget-chat-header{
+		@include group;
+		padding: 15px 15px 15px 30px;
+
+		h4{
+			margin: 6px 0;
+		}
+
+		a{
+			padding: 6px 15px;
+		}
+	}
+
+	.widget-chat-new{
+
+	}
+
+	.widget-chat-body{
+
+		.chat-row{
+
+		}
+
+		.chat-user{
+			display: block;
+			padding:10px 15px 10px 30px;
+			@include group;
+
+			h5{
+				margin-bottom: 0;
+				font-family: font-family(semibold);
+			}
+		}
+
+		.chat-img{
+			position: relative;
+
+			@include span(2/10);
+
+			img{
+				max-width: 50px;
+				@include border-radius(50%);
+			}
+
+			i{
+				position: absolute;
+				left: 0;
+				top: -4px;
+				@include font-size(10px);
+			}
+		}
+
+		.chat-info{
+			@include span(7/10);
+
+			.mood{
+				@include font-size(12px);
+			}
+		}
+
+		.chat-status{
+			text-align: center;
+			@include span(1/10);
+
+			i{
+				margin-left: 3px;
+			}
+
+			li{
+				padding-left: 5px;
+			}
+
+			.label{
+				padding: .3em .6em .2em;
+				font-weight: normal;
+			}
+		}
+
+		.chat-conversation{
+			display: none;
+			@include group;
+
+			.chat-user{
+
+				h5{
+					margin-bottom: 5px;
+				}
+			}
+		}
+
+		.chat-date-start{
+			text-align: center;
+			font-family: font-family(semibold);
+			padding: 15px 0;
+			line-height: 1;
+		}
+
+		.chat-info-conv{
+			@include span(8/10);
+		}
+
+		.chat-message{
+			@include group;
+		}
+
+		.chat-more-message{
+			margin-top: 10px;
+			padding-top: 10px;
+		}
+
+		.chat-text{
+			@include span(8/10);
+		}
+
+		.chat-time{
+			@include span(2/10);
+		}
+
+		.chat-input{
+			margin-top: 20px;
+			@include group;
+		}
+	}
+
+
+//  State
+//  -------------------------------------
+	.is-chat{
+
+	}
+
+	.is-chat{
+
+	}
+
+
+/*
+    Chat in Header
+    ------------------------------------- */
+	.chat-in-header{
+
+	}
+
+/*
+    Chat in Sidebar
+    ------------------------------------- */
+	.chat-in-side{
+
+	}
+
+/*
+    Chat in Box
+    ------------------------------------- */
+	.chat-in-box{
+
+	}
+
+//  Theme
+//  -------------------------------------
+	.t-chat-1{
+
+	}
+
+	.t-chat-2{
+
+	}
+
+	.t-chat-3{
+
+	}
+
+
+
+//  Media Queries
+//  ==========================================================================
+	@include breakpoint($screen-lg-maxx){
+
+	}
+
+	@include breakpoint($screen-md-maxx){
+
+		.widget-chat-body {
+			.chat-img {
+				img { max-width: 45px; }
+			}
+		}
+	}
+
+	@include breakpoint($screen-sm-maxx){
+		.widget-chat-body {
+			.chat-img {
+				img { max-width: 36px; }
+			}
+		}
+	}
+
+	@include breakpoint($screen-xs-maxx){
+
+	}

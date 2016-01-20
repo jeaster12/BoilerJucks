@@ -1,0 +1,335 @@
+//  ==========================================================================
+//  Helpers
+//  ==========================================================================
+
+/*
+    Clearfix and Group
+    ------------------------------------- */
+
+	.clearfix{ @include clearfix; }
+	.group { @include group; }
+
+/*
+    Size - width and height
+    ------------------------------------- */
+
+	/* Width */
+	.full-width{ width: 100%; }
+	.half-width{ width: 50%; }
+
+	/* Height */
+	.full-height{ height: 100%; }
+
+	/* Other */
+	.full-width-height{
+	  width: 100%;
+	  height: 100%;
+	  overflow: hidden;
+	}
+
+	.min-height-10   { min-height: 10px; }
+	.min-height-800  { min-height: 800px; }
+	.min-height-900  { min-height: 900px; }
+	.min-height-1500 { min-height: 1500px; }
+
+/*
+    Font Family
+    ------------------------------------- */
+
+	.font-extralight { font-family: font-family(extralight); }
+	.font-light 	 { font-family: font-family(light); }
+	.font-base       { font-family: font-family(base); }
+	.font-semibold   { font-family: font-family(semibold); }
+	.font-bold       { font-family: font-family(bold); }
+
+/*
+    Font Size
+    ------------------------------------- */
+
+	@include make-font-size-classes; // .fz-10{ @include font-size(10px); }
+
+/*
+    Z-index
+    ------------------------------------- */
+
+	@include make-z-index-classes; // .z-index-100 { z-index: 100; }
+
+
+/*
+    Line Height
+    ------------------------------------- */
+	.lh-2-4 { line-height: 2.4; }
+
+/*
+    Text
+    ------------------------------------- */
+
+	.text-lc{ text-transform: lowercase; }
+	.text-uc{ text-transform: uppercase; }
+	.text-cap{ text-transform: capitalize; }
+
+	.tal{ text-align: left; }
+	.tac{ text-align: center; }
+	.tar{ text-align: right; }
+
+/*
+    Display
+    ------------------------------------- */
+
+	.visuallyhidden {
+		border: 0;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
+	}
+
+	.visuallyhidden.focusable:active,
+	.visuallyhidden.focusable:focus {
+		clip: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		position: static;
+		width: auto;
+	}
+
+	.invisible { visibility: hidden; }
+
+	.block{ display: block !important; }
+	.inline{ display: inline !important; }
+	.inline-block{ display: inline-block !important; }
+
+/*
+    Overflow
+    ------------------------------------- */
+	.of-h { overflow: hidden; }
+
+/*
+    Borders
+    ------------------------------------- */
+	.no-border{ border: 1px solid transparent !important; }
+	.bd-n { border: 	   none !important; }
+	.bdt-n{ border-top:    none !important; }
+	.bdr-n{ border-right:  none !important; }
+	.bdb-n{ border-bottom: none !important; }
+	.bdl-n{ border-left:   none !important; }
+
+/*
+    Alignment
+    ------------------------------------- */
+
+	.align-left,  .fl { @include float-left; }
+	.align-right, .fr { @include float-right; }
+	.fn { float: none; }
+
+	.vat{ vertical-align: top; }
+	.vam{ vertical-align: middle; }
+	.vab{ vertical-align: bottom; }
+	.vas{ vertical-align: sub; }
+
+	/* Margin */
+	.m { margin: 		$s-gutter-p; }
+	.mt{ margin-top:    $s-gutter-p; }
+	.mr{ margin-right:  $s-gutter-p; }
+	.mb{ margin-bottom: $s-gutter-p; }
+	.ml{ margin-left:   $s-gutter-p; }
+
+	.mv{ margin-top:	$s-gutter-p; margin-bottom: $s-gutter-p; } // margin vertical
+	.mh{ margin-left:   $s-gutter-p; margin-right:  $s-gutter-p; } // margin horizontal
+
+	.m-0 { margin:        0; }
+	.mt-0{ margin-top:    0; }
+	.mr-0{ margin-right:  0; }
+	.mb-0{ margin-bottom: 0; }
+	.ml-0{ margin-left:   0; }
+
+	.m-5 { margin:		  5px; }
+	.mt-5{ margin-top:    5px; }
+	.mr-5{ margin-right:  5px; }
+	.mb-5{ margin-bottom: 5px; }
+	.ml-5{ margin-left:   5px; }
+
+	.m-10 { margin:    	   10px; }
+	.mt-10{ margin-top:    10px; }
+	.mr-10{ margin-right:  10px; }
+	.mb-10{ margin-bottom: 10px; }
+	.ml-10{ margin-left:   10px; }
+
+	.m-15 { margin:    	   15px; }
+	.mt-15{ margin-top:    15px; }
+	.mr-15{ margin-right:  15px; }
+	.mb-15{ margin-bottom: 15px; }
+	.ml-15{ margin-left:   15px; }
+
+	.m-20 { margin:    	   20px; }
+	.mt-20{ margin-top:    20px; }
+	.mr-20{ margin-right:  20px; }
+	.mb-20{ margin-bottom: 20px; }
+	.ml-20{ margin-left:   20px; }
+
+	/* Padding */
+	.p { padding: 		 $s-gutter-p; }
+	.pt{ padding-top:    $s-gutter-p; }
+	.pr{ padding-right:  $s-gutter-p; }
+	.pb{ padding-bottom: $s-gutter-p; }
+	.pl{ padding-left:   $s-gutter-p; }
+
+	.pv{ padding-top:	 $s-gutter-p; padding-bottom: $s-gutter-p; } // padding vertical
+	.ph{ padding-left:   $s-gutter-p; padding-right:  $s-gutter-p; } // padding horizontal
+
+	.p-0 { padding:        0; }
+	.pt-0{ padding-top:    0; }
+	.pr-0{ padding-right:  0; }
+	.pb-0{ padding-bottom: 0; }
+	.pl-0{ padding-left:   0; }
+
+	.p-5 { padding:        5px; }
+	.pt-5{ padding-top:    5px; }
+	.pr-5{ padding-right:  5px; }
+	.pb-5{ padding-bottom: 5px; }
+	.pl-5{ padding-left:   5px; }
+
+	.p-10 { padding:        10px; }
+	.pt-10{ padding-top:    10px; }
+	.pr-10{ padding-right:  10px; }
+	.pb-10{ padding-bottom: 10px; }
+	.pl-10{ padding-left:   10px; }
+
+	.p-15 { padding:        15px; }
+	.pt-15{ padding-top:    15px; }
+	.pr-15{ padding-right:  15px; }
+	.pb-15{ padding-bottom: 15px; }
+	.pl-15{ padding-left:   15px; }
+
+	.p-20 { padding:        20px; }
+	.pt-20{ padding-top:    20px; }
+	.pr-20{ padding-right:  20px; }
+	.pb-20{ padding-bottom: 20px; }
+	.pl-20{ padding-left:   20px; }
+
+/*
+    Centered content on page
+    ------------------------------------- */
+
+	.center-outer{
+	  display: table;
+	  width: 100%;
+	  height: 100%;
+	}
+	.center-inner{
+	  display: table-cell;
+	  vertical-align: middle;
+	  text-align: center;
+	}
+	.center-content{
+	  position: relative;
+	  display: inline-block;
+	  width: 50%;
+	}
+
+/*
+    Responsive utilities - extends bootstrap with the new 'xl' size
+    ------------------------------------- */
+
+	@include responsive-invisibility('.visible-xl');
+
+	.visible-xl-block,
+	.visible-xl-inline,
+	.visible-xl-inline-block {
+		display: none !important;
+	}
+
+	/* 'lg' - size overwritten */
+	@media (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+		@include responsive-visibility('.visible-lg');
+	}
+	.visible-lg-block {
+		@media (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+			display: block !important;
+		}
+	}
+	.visible-lg-inline {
+		@media (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+			display: inline !important;
+		}
+	}
+	.visible-lg-inline-block {
+		@media (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+			display: inline-block !important;
+		}
+	}
+
+	@media (min-width: $screen-xl-min) {
+		@include responsive-invisibility('.visible-lg');
+	}
+	.visible-lg-block {
+		@media (min-width: $screen-xl-min) {
+			display: none !important;
+		}
+	}
+	.visible-lg-inline {
+		@media (min-width: $screen-xl-min) {
+			display: none !important;
+		}
+	}
+	.visible-lg-inline-block {
+		@media (min-width: $screen-xl-min) {
+			display: none !important;
+		}
+	}
+
+	/* 'xl' - size added */
+	@media (min-width: $screen-xl-min) {
+		@include responsive-visibility('.visible-xl');
+	}
+	.visible-xl-block {
+		@media (min-width: $screen-xl-min) {
+			display: block !important;
+		}
+	}
+	.visible-xl-inline {
+		@media (min-width: $screen-xl-min) {
+			display: inline !important;
+		}
+	}
+	.visible-xl-inline-block {
+		@media (min-width: $screen-xl-min) {
+			display: inline-block !important;
+		}
+	}
+
+	/* 'lg' - size overwritten */
+	@media (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+		@include responsive-invisibility('.hidden-lg');
+	}
+
+	/* 'xl' - size added */
+	@media (min-width: $screen-xl-min) {
+		@include responsive-invisibility('.hidden-xl');
+	}
+
+
+//  Media Queries
+//  ==========================================================================
+
+
+	@include breakpoint($screen-lg-maxx){
+
+	}
+
+	@include breakpoint($screen-md-maxx){
+
+	}
+
+	@include breakpoint($screen-sm-maxx){
+
+	}
+
+	@include breakpoint($screen-xs-maxx){
+
+	}
+

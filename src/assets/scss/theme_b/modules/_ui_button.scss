@@ -1,0 +1,269 @@
+/*
+    Button
+    ========================================================================== */
+
+	// Buttons
+	.btn{
+		&:focus, &.focus,
+		&:active, &.active{
+			@include box-shadow(inset 0 1px 1px rgba(0,0,0,.08));
+		}
+	}
+
+	.btn-link{
+		color: $btn-link-c;
+
+		&:focus, &.focus,
+		&:active, &.active{
+			@include box-shadow(none);
+		}
+	}
+
+
+	.btn-group.open .dropdown-toggle{
+		@include box-shadow(inset 0 1px 1px rgba(0,0,0,.08));
+	}
+
+	.btn-default {
+		@include button-variant($btn-default-c, $btn-default-bg, $btn-default-bd);
+	}
+	.btn-primary {
+		@include button-variant($btn-primary-c, $btn-primary-bg, $btn-primary-bd);
+	}
+	// Success appears as green
+	.btn-success {
+		@include button-variant($btn-success-c, $btn-success-bg, $btn-success-bd);
+	}
+	// Info appears as blue-green
+	.btn-info {
+		@include button-variant($btn-info-c, $btn-info-bg, $btn-info-bd);
+	}
+	// Warning appears as orange
+	.btn-warning {
+		@include button-variant($btn-warning-c, $btn-warning-bg, $btn-warning-bd);
+	}
+	// Danger and error appear as red
+	.btn-danger {
+		@include button-variant($btn-danger-c, $btn-danger-bg, $btn-danger-bd);
+	}
+	.btn-dark {
+		@include button-variant($btn-dark-c, $btn-dark-bg, $btn-dark-bd);
+	}
+
+	// Dropdowns
+
+	.dropdown-menu{
+		border: 1px solid $btn-default-bd;
+		@include box-shadow(0 1px 1px rgba(0,0,0,.1));
+
+		> li > a{
+			color: $btn-default-c;
+		}
+
+		.divider{
+			background: $btn-default-bd;
+		}
+	}
+
+	.drop-default {
+		@include dropdown-variant($btn-default-c, $btn-default-bd, $btn-default-bd);
+	}
+	.drop-primary {
+		@include dropdown-variant($btn-primary-c, $btn-primary-bg, $btn-primary-bd);
+	}
+	// Success appears as green
+	.drop-success {
+		@include dropdown-variant($btn-success-c, $btn-success-bg, $btn-success-bd);
+	}
+	// Info appears as blue-green
+	.drop-info {
+		@include dropdown-variant($btn-info-c, $btn-info-bg, $btn-info-bd);
+	}
+	// Warning appears as orange
+	.drop-warning {
+		@include dropdown-variant($btn-warning-c, $btn-warning-bg, $btn-warning-bd);
+	}
+	// Danger and error appear as red
+	.drop-danger {
+		@include dropdown-variant($btn-danger-c, $btn-danger-bg, $btn-danger-bd);
+	}
+	.drop-dark {
+		@include dropdown-variant($btn-dark-c, $btn-dark-bg, $btn-dark-bd);
+	}
+
+/*
+    Bordered Elements
+    ------------------------------------- */
+    .btn-bordered{
+        background: $btn-eff-bg;
+        color: $btn-default-c;
+
+        &.btn-primary { color: $btn-primary-c-2; }
+        &.btn-success { color: $btn-success-c-2; }
+        &.btn-info    { color: $btn-info-c-2; }
+        &.btn-warning { color: $btn-warning-c-2; }
+        &.btn-danger  { color: $btn-danger-c-2; }
+		&.btn-dark    { color: $btn-dark-c-2; }
+
+        &.btn-default:hover{ color: $btn-default-c; }
+
+        &:hover{
+            color: $btn-eff-ho;
+        }
+    }
+
+/*
+    Effects
+    ------------------------------------- */
+
+    /* --- Setup - 1 --- */
+
+    .btn-eff-1{
+        &.btn-default:hover{ color: $btn-default-c !important; }
+		&.btn-primary:hover { color: $btn-eff-1-ho !important; }
+
+        &:hover{
+          color: $btn-eff-ho !important;
+        }
+
+    }
+
+    .btn-eff{
+
+        &:before {
+            background: $btn-eff-bg;
+        }
+
+        &:hover{
+            color: $btn-default-c;
+
+            &.btn-primary { color: $btn-primary-c-2; }
+            &.btn-success { color: $btn-success-c-2; }
+            &.btn-info    { color: $btn-info-c-2; }
+            &.btn-warning { color: $btn-warning-c-2; }
+            &.btn-danger  { color: $btn-danger-c-2; }
+
+        }
+
+    }
+
+    /* --- Setup - 2 --- */
+
+    /* - Shadow Basic - */
+    .btn-shadow{
+
+        &.btn-default { @include box-shadow( 0 6px darken($btn-default-c, 1%)); }
+        &.btn-primary { @include box-shadow( 0 6px darken($btn-primary-c-2, 15%)); border: none; }
+        &.btn-success { @include box-shadow( 0 6px darken($btn-success-c-2, 15%)); border: none; }
+        &.btn-info    { @include box-shadow( 0 6px darken($btn-info-c-2,    15%)); border: none; }
+        &.btn-warning { @include box-shadow( 0 6px darken($btn-warning-c-2, 15%)); border: none; }
+        &.btn-danger  { @include box-shadow( 0 6px darken($btn-danger-c-2,  15%)); border: none; }
+		&.btn-dark    { @include box-shadow( 0 6px darken($btn-dark-c-2,    15%)); border: none; }
+    }
+
+    /* - Shadow 1 - */
+    .btn-sh-1{
+
+        &.btn-default:hover { @include box-shadow( 0 4px darken($btn-default-c, 10%)); }
+        &.btn-primary:hover { @include box-shadow( 0 4px darken($btn-primary-c-2, 20%)); }
+        &.btn-success:hover { @include box-shadow( 0 4px darken($btn-success-c-2, 20%)); }
+        &.btn-info:hover    { @include box-shadow( 0 4px darken($btn-info-c-2,    20%)); }
+        &.btn-warning:hover { @include box-shadow( 0 4px darken($btn-warning-c-2, 20%)); }
+        &.btn-danger:hover  { @include box-shadow( 0 4px darken($btn-danger-c-2,  20%)); }
+		&.btn-dark:hover    { @include box-shadow( 0 4px darken($btn-dark-c-2,    20%)); }
+    }
+
+    /* - Shadow 2 - */
+    .btn-sh-2{
+
+        &.btn-default:hover { @include box-shadow( 0 8px darken($btn-default-c, 10%)); }
+        &.btn-primary:hover { @include box-shadow( 0 8px darken($btn-primary-c-2, 20%)); }
+        &.btn-success:hover { @include box-shadow( 0 8px darken($btn-success-c-2, 20%)); }
+        &.btn-info:hover    { @include box-shadow( 0 8px darken($btn-info-c-2,    20%)); }
+        &.btn-warning:hover { @include box-shadow( 0 8px darken($btn-warning-c-2, 20%)); }
+        &.btn-danger:hover  { @include box-shadow( 0 8px darken($btn-danger-c-2,  20%)); }
+		&.btn-dark:hover  	{ @include box-shadow( 0 8px darken($btn-dark-c-2,  20%)); }
+    }
+
+    /* - Shadow Basic - */
+    .btn-shadow{
+
+        &.btn-default:active { @include box-shadow( 0 0 $btn-default-c ); }
+        &.btn-primary:active { @include box-shadow( 0 0 $btn-primary-c-2 ); }
+        &.btn-success:active { @include box-shadow( 0 0 $btn-success-c-2 ); }
+        &.btn-info:active    { @include box-shadow( 0 0 $btn-info-c-2    ); }
+        &.btn-warning:active { @include box-shadow( 0 0 $btn-warning-c-2 ); }
+        &.btn-danger:active  { @include box-shadow( 0 0 $btn-danger-c-2  ); }
+		&.btn-dark:active    { @include box-shadow( 0 0 $btn-dark-c-2    ); }
+
+    }
+
+    /* --- Setup - 3 --- */
+
+    /* - Borer 1 - */
+    .btn-bd-1{
+
+        &.btn-default { border: 2px solid $btn-default-c; &:hover{ color: $btn-default-c; } }
+        &.btn-primary { background: $btn-primary-c-2; border: 2px solid $btn-primary-c-2; &:hover{ color: $btn-primary-c-2; } }
+        &.btn-success { background: $btn-success-c-2; border: 2px solid $btn-success-c-2; &:hover{ color: $btn-success-c-2; } }
+        &.btn-info    { background: $btn-info-c-2;    border: 2px solid $btn-info-c-2   ; &:hover{ color: $btn-info-c-2;    } }
+        &.btn-warning { background: $btn-warning-c-2; border: 2px solid $btn-warning-c-2; &:hover{ color: $btn-warning-c-2; } }
+        &.btn-danger  { background: $btn-danger-c-2;  border: 2px solid $btn-danger-c-2 ; &:hover{ color: $btn-danger-c-2 ; } }
+		&.btn-dark    { background: $btn-dark-c-2;    border: 2px solid $btn-dark-c-2 ;   &:hover{ color: $btn-dark-c-2 ; 	} }
+    }
+
+    /* - Borer 2 - */
+    .btn-bd-2{
+
+        &.btn-default { border: 2px dashed $btn-default-c; &:hover{ color: $btn-default-c; } }
+        &.btn-primary { background: $btn-primary-c-2; border: 2px dashed $btn-primary-c-2; &:hover{ color: $btn-primary-c-2; } }
+        &.btn-success { background: $btn-success-c-2; border: 2px dashed $btn-success-c-2; &:hover{ color: $btn-success-c-2; } }
+        &.btn-info    { background: $btn-info-c-2;    border: 2px dashed $btn-info-c-2   ; &:hover{ color: $btn-info-c-2;    } }
+        &.btn-warning { background: $btn-warning-c-2; border: 2px dashed $btn-warning-c-2; &:hover{ color: $btn-warning-c-2; } }
+        &.btn-danger  { background: $btn-danger-c-2;  border: 2px dashed $btn-danger-c-2 ; &:hover{ color: $btn-danger-c-2 ; } }
+		&.btn-dark    { background: $btn-dark-c-2;    border: 2px dashed $btn-dark-c-2 ;   &:hover{ color: $btn-dark-c-2 ;   } }
+    }
+
+    /* - Borer 3 - */
+    .btn-bd-3{
+
+        &.btn-default { border: 2px dotted $btn-default-c; &:hover{ color: $btn-default-c; } }
+        &.btn-primary { background: $btn-primary-c-2; border: 2px dotted $btn-primary-c-2; &:hover{ color: $btn-primary-c-2; } }
+        &.btn-success { background: $btn-success-c-2; border: 2px dotted $btn-success-c-2; &:hover{ color: $btn-success-c-2; } }
+        &.btn-info    { background: $btn-info-c-2;    border: 2px dotted $btn-info-c-2   ; &:hover{ color: $btn-info-c-2;    } }
+        &.btn-warning { background: $btn-warning-c-2; border: 2px dotted $btn-warning-c-2; &:hover{ color: $btn-warning-c-2; } }
+        &.btn-danger  { background: $btn-danger-c-2;  border: 2px dotted $btn-danger-c-2 ; &:hover{ color: $btn-danger-c-2 ; } }
+		&.btn-dark    { background: $btn-dark-c-2;    border: 2px dotted $btn-dark-c-2 ;   &:hover{ color: $btn-dark-c-2 ;   } }
+    }
+
+    /* - Borer 4 - */
+    .btn-bd-4{
+
+        &.btn-default { border: 4px double $btn-default-c; &:hover{ color: $btn-default-c; } }
+        &.btn-primary { background: $btn-primary-c-2; border: 4px double $btn-primary-c-2; &:hover{ color: $btn-primary-c-2; } }
+        &.btn-success { background: $btn-success-c-2; border: 4px double $btn-success-c-2; &:hover{ color: $btn-success-c-2; } }
+        &.btn-info    { background: $btn-info-c-2;    border: 4px double $btn-info-c-2   ; &:hover{ color: $btn-info-c-2;    } }
+        &.btn-warning { background: $btn-warning-c-2; border: 4px double $btn-warning-c-2; &:hover{ color: $btn-warning-c-2; } }
+        &.btn-danger  { background: $btn-danger-c-2;  border: 4px double $btn-danger-c-2 ; &:hover{ color: $btn-danger-c-2 ; } }
+		&.btn-dark    { background: $btn-dark-c-2;    border: 4px double $btn-dark-c-2 ;   &:hover{ color: $btn-dark-c-2 ;   } }
+    }
+
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }
+

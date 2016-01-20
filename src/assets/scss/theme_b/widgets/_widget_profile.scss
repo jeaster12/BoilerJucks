@@ -1,0 +1,113 @@
+/*
+    Widget - Profile
+    ========================================================================== */
+
+/*
+    Common
+    ------------------------------------- */
+	.widget-profile{
+
+		.dropdown-menu{
+
+			.lock{
+				background: $profile-lock-bg;
+				border-top: 1px solid $profile-lock-bd;
+			}
+
+			.power{
+				background: $profile-power-bg;
+			}
+
+			> li > a:hover{
+				color: $profile-menu-ho;
+				background: none;
+			}
+		}
+	}
+
+/*
+    Profile in Header
+    ------------------------------------- */
+
+	.profile-in-header{
+
+		.dropdown-toggle {
+			background: $profile-in-header-btn-bg;
+		}
+
+		.dropdown-menu{
+			border-top-color: $profile-in-header-menu-bd;
+		}
+
+		&.open{
+
+			.dropdown-toggle{
+				border-color: transparent $profile-in-header-btn-bd;
+
+			}
+
+			.name{
+				color: $profile-in-header-btn-active-c;
+			}
+		}
+	}
+
+/*
+    Profile in Sidebar
+    ------------------------------------- */
+
+	.profile-in-side{
+
+		.dropdown-toggle {
+			background: $profile-in-side-btn-bg;
+			border-color: $profile-in-side-btn-bd transparent;
+		}
+	}
+
+
+//  Theme
+//  -------------------------------------
+	.t-profile-1{
+
+	}
+
+	.t-profile-2{
+
+	}
+
+	.t-profile-3{
+
+	}
+
+
+
+
+
+
+//  Media Queries
+//  ==========================================================================
+	@include breakpoint($screen-lg-maxx){
+
+	}
+
+	@include breakpoint($screen-md-maxx){
+
+	}
+
+	@include breakpoint($screen-sm-maxx){
+
+	}
+
+	@include breakpoint($screen-xs-maxx){
+		.profile-in-header{
+
+			&.open{
+
+				.dropdown-toggle{
+					border-color: transparent transparent $profile-in-header-btn-bd;
+
+				}
+			}
+		}
+
+	}

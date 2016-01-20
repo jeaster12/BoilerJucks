@@ -1,0 +1,164 @@
+/*
+    Widget - Latest News
+    ========================================================================== */
+
+/*
+    Common
+    ------------------------------------- */
+	.widget-latest-news{
+
+		.collapsible-cointainer{
+
+			.collapsible{
+				@include group;
+			}
+
+			.collapse-open span{
+				padding: 0;
+				&:after{
+					font-family: 'FontAwesome';
+					content: "\f106";
+					@include font-size(16px);
+				}
+			}
+
+			.collapse-close span{
+				padding: 0;
+				&:after{
+					font-family: 'FontAwesome';
+					content: "\f107";
+				}
+			}
+
+		}
+
+	}
+
+	.latest-news-main-title{
+		font-family: font-family(semibold);
+		margin: 0 0 20px;
+		padding: 20px 15px 12px;
+		line-height: 1;
+
+		.label,
+		.badge{
+			padding-top: 0.3em;
+			margin-top: -2px;
+		}
+	}
+
+	.latest-news-title{
+		float: left;
+		width: 85%;
+		@include truncate-string;
+	}
+
+	.latest-news-img{
+
+		img{
+			padding: 5px;
+			@include border-radius(2px);
+		}
+	}
+
+	.latest-news-date{
+		font-family: font-family(semibold);
+		padding-top: 10px;
+		@include font-size(12px);
+	}
+
+	.latest-news-description{
+		padding: 10px 0;
+	}
+
+	.latest-news-btn{
+		i{
+			margin-right: 5px;
+		}
+	}
+
+
+//  State
+//  -------------------------------------
+	.is-latest-news{
+
+	}
+
+	.is-latest-news{
+
+	}
+
+
+/*
+    Latest News in Header
+    ------------------------------------- */
+	.latest-news-in-header{
+
+	}
+
+
+/*
+    Latest News in Box
+    ------------------------------------- */
+	.latest-news-in-box{
+
+	}
+
+
+/*
+    Latest News in Sidebar
+    ------------------------------------- */
+	.latest-news-in-side{
+
+	}
+
+//  Compact State
+//  -------------------------------------
+
+	.l-sidebar-compact-left,
+	.l-sidebar-compact-right{
+
+	}
+
+//  Collapsed State
+//  -------------------------------------
+
+	.l-sidebar-collapsed-left,
+	.l-sidebar-collapsed-right{
+
+	}
+
+
+//  Theme
+//  -------------------------------------
+	.t-latest-news-1{
+
+	}
+
+	.t-latest-news-2{
+
+	}
+
+	.t-latest-news-3{
+
+	}
+
+
+
+//  Media Queries
+//  ==========================================================================
+	@include breakpoint($screen-lg-maxx){
+
+	}
+
+	@include breakpoint($screen-md-maxx){
+
+	}
+
+	@include breakpoint($screen-sm-maxx){
+
+	}
+
+	@include breakpoint($screen-xs-maxx){
+
+	}

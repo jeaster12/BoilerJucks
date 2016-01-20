@@ -1,0 +1,88 @@
+/*
+    Page Invoice
+    ========================================================================== */
+
+
+/*
+    Invoice
+    ------------------------------------- */
+    .invoice-container{
+        // padding: $s-gutter-p;
+    }
+
+    .company-details,
+    .purchase-details,
+    .invoice-address,
+    .shipping-address{
+        @include span(1/2);
+    }
+
+    .company-details{
+        h2{
+            margin: 0 0 10px;
+        }
+    }
+
+    .invoice-header{
+        padding: $s-gutter-p;
+        margin: $s-gutter-p 0;
+    }
+
+    .purchase-details{
+        text-align: right;
+
+
+    }
+
+    .shipping-address{
+        text-align: right;
+    }
+
+    .table-invoice{
+
+        td{
+            padding: 15px !important;
+        }
+
+        tfoot td{
+            padding: 15px 10px !important;
+
+            &:first-child{
+                text-align: right;
+            }
+        }
+
+        .col-1{
+            width: 12%;
+        }
+
+        .col-4{
+            width: 10%;
+        }
+
+        .middle{
+            @include font-size(15px);
+        }
+
+        .big{
+            @include font-size(18px);
+        }
+    }
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }

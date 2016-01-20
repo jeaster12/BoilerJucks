@@ -1,0 +1,249 @@
+/*
+    Button
+    ========================================================================== */
+    .btn{
+        @include font-size(14px);
+        line-height: 1.43857;
+		@include transition($transition-value);
+    }
+
+    .btn-drop{
+        .caret{
+            margin-left: 4px;
+        }
+    }
+
+/*
+    Rounded Elements
+    ------------------------------------- */
+
+    .btn-rounded{ @include border-radius($button-rounded); }
+    .btn-rounded-left{ @include border-left-radius($button-rounded); }
+    .btn-rounded-right{ @include border-right-radius($button-rounded); }
+
+    .btn-group-rounded{
+        > .btn:first-child{
+            @include border-radius($button-rounded 0 0 $button-rounded);
+        }
+
+        > .btn:last-child{
+          @include border-radius(0 $button-rounded $button-rounded 0);
+        }
+    }
+
+/*
+    Square Elements
+    ------------------------------------- */
+
+    .btn-square{ @include border-radius($button-square); }
+    .btn-square-left{ @include border-left-radius($button-square); }
+    .btn-square-right{ @include border-right-radius($button-square); }
+
+
+    .btn-group-square{
+      > .btn:first-child{
+        @include border-radius($button-square 0 0 $button-square);
+      }
+
+      > .btn:last-child{
+        @include border-radius(0 $button-square $button-square 0);
+      }
+    }
+
+
+/*
+    Effects
+    ------------------------------------- */
+
+    /* --- Setup - 1 --- */
+    .btn-eff{
+        position: relative;
+        @include transition(all $transition-value);
+
+        &:before{
+            content: '';
+            position: absolute;
+            @include transition(all $transition-value);
+        }
+
+        span{
+            position: relative;
+        }
+    }
+
+
+    /* --- Effect 2 --- */
+    .btn-eff-2{
+
+        &:before {
+            width: 100%;
+            height: 0;
+            top: 0;
+            left: 0;
+        }
+
+        &:hover:before{
+            height: 100%;
+        }
+    }
+
+
+    /* --- Effect 3 --- */
+    .btn-eff-3{
+
+        &:before {
+            width: 0%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        &:hover:before{
+            width: 100%;
+        }
+    }
+
+    /* --- Effect 4 --- */
+    .btn-eff-4{
+
+        overflow: hidden;
+
+        &:before {
+            width: 0;
+            height: 103%;
+            top: 50%;
+            left: 50%;
+            opacity: 0;
+            @include transform(translateX(-50%) translateY(-50%));
+        }
+
+        &:hover:before{
+            width: 80%;
+            opacity: 1;
+        }
+
+        &:active:before{
+            width: 102%;
+            opacity: 1;
+        }
+    }
+
+    /* --- Effect 5 --- */
+    .btn-eff-5{
+
+        overflow: hidden;
+
+        &:before {
+            width: 125%;
+            height: 0;
+            top: 50%;
+            left: 50%;
+            opacity: 0;
+            @include transform(translateX(-50%) translateY(-50%) rotate(45deg));
+        }
+
+        &:hover:before{
+            height: 150%;
+            opacity: 1;
+        }
+
+        &:active:before{
+            height: 400%;
+            opacity: 1;
+        }
+    }
+
+    /* --- Effect 6 --- */
+    .btn-eff-6{
+
+        overflow: hidden;
+
+        &:before {
+            width: 102%;
+            height: 0;
+            top: 50%;
+            left: 50%;
+            opacity: 0;
+            @include transform(translateX(-50%) translateY(-50%));
+        }
+
+        &:hover:before{
+            height: 75%;
+            opacity: 1;
+        }
+
+        &:active:before{
+            height: 130%;
+            opacity: 1;
+        }
+    }
+
+    /* --- Setup - 2 --- */
+    .btn-shadow{
+        position: relative;
+    }
+
+
+    /* --- Effect 1 --- */
+    .btn-sh-1{
+
+        &:hover{
+            top: 2px;
+        }
+
+        &:active{
+            top: 6px;
+        }
+    }
+
+    .btn-sh-2{
+
+        &:hover{
+            top: -2px;
+        }
+
+        &:active{
+            top: 6px;
+        }
+    }
+
+    /* --- Setup - 3 --- */
+    .btn-border{
+        position: relative;
+        @include transition(all 200ms);
+
+        &:hover{
+            background: transparent !important;
+        }
+    }
+
+	// Dropdowns
+
+	.dropdown-menu{
+
+		padding: 0;
+
+		> li > a{
+			padding: 8px 15px;
+		}
+
+	}
+
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }

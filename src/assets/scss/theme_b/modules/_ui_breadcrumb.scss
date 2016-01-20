@@ -1,0 +1,87 @@
+/*
+    Breadcrumb
+    ========================================================================== */
+
+
+/*
+    Bootstrap Beadcrumb
+    ------------------------------------- */
+	.breadcrumb {
+		
+		background-color: $bread-bg;
+		border: 1px solid $bread-bd;
+
+		> li {			
+	
+			+ li:before {				
+				color: $bread-c;
+			}
+		}
+	
+		> .active {
+			color: $bread-active-c;
+		}
+	}
+
+/*
+    jBreadCrumb
+    ------------------------------------- */
+
+    .breadCrumb {
+		color: $bread-c;
+        background: $bread-bg;
+        border: 1px solid $bread-bd;
+
+          ul {
+
+            li {
+
+              // background: url(../img/plugins/breadcrumb/Chevron.gif) no-repeat 100% 0;
+
+              &.first a {
+                background: url(../img/plugins/breadcrumb/IconHome.gif) no-repeat 0 0;
+
+              }
+            }
+        }
+    }
+
+
+//  Theme
+//  ==========================================================================
+
+	.t-breadcrumb-page{
+		background-color: $bread-page-bg;
+		border: 1px solid $bread-page-bd;
+
+		a{
+			color: $bread-page-c;
+
+			&:hover{
+				color: $bread-page-ho;
+			}
+		}
+
+		.active,
+		> li + li:before{
+			color: $bread-page-active-c;
+		}
+	}
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }

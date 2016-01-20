@@ -1,0 +1,123 @@
+/*
+    Widget - Todos
+    ========================================================================== */
+
+/*
+    Common
+    ------------------------------------- */
+	.widget-todo{
+		padding: 15px 0;
+		position: relative;
+
+		h4 {
+			padding: 0 10px 10px;
+		}
+
+		.widget-todo-info{
+			padding: 10px 20px;
+		}
+
+		.todo-list{
+
+		}
+
+		.todo-item{
+			padding: 10px 10px;
+
+			&:hover{
+				.delete-todo{
+					display: block;
+				}
+			}
+		}
+
+		.cb-checkbox, i{
+			vertical-align: middle;
+		}
+
+		label{
+			font-family: font-family(base);
+			margin-left: 5px;
+		}
+
+		.todo-input{
+			margin-top: 10px;
+		}
+
+		.delete-todo{
+			display: none;
+		}
+
+		.checked{
+			.todo-text{
+				text-decoration: line-through;
+			}
+		}
+	}
+
+
+//  State
+//  -------------------------------------
+	.is-todo{
+
+	}
+
+	.is-todo{
+
+	}
+
+
+/*
+    Todos in Header
+    ------------------------------------- */
+	.todo-in-header{
+
+	}
+
+/*
+    Todos in Sidebar
+    ------------------------------------- */
+	.todo-in-side{
+
+	}
+
+/*
+    Todos in Box
+    ------------------------------------- */
+	.todo-in-box{
+
+	}
+
+//  Theme
+//  -------------------------------------
+	.t-todo-1{
+
+	}
+
+	.t-todo-2{
+
+	}
+
+	.t-todo-3{
+
+	}
+
+
+
+//  Media Queries
+//  ==========================================================================
+	@include breakpoint($screen-lg-maxx){
+
+	}
+
+	@include breakpoint($screen-md-maxx){
+
+	}
+
+	@include breakpoint($screen-sm-maxx){
+
+	}
+
+	@include breakpoint($screen-xs-maxx){
+
+	}

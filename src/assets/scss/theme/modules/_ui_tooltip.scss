@@ -1,0 +1,245 @@
+/*
+    Tooltips and Popovers
+    ========================================================================== */
+
+/*
+    Tooltip
+    ------------------------------------- */
+	.tooltip-inner {
+		color: $tooltip-c;
+		background-color: $tooltip-bg;
+	}
+
+	.tooltip {
+		&.top .tooltip-arrow,
+		&.top-left .tooltip-arrow,
+		&.top-right .tooltip-arrow{
+			border-top-color: $tooltip-bd;
+		}
+		&.right .tooltip-arrow {
+			border-right-color: $tooltip-bd;
+		}
+		&.left .tooltip-arrow {
+			border-left-color: $tooltip-bd;
+		}
+		&.bottom .tooltip-arrow,
+		&.bottom-left .tooltip-arrow,
+		&.bottom-right .tooltip-arrow
+		{
+			border-bottom-color: $tooltip-bd;
+		}
+	}
+
+
+/*
+    Tooltipster
+    ------------------------------------- */
+	.tooltipster-default {
+		background: $tipster-default-bg;
+		border: 1px solid $tipster-default-bd;
+		color: $tipster-default-c;
+	}
+
+
+	/* Tooltipster skins */
+
+	.tooltipster-light {
+		background: $tipster-light-bg;
+		border: 1px solid $tipster-light-bd;
+		color: $tipster-light-c ;
+	}
+
+	.tooltipster-noir {
+		border: 2px solid $tipster-noir-bd;
+		background: $tipster-noir-bg;
+		color: $tipster-noir-c;
+	}
+
+	.tooltipster-punk {
+		background: $tipster-punk-bg;
+		border-bottom: 3px solid $tipster-punk-bd;
+		color: $tipster-punk-c;
+	}
+
+	.tooltipster-shadow {
+		background: $tipster-shadow-bg;
+		box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+		color: $tipster-shadow-c;
+	}
+
+	.tooltipster-cool {
+		background: $tipster-cool-bg;
+		border-bottom: 2px solid $tipster-cool-bd;
+		color: $tipster-cool-c;
+	}
+
+/*
+    Popover
+    ------------------------------------- */
+
+	.popover {
+		background-color: $popover-bg;
+		border: 1px solid $popover-bd;
+		@include box-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
+	}
+
+	.popover-title {
+		background-color: $popover-title-bg;
+		border-bottom: 1px solid $popover-title-bd;
+	}
+
+	.popover {
+		&.top > .arrow {
+			border-top-color: $popover-bd;
+			&:after {
+				border-top-color: $popover-arrow-c;
+			}
+		}
+		&.right > .arrow {
+			border-right-color: $popover-bd;
+			&:after {
+				border-right-color: $popover-arrow-c;
+			}
+		}
+		&.bottom > .arrow {
+			border-bottom-color: $popover-bd;
+			&:after {
+				border-bottom-color: $popover-arrow-c;
+			}
+		}
+		&.left > .arrow {
+			border-left-color: $popover-bd;
+			&:after {
+				border-left-color: $popover-arrow-c;
+			}
+		}
+	}
+
+	/*
+		Webui Popover
+		------------------------------------- */
+	.webui-popover {
+		background-color: $web-popover-bg;
+		border: 1px solid $web-popover-bd;
+		@include box-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
+	}
+
+	.webui-popover-inner .close {
+		color: #000000;
+		text-shadow: 0 1px 0 #fff;
+	}
+
+	.webui-popover-title {
+		background-color: $web-popover-title-bg;
+		border-bottom: 1px solid $web-popover-title-bd;
+	}
+
+	.webui-popover.top > .arrow,
+	.webui-popover.top-right > .arrow,
+	.webui-popover.top-left > .arrow {
+		border-top-color: $web-popover-bd;
+	}
+
+	.webui-popover.top > .arrow:after,
+	.webui-popover.top-right > .arrow:after,
+	.webui-popover.top-left > .arrow:after {
+		border-top-color: $web-popover-arrow-c;
+	}
+
+	.webui-popover.right > .arrow,
+	.webui-popover.right-top > .arrow,
+	.webui-popover.right-bottom > .arrow {
+		border-right-color: $web-popover-bd;
+	}
+
+	.webui-popover.right > .arrow:after,
+	.webui-popover.right-top > .arrow:after,
+	.webui-popover.right-bottom > .arrow:after {
+		border-right-color: $web-popover-arrow-c;
+	}
+
+	.webui-popover.bottom > .arrow,
+	.webui-popover.bottom-right > .arrow,
+	.webui-popover.bottom-left > .arrow {
+		border-bottom-color: $web-popover-bd;
+	}
+
+	.webui-popover.bottom > .arrow:after,
+	.webui-popover.bottom-right > .arrow:after,
+	.webui-popover.bottom-left > .arrow:after {
+		border-bottom-color: $web-popover-arrow-c;
+	}
+
+	.webui-popover.left > .arrow,
+	.webui-popover.left-top > .arrow,
+	.webui-popover.left-bottom > .arrow {
+		border-left-color: $web-popover-bd;
+	}
+
+	.webui-popover.left > .arrow:after,
+	.webui-popover.left-top > .arrow:after,
+	.webui-popover.left-bottom > .arrow:after {
+		border-left-color: $web-popover-arrow-c;
+	}
+
+	.webui-popover-inverse {
+		background-color: $web-popover-inv-bg;
+		border-color: $web-popover-inv-bg;
+		color: $web-popover-inv-c;
+	}
+	.webui-popover-inverse .webui-popover-title {
+		background: $web-popover-inv-bg;
+		color: $web-popover-inv-c;
+	}
+
+	.webui-popover-inverse.top > .arrow,
+	.webui-popover-inverse.top-left > .arrow,
+	.webui-popover-inverse.top-right > .arrow,
+	.webui-popover-inverse.top > .arrow:after,
+	.webui-popover-inverse.top-left > .arrow:after,
+	.webui-popover-inverse.top-right > .arrow:after {
+		border-top-color: $web-popover-inv-bg;
+	}
+	.webui-popover-inverse.right > .arrow,
+	.webui-popover-inverse.right-top > .arrow,
+	.webui-popover-inverse.right-bottom > .arrow,
+	.webui-popover-inverse.right > .arrow:after,
+	.webui-popover-inverse.right-top > .arrow:after,
+	.webui-popover-inverse.right-bottom > .arrow:after {
+		border-right-color: $web-popover-inv-bg;
+	}
+	.webui-popover-inverse.bottom > .arrow,
+	.webui-popover-inverse.bottom-left > .arrow,
+	.webui-popover-inverse.bottom-right > .arrow,
+	.webui-popover-inverse.bottom > .arrow:after,
+	.webui-popover-inverse.bottom-left > .arrow:after,
+	.webui-popover-inverse.bottom-right > .arrow:after {
+		border-bottom-color: $web-popover-inv-bg;
+	}
+	.webui-popover-inverse.left > .arrow,
+	.webui-popover-inverse.left-top > .arrow,
+	.webui-popover-inverse.left-bottom > .arrow,
+	.webui-popover-inverse.left > .arrow:after,
+	.webui-popover-inverse.left-top > .arrow:after,
+	.webui-popover-inverse.left-bottom > .arrow:after {
+		border-left-color: $web-popover-inv-bg;
+	}
+
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }

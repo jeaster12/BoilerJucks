@@ -1,0 +1,207 @@
+/*
+    Widget - Navigation
+    ========================================================================== */
+
+/*
+    Common
+    ------------------------------------- */
+	.widget-nav{
+
+		a{
+			display: block;
+		}
+
+		.nav-icon{
+			position: relative;
+			text-align: center;
+
+			i{
+				padding: 8px 10px;
+				@include border-radius(50%);
+			}
+		}
+
+		.nav-info{
+			position: absolute;
+
+			.badge,.label{
+				font-weight: normal;
+				padding: 5px 7px 3px;
+			}
+
+		}
+	}
+
+//  State
+//  -------------------------------------
+	.is-nav{
+
+	}
+
+	.is-nav{
+
+	}
+
+
+/*
+    Navigation in Header
+    ------------------------------------- */
+	.nav-in-header{
+		li{
+			display: inline-block;
+		}
+
+		a{
+			padding: 12px;
+		}
+
+		.nav-info{
+			left: -1px;
+			top: -5px;
+		}
+	}
+
+
+/*
+    Navigation in Box
+    ------------------------------------- */
+	.nav-in-box{
+		li{
+			display: inline-block;
+		}
+
+		a{
+			padding: 10px 20px;
+		}
+
+		.nav-info{
+			left: -1px;
+			top: -5px;
+		}
+	}
+
+
+/*
+    Navigation in Sidebar
+    ------------------------------------- */
+	.nav-in-side{
+		li{
+		}
+
+		a{
+			padding: 9px 0;
+			line-height: 2.2;
+			@include group;
+		}
+
+		.nav-icon{
+			@include span(2/6);
+			text-align: center;
+		}
+
+		.nav-text{
+			@include span(4/6);
+		}
+
+		.nav-info{
+			left: 15px;
+			top: -10px;
+		}
+
+	}
+
+//  Compact State
+//  -------------------------------------
+
+	.l-sidebar-compact-left,
+	.l-sidebar-compact-right{
+
+		.nav-in-side a {
+			padding: 15px 0 10px;
+		}
+
+		.nav-icon,
+		.nav-text{
+			@include stack();
+			text-align: center;
+		}
+
+		.nav-info {
+			left: 22px;
+			top: -12px;
+		}
+
+	}
+
+//  Collapsed State
+//  -------------------------------------
+
+	.l-sidebar-collapsed-left,
+	.l-sidebar-collapsed-right{
+
+		.nav-in-side a {
+			position: relative;
+			z-index: 10;
+
+			&:hover{
+				.nav-text{
+					display: block;
+				}
+			}
+		}
+
+		.nav-icon{
+			width: 100%;
+		}
+
+		.nav-text{
+			display: none;
+			position: absolute;
+			top: -1px;
+			right: 49px;
+			width: 150px;
+			padding: 11px 20px;
+			text-align: right;
+		}
+
+		.nav-info {
+			left: 2px;
+			top: -13px;
+		}
+
+	}
+
+
+//  Theme
+//  -------------------------------------
+	.t-nav-1{
+
+	}
+
+	.t-nav-2{
+
+	}
+
+	.t-nav-3{
+
+	}
+
+
+
+//  Media Queries
+//  ==========================================================================
+	@include breakpoint($screen-lg-maxx){
+
+	}
+
+	@include breakpoint($screen-md-maxx){
+
+	}
+
+	@include breakpoint($screen-sm-maxx){
+
+	}
+
+	@include breakpoint($screen-xs-maxx){
+
+	}

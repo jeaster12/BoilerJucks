@@ -1,0 +1,114 @@
+/*
+    Sidebar Layouts
+    ========================================================================== */
+
+/*
+	Assigned to 'aside' html tag
+	-------------------------------------  */
+
+	.l-sidebar {
+		display: table-cell;
+		height: 100%;
+		vertical-align: top;
+	}
+
+	// .l-sidebar-... , l-slidebar-left-..., l-slidebar-right-...
+	@include make-sidebar-columns($sidebar-extra-large-values-list);
+
+	@include make-sidebar-invisibility('compact');
+	@include make-sidebar-invisibility('collapsed');
+	@include make-sidebar-visibility('default');
+
+
+//  Compact State
+//  ==========================================================================
+
+	.l-sidebar-compact-left,
+	.l-sidebar-compact-right{
+		width: $sidebar-compact-width !important;
+
+		@include make-sidebar-invisibility('default');
+		@include make-sidebar-invisibility('collapsed');
+
+		@include make-sidebar-visibility('compact');
+
+	}
+
+
+//  Collapsed State
+//  ==========================================================================
+
+	.l-sidebar-collapsed-left,
+	.l-sidebar-collapsed-right{
+		width: $sidebar-collapsed-width !important;
+
+		@include make-sidebar-invisibility('default');
+		@include make-sidebar-invisibility('compact');
+
+		@include make-sidebar-visibility('collapsed');
+	}
+
+
+//  Slidebar Layouts
+//  ==========================================================================
+
+	.l-slidebar{
+		height: 100%;
+		overflow-y: auto;
+		position: fixed;
+		top: 0;
+		z-index: 200;
+	}
+
+
+	.l-slidebar-static{
+		position: absolute;
+		top: 0;
+	}
+
+//  Transitions
+//  ==========================================================================
+
+	.transitionBasic{
+		@include transition(all, $transition-value);
+	}
+
+	.transitionWidth{
+		width:0%;
+		@include transition(all, $transition-value);
+	}
+
+//  Media Queries
+//  ==========================================================================
+
+	@include breakpoint($screen-lg-maxx){
+		@include make-sidebar-columns($sidebar-large-values-list);
+	}
+
+	@include breakpoint($screen-md-maxx){
+		@include make-sidebar-columns($sidebar-medium-values-list);
+	}
+
+	@include breakpoint($screen-sm-maxx){
+		@include make-sidebar-columns($sidebar-small-values-list);
+	}
+
+	@include breakpoint($screen-xs-maxx){
+
+	}
+
+//  Hidden State
+//  ==========================================================================
+
+	.l-sidebar-hidden{
+		width: 0px;
+		overflow: hidden;
+	}
+
+//  Slidebar Open State - must come after media queries
+//  ==========================================================================
+
+	.l-slidebar-left-open { left: 0px; }
+	.l-slidebar-right-open{ right: 0px; }
+
+

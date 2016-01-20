@@ -1,0 +1,150 @@
+/*
+    Modals
+    ========================================================================== */
+
+
+/*
+    Bootstrap Modal
+    ------------------------------------- */
+
+	// Actual modal
+	.modal-content {
+		background-color: $modal-content-bg;
+		border: 1px solid $modal-content-bd;
+		@include box-shadow(0 3px 5px rgba(0, 0, 0, 0.3));
+	}
+
+	// Modal background
+	.modal-backdrop {
+		background-color: $modal-backdrop-bg;
+	}
+
+	// Modal header
+	.modal-header {
+		background: $modal-header-bg;
+		border-bottom: 1px solid $modal-header-bd;
+	}
+
+	// Modal body
+	.modal-body {
+		background: $modal-body-bg;
+	}
+
+
+	// Footer (for actions)
+	.modal-footer {
+		background: $modal-footer-bg;
+		border-top: 1px solid $modal-footer-bd;
+	}
+
+
+/*
+    Remodal
+    ------------------------------------- */
+
+	.remodal-overlay {
+		background: $remodal-overlay-bg;
+	}
+
+	/* Modal dialog default theme styles */
+
+	.remodal {
+
+		background: $remodal-bg;
+		color: $remodal-c;
+		@include box-shadow(0 3px 5px rgba(0, 0, 0, 0.3));
+
+	}
+
+	/* Close button */
+
+	.remodal-close {
+
+		border: 2px solid $remodal-close-bg;
+
+		&:after {
+			color: $remodal-close-bg;
+		}
+		&:hover, &:active {
+			background: $remodal-close-bg;
+		}
+		&:hover.remodal-close:after,
+		&:active.remodal-close:after {
+			color: $remodal-close-c;
+		}
+	}
+
+/*
+    Magnific Popup
+    ------------------------------------- */
+
+	.mfp-bg {
+		background: $mfp-bg;
+	}
+
+	.mfp-preloader{
+		color: $mfp-preloader-c;
+
+		a {
+			color: $mfp-preloader-c;
+			&:hover {
+				color: $mfp-preloader-ho;
+			}
+		}
+	}
+
+	.mfp-close {
+		color: $mfp-close-c;
+	}
+
+	.mfp-close-btn-in .mfp-close {
+		color: $mfp-close-btn-in;
+	}
+
+	.mfp-image-holder .mfp-close,
+	.mfp-iframe-holder .mfp-close {
+		color: $mfp-close-c;
+	}
+
+	.mfp-counter {
+		color: $mfp-counter-c;
+	}
+
+	.mfp-arrow-left {
+		&:after, .mfp-a {
+			border-right: 17px solid $mfp-arrow-inner-bd;
+		}
+		&:before, .mfp-b {
+			border-right: 27px solid $mfp-arrow-outer-bd;
+		}
+	}
+
+	.mfp-arrow-right {
+		&:after, .mfp-a {
+			border-left: 17px solid $mfp-arrow-inner-bd;
+		}
+		&:before, .mfp-b {
+			border-left: 27px solid $mfp-arrow-outer-bd;
+		}
+	}
+
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+		.modal-content {
+			@include box-shadow(0 3px 5px rgba(0, 0, 0, 0.3));
+		}
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }

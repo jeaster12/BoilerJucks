@@ -1,0 +1,110 @@
+/*
+    Widget - Logo
+    ========================================================================== */
+
+/*
+    Common
+    ------------------------------------- */
+	.widget-logo{
+		text-align: center;
+		padding-top: 5%;
+		padding-bottom: 5%;
+		@include transition($transition-value);
+		}
+
+		span.logo-default
+		{
+			&:after{
+				width: 22px;
+				height: 22px;
+				top: 15px;
+				left: 68px;
+			}
+		}
+
+		span.logo-default-header{
+
+			&:after{
+				width: 17px;
+				height: 18px;
+				top: 12px;
+				left: 56px;
+			}
+		}
+
+		span.logo-medium{
+
+			&:after{
+				width: 20px;
+				height: 20px;
+				top: 16px;
+				left: 66px;
+			}
+	}
+
+
+//  State
+//  -------------------------------------
+	.is-logo{
+
+	}
+
+	.is-logo{
+
+	}
+
+
+/*
+    Logo in Header
+    ------------------------------------- */
+	.logo-in-header{
+
+	}
+
+/*
+    Logo in Sidebar
+    ------------------------------------- */
+	.logo-in-side{
+
+	}
+
+/*
+    Logo in Box
+    ------------------------------------- */
+	.logo-in-box{
+
+	}
+
+//  Theme
+//  -------------------------------------
+	.t-logo-1{
+
+	}
+
+	.t-logo-2{
+
+	}
+
+	.t-logo-3{
+
+	}
+
+
+
+//  Media Queries
+//  ==========================================================================
+	@include breakpoint($screen-lg-maxx){
+
+	}
+
+	@include breakpoint($screen-md-maxx){
+
+	}
+
+	@include breakpoint($screen-sm-maxx){
+
+	}
+
+	@include breakpoint($screen-xs-maxx){
+
+	}

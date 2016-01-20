@@ -1,0 +1,39 @@
+/*
+    Chart - Flot
+    ========================================================================== */
+
+/*
+	Flot
+	------------------------------------- */
+
+	.flot-container {
+		box-sizing: border-box;
+		width: 100%;
+		height: 450px;
+		padding: 5px 10px;
+		margin:0 auto;
+	}
+
+	.flot-chart{
+		width: 100%;
+		height: 100%;
+	}
+
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }

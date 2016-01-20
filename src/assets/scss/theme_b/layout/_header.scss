@@ -1,0 +1,48 @@
+/*
+    Header
+    ========================================================================== */
+
+//  Theme
+//  ==========================================================================
+
+	.t-header-1{
+		background: $header-1-bg;
+		@include box-shadow(0 1px 1px rgba(0,0,0,.1));
+	}
+
+	.t-header-slide-1{
+		background: $header-slide-1-bg;
+		@include box-shadow(0 1px 1px rgba(0,0,0,.1));
+	}
+
+	.t-header-slide-2{
+		background: $header-slide-2-bg;
+		@include box-shadow(0 1px 1px rgba(0,0,0,.1));
+	}
+
+	.t-header-slide-3{
+		background: $header-slide-3-bg;
+		@include box-shadow(0 1px 1px rgba(0,0,0,.1));
+	}
+
+
+//  Media Queries
+//  ==========================================================================
+
+	@include breakpoint($screen-lg-maxx){
+
+	}
+
+	@include breakpoint($screen-md-maxx){
+
+	}
+
+	@include breakpoint($screen-sm-maxx){
+
+	}
+
+	@include breakpoint($screen-xs-maxx){
+
+	}
+
+

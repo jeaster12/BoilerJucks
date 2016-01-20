@@ -1,0 +1,117 @@
+/*
+    Scrollbar
+    ========================================================================== */
+
+	// Scrollbar mixins
+	@mixin scrollbar-rail-default {
+		display: none;
+		position: absolute; /* please don't change 'position' */
+		@include border-radius($s-radius);
+		@include opacity(0);
+		@include transition(background-color .2s linear, opacity .2s linear);
+
+	}
+
+	@mixin scrollbar-rail-hover {
+		@include opacity(0.9);
+	}
+
+	@mixin scrollbar-default {
+		position: absolute; /* please don't change 'position' */
+		@include border-radius($s-radius);
+		@include transition(background-color .2s linear);
+	}
+
+	@mixin in-scrolling {
+		&.ps-in-scrolling {
+			pointer-events: none;
+			&.ps-x>.ps-scrollbar-x-rail{
+				@include scrollbar-rail-hover;
+			}
+			&.ps-y>.ps-scrollbar-y-rail {
+				@include scrollbar-rail-hover;
+			}
+		}
+	}
+
+	// Scrollbar content
+	.ps-container {
+		overflow: hidden !important;
+
+		&.ps-active-x > .ps-scrollbar-x-rail,
+		&.ps-active-y > .ps-scrollbar-y-rail {
+			display: block;
+		}
+
+		@include in-scrolling;
+
+		>.ps-scrollbar-x-rail {
+			@include scrollbar-rail-default;
+			bottom: 2px; /* there must be 'bottom' for ps-scrollbar-x-rail */
+			height: 6px;
+
+			>.ps-scrollbar-x {
+				@include scrollbar-default;
+				bottom: 0; /* there must be 'bottom' for ps-scrollbar-x */
+				height: 6px;
+			}
+
+		}
+
+		>.ps-scrollbar-y-rail {
+			@include scrollbar-rail-default;
+			right: 2px; /* there must be 'right' for ps-scrollbar-y-rail */
+			width: 6px;
+
+			>.ps-scrollbar-y {
+				@include scrollbar-default;
+				right: 0; /* there must be 'right' for ps-scrollbar-y */
+				width: 6px;
+			}
+
+		}
+
+		&:hover {
+
+			@include in-scrolling;
+
+			>.ps-scrollbar-x-rail,
+			>.ps-scrollbar-y-rail {
+				@include opacity(0.6);
+				@include in-scrolling;
+			}
+
+			>.ps-scrollbar-x-rail:hover {
+				@include scrollbar-rail-hover;
+			}
+
+			>.ps-scrollbar-y-rail:hover {
+				@include scrollbar-rail-hover;
+			}
+		}
+	}
+
+	.ps-wrapper{
+		max-height:200px;
+		overflow: hidden;
+		position: relative;
+	}
+
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }

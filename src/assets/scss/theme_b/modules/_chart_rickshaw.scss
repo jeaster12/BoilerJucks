@@ -1,0 +1,164 @@
+/*
+    Chart - Rickshaw
+    ========================================================================== */
+
+/*
+    Rickshaw
+    ------------------------------------- */
+
+	.rickshaw_graph {
+		.detail {
+
+			background: rgba(0, 0, 0, 0.1);
+
+			.x_label {
+				border: 1px solid #e0e0e0;
+				background: white;
+			}
+			.item {
+				background: rgba(0, 0, 0, 0.4);
+				color: white;
+				border: 1px solid rgba(0, 0, 0, 0.4);
+				&.active {
+					background: rgba(0, 0, 0, 0.8);
+				}
+				&.left:after {
+					border-right-color: rgba(0, 0, 0, 0.8);
+				}
+				&.right:after {
+					border-left-color: rgba(0, 0, 0, 0.8);
+				}
+			}
+			.dot {
+				box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+				background: white;
+			}
+		}
+
+
+		/* ticks */
+		.x_tick {
+			border-left: 1px dotted rgba(0, 0, 0, 0.2);
+		}
+	}
+
+	/* annotations */
+
+	.rickshaw_annotation_timeline {
+		border-top: 1px solid #e0e0e0;
+		.annotation {
+			background-color: rgba(0, 0, 0, 0.25);
+		}
+	}
+
+	.rickshaw_graph {
+		.annotation_line {
+			border-left: 2px solid rgba(0, 0, 0, 0.3);
+		}
+		.annotation_range {
+			background: rgba(0, 0, 0, 0.1);
+		}
+	}
+
+	.rickshaw_annotation_timeline .annotation {
+		.content {
+			background: white;
+			color: black;
+			box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+			&:before {
+				color: white;
+				text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.8);
+			}
+		}
+		&.active, &:hover {
+			background-color: rgba(0, 0, 0, 0.8);
+		}
+	}
+
+	.rickshaw_graph {
+
+		.y_ticks .tick line, .x_ticks_d3 .tick {
+			stroke: rgba(0, 0, 0, 0.16);
+		}
+		.y_grid .tick, .x_grid_d3 .tick {
+			stroke: rgba(0, 0, 0, 0.2);
+		}
+		.x_grid_d3 path {
+			fill: none;
+			stroke: none;
+		}
+		.y_ticks path, .x_ticks_d3 path {
+			fill: none;
+			stroke: #808080;
+		}
+		.x_tick.glow .title, .y_ticks.glow text {
+			fill: black;
+			color: black;
+			text-shadow: -1px 1px 0 rgba(255, 255, 255, 0.1), 1px -1px 0 rgba(255, 255, 255, 0.1), 1px 1px 0 rgba(255, 255, 255, 0.1), 0px 1px 0 rgba(255, 255, 255, 0.1), 0px -1px 0 rgba(255, 255, 255, 0.1), 1px 0px 0 rgba(255, 255, 255, 0.1), -1px 0px 0 rgba(255, 255, 255, 0.1), -1px -1px 0 rgba(255, 255, 255, 0.1);
+		}
+		.x_tick.inverse .title, .y_ticks.inverse text {
+			fill: white;
+			color: white;
+			text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.8), 1px -1px 0 rgba(0, 0, 0, 0.8), 1px 1px 0 rgba(0, 0, 0, 0.8), 0px 1px 0 rgba(0, 0, 0, 0.8), 0px -1px 0 rgba(0, 0, 0, 0.8), 1px 0px 0 rgba(0, 0, 0, 0.8), -1px 0px 0 rgba(0, 0, 0, 0.8), -1px -1px 0 rgba(0, 0, 0, 0.8);
+		}
+	}
+
+	.rickshaw_legend {
+
+		background: white;
+		.swatch {
+			border: 1px solid rgba(0, 0, 0, 0.2);
+		}
+
+		li {
+
+			&:hover {
+				background: rgba(255, 255, 255, 0.08);
+
+			}
+			&:active {
+				background: rgba(255, 255, 255, 0.2);
+
+			}
+		}
+	}
+
+	.custom_rickshaw_legend{
+
+	}
+
+	// Colors
+	.rickshaw-area-1 { color: $rickshaw-area-1-c; }
+	.rickshaw-area-2 { color: $rickshaw-area-2-c; }
+	.rickshaw-area-3 { color: $rickshaw-area-3-c; }
+
+	.rickshaw-bar-1 { color: rgba($rickshaw-bar-1-c, 0.8); }
+	.rickshaw-bar-2 { color: rgba($rickshaw-bar-2-c, 0.8); }
+	.rickshaw-bar-3 { color: rgba($rickshaw-bar-3-c, 0.8); }
+
+	.rickshaw-line-1 { color: rgba($rickshaw-line-1-c, 0.5); }
+	.rickshaw-line-2 { color: rgba($rickshaw-line-2-c, 0.5); }
+	.rickshaw-line-3 { color: rgba($rickshaw-line-3-c, 0.5); }
+
+	.rickshaw-scatter-1 { color: $rickshaw-scatter-1-c; }
+	.rickshaw-scatter-2 { color: $rickshaw-scatter-2-c; }
+	.rickshaw-scatter-3 { color: $rickshaw-scatter-3-c; }
+
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }

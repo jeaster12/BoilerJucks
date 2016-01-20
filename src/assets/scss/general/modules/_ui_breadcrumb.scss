@@ -1,0 +1,124 @@
+/*
+    Breadcrumb
+    ========================================================================== */
+
+/*
+    jBreadCrumb
+    ------------------------------------- */
+
+    .breadCrumb {
+        margin: 0;
+        padding: 0;
+        float: left;
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        padding: 5px;
+
+          ul {
+            margin: 0;
+            padding: 0;
+            height: 21px;
+            display: block;
+
+            li {
+              display: block;
+              float: left;
+              position: relative;
+              overflow: hidden;
+              line-height: 21px;
+              margin: 0px 6px 0px 0;
+              padding: 0px 10px 0px 0;
+
+              div.chevronOverlay {
+                position: absolute;
+                right: 0;
+                top: 0;
+                z-index: 2;
+
+                &:after{
+                    content: "\f105";
+                    font-family: FontAwesome;
+                    padding-left: 7px;
+                }
+
+              }
+              span {
+                display: block;
+                overflow: hidden;
+              }
+              a {
+                display: block;
+                position: relative;
+                line-height: 21px;
+                overflow: hidden;
+                float: left;
+              }
+              &.first a {
+                height: 16px !important;
+                text-indent: -1000em;
+                width: 16px;
+                padding: 0;
+                margin-top: 2px;
+                overflow: hidden;
+                &:hover {
+                  background-position: 0 -16px;
+                }
+
+              }
+              &.last {
+                background: none;
+                margin-right: 0;
+                padding-right: 0;
+              }
+            }
+        }
+    }
+
+    .chevronOverlay {
+      display: none;
+      width: 13px;
+      height: 20px;
+    }
+
+
+//  Theme
+//  ==========================================================================
+
+	.t-breadcrumb-page{
+		background: none;
+		padding: 0 2px;
+		@include border-radius(0);
+
+		> li + li:before{
+			content: "- ";
+		}
+		
+		a{
+			font-family: font-family(semibold);
+		}
+		
+		.active{
+			font-family: font-family(light);
+		}
+	}
+
+
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }

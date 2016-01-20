@@ -1,0 +1,365 @@
+/*
+	Navigation
+	========================================================================== */
+
+	// All classes listed, with sensible defaults applied
+	.cupcake-nav{
+
+		// ----- Default Styles -----
+		font-family: font-family(regular);
+		margin-left: 0;
+
+		// li : All <li> list items
+		li{
+			position: relative;
+			display: block;
+		}
+
+		// a : All <a href="#"> links
+		a{
+			padding: 12px 0;
+			display: block;
+			@include group;
+		}
+
+		// span.icon : All <span>'s that have an "icon" class assigned
+		.icon{
+			float: left;
+			line-height: 1.3;
+			padding: 0 15px;
+		}
+
+		// span.title: All <span>'s that have an "title" class assigned
+		.title{
+			float: left;
+		}
+
+		// span.info, ... : All <span>'s that have an "info" or "new" or "soon" class assigned
+		.info, .new, .soon{
+			display: inline-block;
+			float: right;
+			line-height: 1;
+			padding: 5px 7px 3px;
+			margin-top: -3px;
+			font-family: font-family(semibold);
+			@include font-size(12px);
+		}
+
+		.first{
+			margin-left: 15px;
+		}
+
+		.last{
+			margin-right: 20px;
+		}
+
+		// span.arrow: All <span>'s that have a "arrow" class assigned
+		.arrow{
+			float: right;
+			margin: 0 20px;
+			display: block;
+
+			i{
+				@include transition(all, 100ms);
+			}
+		}
+
+		.active > a .arrow i{
+
+		}
+
+		.open > a .arrow i {
+			@include transform(rotate(-90deg));
+		}
+
+
+		// li.active : All <li> list items that are active
+		.active{
+
+			> a > .title{
+				font-family: font-family(semibold);
+			}
+		}
+
+		// li.node : All <li> list items that have children (node)
+		.node{ }
+
+		// li.root : <li> list items that are root nodes
+		.root{
+
+			> a{
+				padding: 15px 0;
+			}
+		}
+
+		// li.open : <li> list items that are open
+		.open{ }
+
+		// li.closed : <li> list items that are closed
+		.closed{ }
+
+		// ul.ul-back: Send back the not active list
+		.ul-back{
+			z-index: 100 !important;
+		}
+
+		// ul.ul-open : <ul> lists that are open
+		.ul-open{
+			overflow: hidden;
+			height: auto;
+			display: block;
+		}
+
+		// ul.ul-closed : <ul> lists that are closed
+		.ul-closed{
+			overflow: hidden;
+			height: 0;
+			display: none;
+		}
+
+		// ul.level-[DEPTH]: <ul> recursive level classes
+		.level-1{
+
+
+		}
+
+		// Other menu elements
+		.divider{
+			width: 100%;
+			height: 1px;
+		}
+
+
+		// ----- Menu Skins -----
+
+		// ul.cupcake-nav.cupcake-skin: Assign custom skins to each theme
+		.cupcake-skin{
+
+		}
+
+
+	}
+
+//  Default State
+//  ==========================================================================
+	.l-sidebar-left,
+	.l-sidebar-right {
+
+	}
+
+	.l-sidebar-left{
+		.cupcake-nav {	}
+	}
+
+	.l-sidebar-right{
+		.cupcake-nav { }
+	}
+
+//  Compact State
+//  ==========================================================================
+
+/*
+	Compact Nav State
+	------------------------------------- */
+	.l-sidebar-compact-left,
+	.l-sidebar-compact-right{
+
+		.cupcake-nav{
+
+			> li > a{
+				text-align: center;
+
+				.arrow{
+					display: none;
+					position: absolute;
+					bottom: 0px;
+					margin: 0;
+				}
+
+				.title{
+					display: block;
+				}
+
+				.icon, .title{
+					float: none;
+				}
+
+				.info,
+				.new,
+				.soon{
+					float: none;
+					margin-top: 0;
+					padding: 3px 5px 2px;
+					position: absolute;
+					top: 5px;
+					@include font-size(12px);
+				}
+
+				.info{ right: 5px; }
+				.new { left: 5px; }
+
+			}
+
+			.level-1{
+				position: absolute;
+				z-index: 100;
+				top: 0;
+				width: 250px;
+			}
+
+			.ul-scroll{
+				max-height: $sidebar-compact-max-height;
+			}
+
+		}
+	}
+
+	.l-sidebar-compact-left{
+
+		.root{
+
+			> a{
+				> .arrow{
+					right: 12px;
+					@include rotate(180deg);
+				}
+			}
+
+			&.open > a .arrow{
+				@include transform(rotate(-90deg));
+			}
+		}
+
+		.level-1{
+			left: $sidebar-compact-width;
+		}
+	}
+
+	.l-sidebar-compact-right{
+
+		.root > a{
+			.arrow{
+				left: 12px;
+			}
+		}
+
+		.level-1{
+			right: $sidebar-compact-width;
+		}
+	}
+
+
+//  Collapsed State
+//  ==========================================================================
+
+/*
+	Collapsed Nav State
+	------------------------------------- */
+	.l-sidebar-collapsed-left,
+	.l-sidebar-collapsed-right{
+
+		.cupcake-nav{
+
+			> li > a{
+
+				.arrow{
+					display: none;
+				}
+
+				.icon{
+					line-height: 1.4;
+					padding: 0 19px;
+				}
+
+				.title{
+					display: none;
+					line-height: 1.4;
+					padding-left: 10px;
+				}
+
+				.info,
+				.new,
+				.soon{
+					float: none;
+					margin-top: 0;
+					padding: 3px 5px 2px;
+					position: absolute;
+					top: 5px;
+					display: none;
+					@include font-size(12px);
+				}
+
+				.info{ right: 5px; display: block; }
+				.new { right: 15px; }
+
+			}
+
+			.level-1{
+				position: absolute;
+				z-index: 100;
+				top: 49px;
+				width: 250px;
+			}
+
+			.ul-scroll{
+				max-height: $sidebar-collapsed-max-height;
+			}
+
+			.root.open{
+				width: 300px;
+
+				.title{
+					display: block;
+				}
+
+				.new{
+					display: block;
+				}
+			}
+		}
+	}
+
+	.l-sidebar-collapsed-left{
+
+		.root.open{
+			left: 0;
+			z-index: 10;
+		}
+
+		.level-1{
+			left: $sidebar-collapsed-width;
+		}
+	}
+
+	.l-sidebar-collapsed-right{
+
+		.root.open{
+			right: 250px;
+			z-index: 10;
+		}
+
+		.level-1{
+			right: $sidebar-collapsed-width;
+		}
+	}
+
+
+//  Media Queries
+//  ==========================================================================
+
+
+	@include breakpoint($screen-lg-maxx){
+
+	}
+
+	@include breakpoint($screen-md-maxx){
+
+	}
+
+	@include breakpoint($screen-sm-maxx){
+
+	}
+
+	@include breakpoint($screen-xs-maxx){
+
+	}

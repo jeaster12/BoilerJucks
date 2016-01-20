@@ -1,0 +1,173 @@
+// //  Theme Variables
+// //  ==========================================================================
+//
+// //$summer-bd: #a9a9a9;
+// //$summer-bg: #f5f5f5;
+//
+//
+// /* Frame Mode Layout
+//  ------------------------------------------*/
+// .note-editor {
+//   border: 1px solid $summer-bd;
+//
+//   /* dropzone */
+//   .note-dropzone {
+//
+//     border: 2px dashed $summer-dropzone-c;
+//     color: $summer-dropzone-c;
+//     background-color: white;
+//
+//     &.hover {
+//       border: 2px dashed $summer-dropzone-active-c;
+//       color: $summer-dropzone-active-c;
+//     }
+//   }
+//
+//   .note-toolbar {
+//     background-color: $summer-bg;
+//     border-bottom: 1px solid $summer-bd;
+//   }
+//
+//   /* fullscreen mode */
+//   &.fullscreen {
+//     .note-editable {
+//       background-color: white;
+//     }
+//   }
+//
+//   /* statusbar */
+//   .note-statusbar {
+//     background-color: $summer-bg;
+//     .note-resizebar {
+//       border-top: 1px solid $summer-bd;
+//
+//       .note-icon-bar {
+//         border-top: 1px solid $summeer-note-icon-bar-bd;
+//       }
+//     }
+//   }
+//
+//   /* editable */
+//   .note-editable[contenteditable="false"] {
+//     background-color: #e5e5e5;
+//   }
+//
+//   /* codeable */
+//   .note-codable {
+//     color: #ccc;
+//     background-color: #222;
+//   }
+// }
+//
+// /* Popover and Toolbar (Button container)
+//  ------------------------------------------*/
+// .note-popover .popover .popover-content, .note-toolbar {
+//
+//   .note-color {
+//
+//     .dropdown-menu {
+//
+//       .btn-group {
+//
+//         .note-palette-title {
+//           border-bottom: 1px solid #eee;
+//         }
+//
+//         .note-color-reset:hover {
+//           background: #eee;
+//         }
+//       }
+//     }
+//   }
+//
+//   /* dropdown-menu for toolbar and popover */
+//   .dropdown-menu {
+//     min-width: 90px;
+//
+//     /* dropdown-menu for selectbox */
+//     li a i {
+//       color: deepskyblue;
+//     }
+//   }
+//
+//   /* color palette for toolbar and popover */
+//   .note-color-palette {
+//     div {
+//       .note-color-btn {
+//         border: 1px solid #fff;
+//       }
+//       .note-color-btn:hover {
+//         border: 1px solid #000;
+//       }
+//     }
+//   }
+// }
+//
+// /* Dialog
+//  ------------------------------------------*/
+// .note-dialog {
+//
+//   .note-image-dialog {
+//     .note-dropzone {
+//
+//       color: lightgray;
+//       border: 4px dashed lightgray;
+//     }
+//   }
+//   .note-help-dialog {
+//     $note-shortcut-hl: #dd0;
+//     color: #ccc;
+//     background-color: #222 !important;
+//
+//     .modal-content {
+//       border: 1px solid white;
+//     }
+//
+//     a {
+//       color: white;
+//     }
+//
+//     .title {
+//       color: white;
+//       border-bottom: white 1px solid;
+//     }
+//     .modal-close {
+//       color: $note-shortcut-hl;
+//     }
+//     .note-shortcut {
+//       th {
+//         color: $note-shortcut-hl;
+//       }
+//       td:first-child {
+//         color: $note-shortcut-hl;
+//       }
+//     }
+//   }
+// }
+//
+// /* Handle
+//  ------------------------------------------*/
+// .note-handle {
+//   /* control selection */
+//   .note-control-selection {
+//
+//     border: 1px solid black;
+//
+//     .note-control-selection-bg {
+//       background-color: black;
+//     }
+//
+//     .note-control-handle {
+//       border: 1px solid black;
+//     }
+//
+//     .note-control-sizing {
+//       background-color: white;
+//     }
+//
+//     .note-control-selection-info {
+//       color: white;
+//       background-color: black;
+//     }
+//   }
+// }

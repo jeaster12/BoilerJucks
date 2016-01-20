@@ -1,0 +1,497 @@
+/*
+    Date and Time pickers
+    ========================================================================== */
+
+/*
+    Date Range Picker
+    ------------------------------------- */
+
+	.daterangepicker {
+
+		background: $daterangepicker-bg;
+		border: 1px solid $daterangepicker-bd;
+
+		.daterangepicker_start_input label, .daterangepicker_end_input label {
+			color: $daterangepicker-label-c;
+		}
+		.ranges {
+
+			.input-mini {
+				background-color: $daterangepicker-input-mini-bg;
+				border: 1px solid $daterangepicker-input-mini-bd;
+				color: $daterangepicker-input-mini-c;
+			}
+
+			li {
+				background: $daterangepicker-ranges-li-bg;
+				border: 1px solid $daterangepicker-ranges-li-bd;
+				color: $daterangepicker-ranges-li-c;
+
+				&.active, &:hover {
+					background: $daterangepicker-ranges-li-bg-ho;
+					border: 1px solid $daterangepicker-ranges-li-bd-ho;
+					color: $daterangepicker-ranges-li-c-ho;
+				}
+			}
+
+			.applyBtn{
+
+			}
+		}
+		.calendar-date {
+			border: 1px solid $daterangepicker-calendar-bd;
+			background: $daterangepicker-calendar-bg;
+		}
+
+		&.opensleft {
+
+			&:before {
+				border-right: 7px solid transparent;
+				border-bottom: 7px solid $daterangepicker-bd;
+				border-left: 7px solid transparent;
+				border-bottom-color: rgba(0, 0, 0, 0.2);
+			}
+
+			&:after {
+				border-right: 6px solid transparent;
+				border-bottom: 6px solid $daterangepicker-bg;
+				border-left: 6px solid transparent;
+			}
+
+		}
+
+		&.opensright {
+
+			&:before {
+
+				border-right: 7px solid transparent;
+				border-bottom: 7px solid $daterangepicker-bd;
+				border-left: 7px solid transparent;
+				border-bottom-color: rgba(0, 0, 0, 0.2);
+
+			}
+
+			&:after {
+				border-right: 6px solid transparent;
+				border-bottom: 6px solid $daterangepicker-bg;
+				border-left: 6px solid transparent;
+			}
+		}
+
+		td {
+			&.off, &.disabled {
+				color: $daterangepicker-disabled-c;
+			}
+			&.available:hover {
+				background: $daterangepicker-available-bg;
+			}
+		}
+		th.available:hover {
+			background: $daterangepicker-available-bg;
+		}
+		td {
+
+			&.in-range {
+				background: $daterangepicker-in-range-bg;
+			}
+
+			&.active {
+				background-color: $daterangepicker-active-bg;
+				border-color: $daterangepicker-active-bd;
+				color: $daterangepicker-active-c;
+				&:hover {
+					background-color: $daterangepicker-active-bg;
+					border-color: $daterangepicker-active-bd;
+					color: $daterangepicker-active-c;
+				}
+			}
+
+			&.week {
+				color: #ccc;
+			}
+		}
+		th.week {
+			color: #ccc;
+		}
+	}
+
+/*
+    Date Time Picker
+    ------------------------------------- */
+
+	.bootstrap-datetimepicker-widget {
+		background: $datetimepicker-bg;
+		border: 1px solid $datetimepicker-bd;
+
+		&:before {
+			border-left: 7px solid transparent;
+			border-right: 7px solid transparent;
+			border-bottom: 7px solid $datetimepicker-bd;
+			border-bottom-color: rgba(0, 0, 0, 0.2);
+		}
+
+		&:after {
+			border-left: 6px solid transparent;
+			border-right: 6px solid transparent;
+			border-bottom: 6px solid $datetimepicker-bg;
+		}
+
+		td {
+			&.day:hover, &.hour:hover, &.minute:hover, &.second:hover {
+				color: $datetimepicker-hover-c;
+				background: $datetimepicker-hover-bg;
+			}
+			&.old, &.new {
+				color: #999;
+			}
+			&.active {
+				color: $datetimepicker-active-c;
+				background: $datetimepicker-active-bg;
+
+				&:hover {
+					color: $datetimepicker-active-c;
+					background: $datetimepicker-active-bg;
+				}
+			}
+			&.disabled {
+				background: 0;
+				color: $datetimepicker-disabled-c;
+				&:hover {
+					background: 0;
+					color: $datetimepicker-disabled-c;
+				}
+			}
+			span {
+
+				&:hover {
+					background: $datetimepicker-hover-bg;
+				}
+
+				&.active {
+					color: $datetimepicker-active-c;
+					background: $datetimepicker-active-bg;
+
+					&:hover, &:active, &.active, &.disabled, &[disabled] {
+						color: $datetimepicker-active-c;
+						background: $datetimepicker-active-bg;
+					}
+				}
+
+				&.old {
+					color: $datetimepicker-disabled-c;
+				}
+				&.disabled {
+					background: 0;
+					color: $datetimepicker-disabled-c;
+					&:hover {
+						background: 0;
+						color: $datetimepicker-disabled-c;
+					}
+				}
+			}
+		}
+		th {
+
+			&.disabled {
+				background: 0;
+				color: $datetimepicker-disabled-c;
+
+				&:hover {
+					background: 0;
+					color: $datetimepicker-disabled-c;
+
+				}
+			}
+
+		}
+		thead tr:first-child th {
+
+			&:hover {
+				background: $datetimepicker-hover-bg;
+			}
+		}
+	}
+
+
+/*
+    Clockface
+    ------------------------------------- */
+
+	.clockface {
+
+		.outer:hover, .inner:hover {
+			background-color: $clockface-bg-ho;
+		}
+
+		.outer {
+			color: gray;
+
+			&.active {
+				color: $clockface-outer-active-c;
+				background: $clockface-outer-active-bg;
+
+				&:hover {
+					color: $clockface-outer-active-c;
+					background: $clockface-outer-active-bg;
+				}
+				&:active, &:hover:active, &.active, &:hover.active, &.disabled, &:hover.disabled, &[disabled], &:hover[disabled] {
+					color: $clockface-outer-active-c;
+					background-color: $clockface-outer-active-bg;
+				}
+				&:active, &:hover:active, &.active, &:hover.active {
+					background-color: $clockface-outer-active-bg;
+				}
+			}
+		}
+		.inner.active {
+			color: $clockface-inner-active-c;
+			background: $clockface-inner-active-bg;
+
+			&:hover {
+				color: $clockface-inner-active-c;
+				background: $clockface-inner-active-bg;
+			}
+			&:active, &:hover:active, &.active, &:hover.active, &.disabled, &:hover.disabled, &[disabled], &:hover[disabled] {
+				color: $clockface-inner-active-c;
+				background-color: $clockface-inner-active-bg;
+			}
+			&:active, &:hover:active, &.active, &:hover.active {
+				background-color: $clockface-inner-active-bg;
+			}
+		}
+
+		.ampm {
+			color: $clockface-ampm-c;
+			border-bottom: 1px dashed $clockface-ampm-bd;
+		}
+	}
+
+
+/*
+    Digital Clock
+    ------------------------------------- */
+
+	.digital-clock {
+
+		/*----- Light color theme -----*/
+
+		&.light {
+			background-color: #f3f3f3;
+			color: #272e38;
+			&:after {
+				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+			}
+			.digits div {
+				span {
+					background-color: #272e38;
+					border-color: #272e38;
+				}
+				&.dots {
+					&:before, &:after {
+						background-color: #272e38;
+					}
+				}
+			}
+			.alarm {
+				background: url('../img/alarm_light.jpg');
+			}
+			.display {
+				background-color: #dddddd;
+				box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08) inset, 0 1px 1px #fafafa;
+			}
+		}
+
+		/*----- Dark color theme -----*/
+
+		&.dark {
+			background-color: #272e38;
+			color: #cacaca;
+			&:after {
+				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+			}
+			.digits div span {
+				background-color: #cacaca;
+				border-color: #cacaca;
+			}
+			.alarm {
+				background: url('../img/alarm_dark.jpg');
+			}
+			.display {
+				background-color: #0f1620;
+				box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08) inset, 0 1px 1px #2d3642;
+			}
+			.digits div.dots {
+				&:before, &:after {
+					background-color: #cacaca;
+				}
+			}
+		}
+
+	}
+
+/*
+	Date Picker
+	------------------------------------- */
+
+	.datepicker {
+
+		&-dropdown {
+
+			&:before {
+				border-bottom: 7px solid $datepicker-bd;
+			}
+			&:after {
+				border-bottom: 6px solid $datepicker-bd-2;
+			}
+			&.datepicker-orient-bottom:before {
+				border-top:    7px solid $datepicker-bd;
+			}
+			&.datepicker-orient-bottom:after {
+				border-top:    6px solid $datepicker-bd-2;
+			}
+		}
+		> div {
+
+		}
+		&.days .datepicker-days,
+		&.months .datepicker-months,
+		&.years .datepicker-years {
+
+		}
+		table {
+			tr {
+				td, th {
+
+				}
+			}
+		}
+		.table-striped & table tr {
+			td, th {
+
+			}
+		}
+		table tr td {
+			&.day:hover,
+			&.day.focused {
+				background: $datepicker-th-bg-ho;
+			}
+			&.old,
+			&.new {
+				color: $datepicker-old-new-c;
+			}
+			&.disabled,
+			&.disabled:hover {
+				background: none;
+				color: $datepicker-disabled-mu;
+			}
+			&.highlighted {
+				background: #d9edf7;
+			}
+			&.today,
+			&.today:hover,
+			&.today.disabled,
+			&.today.disabled:hover {
+				color: $datepicker-today-c;
+				background: $datepicker-today-bg;
+			}
+			&.today:hover:hover {
+				color: #000;
+			}
+			&.today.active:hover {
+				color: #fff;
+			}
+			&.range,
+			&.range:hover,
+			&.range.disabled,
+			&.range.disabled:hover {
+				background: $datepicker-disabled-mu;
+			}
+			&.range.today,
+			&.range.today:hover,
+			&.range.today.disabled,
+			&.range.today.disabled:hover {
+				color: $datepicker-today-c;
+				background: $datepicker-today-bg;
+			}
+			&.selected,
+			&.selected:hover,
+			&.selected.disabled,
+			&.selected.disabled:hover {
+				color: $datepicker-selected-c;
+				background: $datepicker-selected-bg;
+			}
+			&.active,
+			&.active:hover,
+			&.active.disabled,
+			&.active.disabled:hover {
+				color: $datepicker-active-c;
+				background: $datepicker-active-bg;
+			}
+			span {
+				&:hover {
+					background: $datepicker-th-bg-ho;
+				}
+				&.disabled,
+				&.disabled:hover {
+					background: none;
+					color: $datepicker-disabled-mu;
+				}
+				&.active,
+				&.active:hover,
+				&.active.disabled,
+				&.active.disabled:hover {
+					color: $datepicker-active-c;
+					background: $datepicker-active-bg;
+				}
+				&.old,
+				&.new {
+					color: $datepicker-old-new-c;
+				}
+			}
+		}
+
+		thead tr:first-child th,
+		tfoot tr th {
+			&:hover {
+				background: $datepicker-th-bg-ho;
+			}
+		}
+
+		// Basic styling for calendar-week cells
+		.cw {
+
+		}
+		thead tr:first-child .cw {
+
+		}
+	}
+	.input-group.date .input-group-addon {
+
+	}
+	.input-daterange {
+
+		.input-group-addon {
+
+		}
+	}
+
+
+
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }

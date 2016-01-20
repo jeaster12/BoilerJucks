@@ -1,0 +1,51 @@
+/*
+    Draggables
+    ========================================================================== */
+
+/*
+    Placeholder
+    ------------------------------------- */
+	.ui-drag-placeholder {
+		background: $ui-drag-placeholder-bg;
+		border: 1px solid $ui-drag-placeholder-bd;
+	}
+
+/*
+    Gridstack
+    ------------------------------------- */
+
+	.grid-stack-placeholder .placeholder-content {
+		background: $ui-drag-placeholder-bg;
+		border: 1px solid $ui-drag-placeholder-bd;
+	}
+
+	.grid-stack-item {
+
+		&.ui-draggable-dragging .grid-stack-item-content, &.ui-resizable-resizing .grid-stack-item-content {
+			box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.2);
+		}
+
+		.ui-resizable-handle {
+			color: gray;
+		}
+
+	}
+
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }

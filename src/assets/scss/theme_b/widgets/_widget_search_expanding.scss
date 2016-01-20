@@ -1,0 +1,127 @@
+/*
+    Widget - Search Expanding
+    ========================================================================== */
+
+/*
+    Common
+    ------------------------------------- */
+	.widget-search-expanding{
+
+	}
+
+
+	.search-exp-input {
+		background: $search-exp-input-bg;
+		color: $search-exp-input-c;
+
+		&::-webkit-input-placeholder { color: $search-exp-input-placeholder; }
+		&:-moz-placeholder           { color: $search-exp-input-placeholder; }
+		&::-moz-placeholder          { color: $search-exp-input-placeholder; }
+		&:-ms-input-placeholder      { color: $search-exp-input-placeholder; }
+	}
+
+	.search-exp-icon {
+		color: $search-exp-icon-c;
+		background: $search-exp-icon-bg;
+	}
+
+	.search-exp-submit {
+		background: $search-exp-submit-bg;
+	}
+
+	/* Open state */
+
+	.search-expanding.search-exp-open .search-exp-icon,
+	.no-js .search-expanding .search-exp-icon {
+		background: $search-exp-icon-bg;
+		color: $search-exp-icon-c;
+	}
+
+
+
+//  State
+//  -------------------------------------
+	.is-search-expanding{
+
+	}
+
+	.is-search-expanding{
+
+	}
+
+
+/*
+    Search Expanding in Header
+    ------------------------------------- */
+	.search-expanding-in-header{
+
+	}
+
+
+/*
+    Search Expanding in Box
+    ------------------------------------- */
+	.search-expanding-in-box{
+
+	}
+
+
+/*
+    Search Expanding in Sidebar
+    ------------------------------------- */
+	.search-expanding-in-side{
+
+	}
+
+//  Compact State
+//  -------------------------------------
+
+	.l-sidebar-compact-left,
+	.l-sidebar-compact-right{
+
+	}
+
+//  Collapsed State
+//  -------------------------------------
+
+	.l-sidebar-collapsed-left,
+	.l-sidebar-collapsed-right{
+
+	}
+
+
+//  Theme
+//  -------------------------------------
+	.t-search-expanding-1{
+
+	}
+
+	.t-search-expanding-2{
+
+	}
+
+	.t-search-expanding-3{
+
+	}
+
+
+
+
+
+//  Media Queries
+//  ==========================================================================
+	@include breakpoint($screen-lg-maxx){
+
+	}
+
+	@include breakpoint($screen-md-maxx){
+
+	}
+
+	@include breakpoint($screen-sm-maxx){
+
+	}
+
+	@include breakpoint($screen-xs-maxx){
+
+	}

@@ -1,0 +1,56 @@
+/*
+    Icons
+    ========================================================================== */
+
+    .icon-header{
+		padding-bottom: 15px;
+		margin-bottom: 20px;
+    }
+
+    .icon-list .icon-hover {
+        display: block;
+        line-height: 34px;
+        height: 34px;
+        padding-left: 10px;
+        @include border-radius($s-radius);
+		@include transition($transition-value);
+
+        .fa, .glyphicon, .icomoon, .strokegap, .simpleline {
+            width: 32px;
+            display: inline-block;
+            text-align: right;
+            margin-right: 10px;
+            @include font-size(16px);
+        }
+
+        &:hover {
+            text-decoration: none;
+
+
+            .fa, .glyphicon, .icomoon, .strokegap, .simpleline {
+                font-size: 24px;
+            }
+
+            .fa{ vertical-align: -5px; }
+            .glyphicon, .icomoon, .strokegap, .simpleline { vertical-align: -6px; }
+        }
+    }
+
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }

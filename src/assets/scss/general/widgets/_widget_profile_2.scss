@@ -1,0 +1,546 @@
+/*
+    Widget - Profile 2
+    ========================================================================== */
+
+/*
+    Common
+    ------------------------------------- */
+	.widget-profile-2{
+
+	}
+
+	.profile-2-img{
+		position: relative;
+
+		a{
+			display: inline-block;
+			position: relative;
+		}
+
+		img{
+			padding: 7px;
+			@include border-radius(50%);
+		}
+
+		.edit-profile{
+			position: absolute;
+			right: 10px;
+			top: 10px;
+		}
+
+		.profile-2-status{
+			position: absolute;
+			bottom: 10px;
+			right: 10px;
+		}
+
+		.status {
+
+			/* Size and position */
+			position: relative;
+			z-index: 10;
+			width: 22px;
+
+			/* Styles */
+			cursor: pointer;
+			outline: none;
+
+			.dropdown {
+
+				/* Size & position */
+				padding: 5px 0;
+				position: absolute;
+				top: 140%;
+				left: 0;
+				right: 0;
+
+				/* Styles */
+				border-radius: inherit;
+				font-weight: normal;
+				list-style: none;
+
+				@include border-radius($s-radius);
+				@include transition(all 0.3s ease-in);
+
+				/* Hiding */
+				opacity: 0;
+				pointer-events: none;
+			}
+
+			/* Active state */
+			&.active .dropdown {
+				opacity: 1;
+				pointer-events: auto;
+			}
+		}
+	}
+
+	.profile-2-info{
+		padding: 10px;
+		@include font-size(18px);
+
+		h3{
+			font-family: font-family(semibold);
+			@include font-size(20px);
+		}
+	}
+
+	.profile-2-details{
+		a{
+			padding: 12px 15px;
+			display: block;
+			line-height: 1;
+			@include group;
+		}
+
+		.text{ float: left; }
+		.text-small{
+			display: none;
+			font-family: font-family(bold);
+			@include font-size(17px);
+		}
+
+		.label{
+			float: right;
+			font-weight: normal;
+			padding: .4em .6em .2em;
+		}
+	}
+
+
+//  State
+//  -------------------------------------
+	.is-profile-2{
+
+	}
+
+	.is-profile-2{
+
+	}
+
+
+/*
+    Profile 2 in Header
+    ------------------------------------- */
+	.profile-2-in-header{
+
+	}
+
+
+/*
+    Profile 2 in Box
+    ------------------------------------- */
+	.profile-2-in-box{
+		@include group;
+
+		.profile-2-img{
+			@include col(2/8);
+			text-align: center !important;
+
+			.edit-profile{
+				display: none;
+			}
+		}
+
+		.profile-2-info,
+		.profile-2-details{
+			@include col(3/8);
+		}
+
+		.profile-2-details{
+
+		}
+	}
+
+
+/*
+    Profile 2 in Sidebar
+    ------------------------------------- */
+	.profile-2-in-side{
+
+		.profile-2-img,
+		.profile-2-info{
+			text-align: center;
+		}
+
+		.profile-2-img img{
+			margin: 10px;
+		}
+
+		.profile-2-info{
+			h3{
+				margin-top: 0;
+			}
+		}
+
+		.profile-2-details{
+			padding-top: 10px;
+		}
+	}
+
+/*
+    Profile 2 in Side 2
+    ------------------------------------- */
+	.profile-2-in-side-2{
+		margin: -6px 0 0;
+		position: relative;
+
+		h3{
+			margin: 10px 0 5px;
+		}
+
+		&.profile-2-open{
+			.profile-2-wrapper{
+				display: block;
+			}
+		}
+
+		.profile-2-toggle{
+			position: absolute;
+			top: 0;
+			right: 8px;
+			padding: 5px 10px;
+			@include font-size(15px);
+			z-index: 1;
+		}
+
+		.profile-2-wrapper{
+			display: none;
+		}
+
+		.profile-2-img{
+			@include col(3/8);
+			text-align: center !important;
+
+			.edit-profile{
+				display: none;
+			}
+		}
+
+		.profile-2-info{
+			@include col(5/8);
+			padding: 0 10px;
+
+			li:last-child{
+				margin-top: 10px;
+			}
+		}
+
+		.profile-2-details{
+			@include group;
+			padding: 15px;
+		}
+
+		.profile-2-social-stats{
+			display: none;
+			text-align: center;
+			padding: 15px 0 10px;
+			@include group;
+		}
+
+		.profile-2-status-nr{
+			font-family: font-family(light);
+			@include font-size(22px);
+		}
+
+		.profile-2-chart{
+			display: none;
+			position: relative;
+			padding: 15px 0 0;
+
+			.rickshaw_graph .detail .x_label { display: none }
+		}
+
+		.visitors_rickshaw_legend{
+			position: absolute;
+			background: none;
+			padding: 0;
+			left: 10px;
+			top: 10px;
+		}
+
+	}
+
+
+//  Compact State
+//  -------------------------------------
+
+	.l-sidebar-compact-left,
+	.l-sidebar-compact-right{
+
+		.profile-2-in-side-2{
+
+			.profile-2-img{
+				width: 100%;
+				padding: 10px 0;
+				margin-right: 0;
+			}
+
+			.profile-2-info{
+				width: 250px;
+				padding:8px;
+				position: absolute;
+				top: 0;
+				z-index: 1;
+			}
+
+			.profile-2-details{
+				padding: 0;
+			}
+
+			.profile-2-social-stats{
+				position: absolute;
+				top: 114px;
+				width: 250px;
+				z-index: 1;
+			}
+
+			.profile-2-chart{
+				position: absolute;
+				width: 250px;
+				z-index: 1;
+			}
+
+			.profile-2-chart{
+				top: 114px;
+			}
+
+			.profile-2-social-stats.open + .profile-2-chart{
+				top: 181px;
+			}
+
+		}
+
+	}
+
+	.l-sidebar-compact-left{
+
+		.profile-2-in-side-2{
+
+			.profile-2-info{
+				left: 100px;
+			}
+
+			.profile-2-social-stats{
+				left: 100px;
+			}
+
+			.profile-2-chart{
+				left: 100px;
+			}
+
+		}
+	}
+
+	.l-sidebar-compact-right{
+		.profile-2-in-side-2{
+
+			.profile-2-info{
+				right: 100px;
+			}
+
+			.profile-2-social-stats{
+				right: 100px;
+			}
+
+			.profile-2-chart{
+				right: 100px;
+			}
+
+		}
+	}
+
+//  Collapsed State
+//  -------------------------------------
+
+	.l-sidebar-collapsed-left,
+	.l-sidebar-collapsed-right{
+
+		.profile-2-in-side-2{
+			margin: -1px 0 15px;
+			height: 1px;
+
+			.profile-2-toggle{
+				right: 10px;
+			}
+
+			.profile-2-img{
+				width: 250px;
+				padding: 0;
+				margin-right: 0;
+				position: absolute;
+				top: 0;
+				left: 50px;
+				z-index: 1;
+			}
+
+			.profile-2-info{
+				width: 250px;
+				padding: 0 0 8px;
+				position: absolute;
+				top: 162px;
+				text-align: center;
+				z-index: 1;
+			}
+
+			.profile-2-details{
+				padding: 0;
+			}
+
+			.profile-2-social-stats{
+				position: absolute;
+				top: 268px;
+				width: 250px;
+				z-index: 1;
+			}
+
+			.profile-2-chart{
+				position: absolute;
+				width: 250px;
+				z-index: 1;
+			}
+
+			.profile-2-chart{
+				top: 268px;
+			}
+
+			.profile-2-social-stats.open + .profile-2-chart{
+				top: 335px;
+			}
+
+		}
+	}
+
+	.l-sidebar-collapsed-left{
+
+		.profile-2-in-side-2{
+
+			.profile-2-info{
+				left: 50px;
+			}
+
+			.profile-2-social-stats{
+				left: 50px;
+			}
+
+			.profile-2-chart{
+				left: 50px;
+			}
+
+		}
+	}
+
+	.l-sidebar-collapsed-right{
+		.profile-2-in-side-2{
+
+			.profile-2-info{
+				right: 50px;
+			}
+
+			.profile-2-social-stats{
+				right: 50px;
+			}
+
+			.profile-2-chart{
+				right: 50px;
+			}
+
+		}
+	}
+
+
+//  Theme
+//  -------------------------------------
+	.t-profile-2-1{
+
+	}
+
+	.t-profile-2-2{
+
+	}
+
+	.t-profile-2-3{
+
+	}
+
+
+
+//  Media Queries
+//  ==========================================================================
+	@include breakpoint($screen-lg-maxx){
+
+	}
+
+	@include breakpoint($screen-md-maxx){
+		.profile-2-in-side-2 {
+			.profile-2-toggle {
+				top: 1px;
+			}
+		}
+	}
+
+	@include breakpoint($screen-sm-maxx){
+
+		.profile-2-in-box{
+
+			.profile-2-img,
+			.profile-2-info,
+			.profile-2-details{
+				@include stack();
+			}
+
+			.profile-2-info{
+				text-align: center;
+			}
+
+		}
+
+		.profile-2-in-side{
+
+			.profile-2-img{
+				a{
+					display: block;
+					padding: 10px;
+				}
+
+				.edit-profile{
+					display: none;
+				}
+
+				img{
+					margin: 0;
+					padding: 0;
+				}
+			}
+
+			.profile-2-info{
+				@include font-size(15px);
+
+				h3{
+					@include font-size(17px);
+				}
+			}
+
+			.profile-2-details{
+				padding-top: 10px;
+
+				.text{ display: none; }
+				.text-small{ display: block; float: left; }
+
+			}
+		}
+
+		.profile-2-in-side-2 {
+			.profile-2-toggle {
+				top: 4px;
+			}
+		}
+	}
+
+	@include breakpoint($screen-xs-maxx){
+		.profile-2-in-side-2 {
+			.profile-2-toggle {
+				top: 0px;
+			}
+		}
+	}

@@ -1,0 +1,200 @@
+/*
+    Documentation
+    ========================================================================== */
+
+/*
+    General
+    ------------------------------------- */
+	.doc-default{
+		background: $doc-default;
+
+		&.doc-text, .doc-text { color: darken($doc-default, 30%); }
+		&.doc-border { border:$doc-border-width-thin solid darken($doc-default, 8%); }
+
+		&.doc-top	 { border-top    :$doc-border-width-thick solid darken($doc-default, 10%); }
+		&.doc-right  { border-right  :$doc-border-width-thick solid darken($doc-default, 10%); }
+		&.doc-bottom { border-bottom :$doc-border-width-thick solid darken($doc-default, 10%); }
+		&.doc-left	 { border-left   :$doc-border-width-thick solid darken($doc-default, 10%); }
+	}
+
+	/* Colors v1 */
+	.doc-primary{
+		background: lighten($doc-primary, 3%);
+
+		&.doc-text, .doc-text { color: darken($doc-primary, 40%); }
+		&.doc-border { border:$doc-border-width-thin solid darken($doc-primary, 8%); }
+
+		&.doc-top	 { border-top    :$doc-border-width-thick solid darken($doc-primary, 10%); }
+		&.doc-right  { border-right  :$doc-border-width-thick solid darken($doc-primary, 10%); }
+		&.doc-bottom { border-bottom :$doc-border-width-thick solid darken($doc-primary, 10%); }
+		&.doc-left	 { border-left   :$doc-border-width-thick solid darken($doc-primary, 10%); }
+	}
+
+	.doc-success{
+		background: $doc-success;
+
+		&.doc-text, .doc-text { color: darken($doc-success, 40%); }
+		&.doc-border { border:$doc-border-width-thin solid darken($doc-success, 8%); }
+
+		&.doc-top	 { border-top    :$doc-border-width-thick solid darken($doc-success, 10%); }
+		&.doc-right  { border-right  :$doc-border-width-thick solid darken($doc-success, 10%); }
+		&.doc-bottom { border-bottom :$doc-border-width-thick solid darken($doc-success, 10%); }
+		&.doc-left	 { border-left   :$doc-border-width-thick solid darken($doc-success, 10%); }
+	}
+
+	.doc-info{
+		background: $doc-info;
+
+		&.doc-text, .doc-text { color: darken($doc-info, 40%); }
+		&.doc-border { border:$doc-border-width-thin solid darken($doc-info, 8%); }
+
+		&.doc-top	 { border-top    :$doc-border-width-thick solid darken($doc-info, 10%); }
+		&.doc-right  { border-right  :$doc-border-width-thick solid darken($doc-info, 10%); }
+		&.doc-bottom { border-bottom :$doc-border-width-thick solid darken($doc-info, 10%); }
+		&.doc-left	 { border-left   :$doc-border-width-thick solid darken($doc-info, 10%); }
+	}
+
+	.doc-warning{
+		background: $doc-warning;
+
+		&.doc-text, .doc-text { color: darken($doc-warning, 40%); }
+		&.doc-border { border:$doc-border-width-thin solid darken($doc-warning, 8%); }
+
+		&.doc-top	 { border-top    :$doc-border-width-thick solid darken($doc-warning, 10%); }
+		&.doc-right  { border-right  :$doc-border-width-thick solid darken($doc-warning, 10%); }
+		&.doc-bottom { border-bottom :$doc-border-width-thick solid darken($doc-warning, 10%); }
+		&.doc-left	 { border-left   :$doc-border-width-thick solid darken($doc-warning, 10%); }
+	}
+
+	.doc-danger{
+		background: $doc-danger;
+
+		&.doc-text, .doc-text { color: darken($doc-danger, 40%); }
+		&.doc-border { border:$doc-border-width-thin solid darken($doc-danger, 8%); }
+
+		&.doc-top	 { border-top    :$doc-border-width-thick solid darken($doc-danger, 10%); }
+		&.doc-right  { border-right  :$doc-border-width-thick solid darken($doc-danger, 10%); }
+		&.doc-bottom { border-bottom :$doc-border-width-thick solid darken($doc-danger, 10%); }
+		&.doc-left	 { border-left   :$doc-border-width-thick solid darken($doc-danger, 10%); }
+	}
+
+	.doc-dark{
+		background: $doc-dark;
+
+		&.doc-text, .doc-text { color: darken($doc-dark, 60%); }
+		&.doc-border { border:$doc-border-width-thin solid darken($doc-dark, 8%); }
+
+		&.doc-top	 { border-top    :$doc-border-width-thick solid darken($doc-dark, 10%); }
+		&.doc-right  { border-right  :$doc-border-width-thick solid darken($doc-dark, 10%); }
+		&.doc-bottom { border-bottom :$doc-border-width-thick solid darken($doc-dark, 10%); }
+		&.doc-left	 { border-left   :$doc-border-width-thick solid darken($doc-dark, 10%); }
+	}
+
+	.doc-light{
+		background: $doc-light;
+
+		&.doc-text, .doc-text { color: darken($doc-light, 60%); }
+		&.doc-border { border:$doc-border-width-thin solid darken($doc-light, 8%); }
+
+		&.doc-top	 { border-top    :$doc-border-width-thick solid darken($doc-light, 10%); }
+		&.doc-right  { border-right  :$doc-border-width-thick solid darken($doc-light, 10%); }
+		&.doc-bottom { border-bottom :$doc-border-width-thick solid darken($doc-light, 10%); }
+		&.doc-left	 { border-left   :$doc-border-width-thick solid darken($doc-light, 10%); }
+	}
+
+	/* Colors v2 */
+	.doc-primary-1{
+		color: $doc-c;
+		background: lighten($doc-primary-1, 6%);
+
+		&.doc-text, .doc-text { color: darken($doc-primary-1, 25%); }
+		&.doc-border { border:$doc-border-width-thin solid darken($doc-primary-1, 8%); }
+
+		&.doc-top	 { border-top    :$doc-border-width-thick solid darken($doc-primary-1, 10%); }
+		&.doc-right  { border-right  :$doc-border-width-thick solid darken($doc-primary-1, 10%); }
+		&.doc-bottom { border-bottom :$doc-border-width-thick solid darken($doc-primary-1, 10%); }
+		&.doc-left	 { border-left   :$doc-border-width-thick solid darken($doc-primary-1, 10%); }
+	}
+
+	.doc-success-1{
+		color: $doc-c;
+		background: lighten($doc-success-1, 6%);
+
+		&.doc-text, .doc-text { color: darken($doc-success-1, 25%); }
+		&.doc-border { border:$doc-border-width-thin solid darken($doc-success-1, 8%); }
+
+		&.doc-top	 { border-top    :$doc-border-width-thick solid darken($doc-success-1, 10%); }
+		&.doc-right  { border-right  :$doc-border-width-thick solid darken($doc-success-1, 10%); }
+		&.doc-bottom { border-bottom :$doc-border-width-thick solid darken($doc-success-1, 10%); }
+		&.doc-left	 { border-left   :$doc-border-width-thick solid darken($doc-success-1, 10%); }
+	}
+
+	.doc-info-1{
+		color: $doc-c;
+		background: lighten($doc-info-1, 6%);
+
+		&.doc-text, .doc-text { color: darken($doc-info-1, 25%); }
+		&.doc-border { border:$doc-border-width-thin solid darken($doc-info-1, 8%); }
+
+		&.doc-top	 { border-top    :$doc-border-width-thick solid darken($doc-info-1, 10%); }
+		&.doc-right  { border-right  :$doc-border-width-thick solid darken($doc-info-1, 10%); }
+		&.doc-bottom { border-bottom :$doc-border-width-thick solid darken($doc-info-1, 10%); }
+		&.doc-left	 { border-left   :$doc-border-width-thick solid darken($doc-info-1, 10%); }
+	}
+
+	.doc-warning-1{
+		color: $doc-c;
+		background: lighten($doc-warning-1, 6%);
+
+		&.doc-text, .doc-text { color: darken($doc-warning-1, 25%); }
+		&.doc-border { border:$doc-border-width-thin solid darken($doc-warning-1, 8%); }
+
+		&.doc-top	 { border-top    :$doc-border-width-thick solid darken($doc-warning-1, 10%); }
+		&.doc-right  { border-right  :$doc-border-width-thick solid darken($doc-warning-1, 10%); }
+		&.doc-bottom { border-bottom :$doc-border-width-thick solid darken($doc-warning-1, 10%); }
+		&.doc-left	 { border-left   :$doc-border-width-thick solid darken($doc-warning-1, 10%); }
+	}
+
+	.doc-danger-1{
+		color: $doc-c;
+		background: lighten($doc-danger-1, 6%);
+
+		&.doc-text, .doc-text { color: darken($doc-danger-1, 25%); }
+		&.doc-border { border:$doc-border-width-thin solid darken($doc-danger-1, 8%); }
+
+		&.doc-top	 { border-top    :$doc-border-width-thick solid darken($doc-danger-1, 10%); }
+		&.doc-right  { border-right  :$doc-border-width-thick solid darken($doc-danger-1, 10%); }
+		&.doc-bottom { border-bottom :$doc-border-width-thick solid darken($doc-danger-1, 10%); }
+		&.doc-left	 { border-left   :$doc-border-width-thick solid darken($doc-danger-1, 10%); }
+	}
+
+	.doc-dark-1{
+		color: $doc-c;
+		background: lighten($doc-dark-1, 6%);
+
+		&.doc-text, .doc-text { color: darken($doc-dark-1, 25%); }
+		&.doc-border { border:$doc-border-width-thin solid darken($doc-dark-1, 8%); }
+
+		&.doc-top	 { border-top    :$doc-border-width-thick solid darken($doc-dark-1, 10%); }
+		&.doc-right  { border-right  :$doc-border-width-thick solid darken($doc-dark-1, 10%); }
+		&.doc-bottom { border-bottom :$doc-border-width-thick solid darken($doc-dark-1, 10%); }
+		&.doc-left	 { border-left   :$doc-border-width-thick solid darken($doc-dark-1, 10%); }
+	}
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }

@@ -1,0 +1,2250 @@
+//  ==========================================================================
+//  Theme colors
+//  ==========================================================================
+
+
+	// ==========================================================
+    // Functional Variables
+	// ==========================================================
+
+	// Named Colors
+	// -----------------------------
+
+	$c-white : #FFF;
+	$c-black : #000;
+
+
+	// Color Palette
+	// -----------------------------
+
+	// Tones
+	// -----
+	// color-name: (
+		// x-light				  lightest
+		// light				  lighter
+		// mid-light			  light
+		// base (default)	or    base (default)
+		// mid-dark				  dark
+		// dark					  darker
+		// x-dark				  darkest
+	// )
+
+	$colors: (
+
+	// Ipreo Blue
+
+		ipreo-blue:(
+			lighter : lighten(#0079bd, 40%),
+			light   : lighten(#0079bd, 30%),
+			base    : #0079bd,
+			dark    : darken(#0079bd, 5%),
+			darker  : darken(#0079bd, 15%),
+		),
+
+		// Base
+
+		white:(
+			base   : $c-white,
+			dark   : #FDFDFD,
+			darker : #FAFAFA
+		),
+		black:(
+			base : $c-black
+		),
+
+
+		// Theme Colors
+
+		white-smoke:(
+			base   : #F8F8F8,
+			dark   : #F4F4F4,
+			darker : #EDEDED
+		),
+
+		very-light-grey:(
+			base : #CCCCCC
+		),
+
+		light-grey:(
+			base : #D7D7D7
+		),
+
+		dark-grey:(
+			base : #AAAAAA,
+			dark : #A0A0A0
+		),
+
+		gainsboro:(
+			base   : #E2E2E2,
+			dark   : #DDDDDD,
+			darker : #d9d9d9
+		),
+
+		silver:(
+			base : #BBBBBB,
+		),
+
+		empress:(
+			base : #737373,
+		),
+
+		mortar:(
+			lighter : lighten(#535353, 50%),
+			light   : lighten(#535353, 40%),
+			base    : #535353,
+			dark    : darken(#535353, 5%),
+			darker  : darken(#535353, 15%),
+		),
+
+		nero:(
+			light	: #1d1d1d, //#242424
+			base    : #161616,  //#202020
+			dark    : darken(#161616, 2%),
+			darker  : darken(#161616, 5%),
+			darkest : darken(#161616, 7%)
+		),
+
+		amber:(
+			lighter : lighten(#FFC20A, 40%),
+			light   : lighten(#FFC20A, 30%),
+			base    : #FFC20A,
+			dark    : darken(#FFC20A, 5%),
+			darker  : darken(#FFC20A, 15%),
+		),
+
+
+		// Bootstrap Colors
+
+		malibu:(
+			lighter : lighten(#66A6E2, 30%),
+			light   : lighten(#66A6E2, 20%),
+			base:   #66A6E2,
+			dark    : darken(#66A6E2, 5%)
+		),
+		jungle-green:(
+			lighter : lighten(#30BB74, 40%),
+			light   : lighten(#30BB74, 30%),
+			base    : #30BB74,
+			dark    : darken(#30BB74, 5%)
+		),
+		summer-sky:(
+			lighter : lighten(#49C0E7, 35%),
+			light   : lighten(#49C0E7, 30%),
+			base    : #49C0E7,
+		    dark    : darken(#49C0E7, 5%)
+		),
+		yellow-sea:(
+			lighter : lighten(#F2A730, 40%),
+			light   : lighten(#F2A730, 30%),
+			base    : #F2A730,
+		    dark    : darken(#F2A730, 5%)
+		),
+		dark-pink:(
+			lighter : lighten(#eb525d, 35%),
+			light   : lighten(#eb525d, 30%),
+			base    : #eb525d,
+			dark    : darken(#eb525d, 5%)
+		),
+
+
+		// Social Colors
+
+		facebook:(
+			base   : #3B5998,
+			dark   : darken(#3B5998, 4%),
+			darker : darken(#3B5998, 6%)
+		),
+
+		twitter:(
+			base : #55ACEE,
+			dark   : darken(#55ACEE, 4%),
+			darker : darken(#55ACEE, 6%)
+		),
+
+		youtube:(
+			base : #e52d27,
+			dark   : darken(#e52d27, 4%),
+			darker : darken(#e52d27, 6%)
+		),
+
+		google-plus:(
+			base : #dd4b39,
+			dark   : darken(#dd4b39, 4%),
+			darker : darken(#dd4b39, 6%)
+		),
+
+		instagram:(
+			base : #3f729b,
+			dark   : darken(#3f729b, 4%),
+			darker : darken(#3f729b, 6%)
+		),
+
+
+		// Other Colors
+
+	);
+
+
+	// ==========================================================
+	// Descriptive Variables
+	// ==========================================================
+
+	// Abbreviation
+	// ------------
+	// c  : color
+	// bg : background
+	// bd : border
+	// ho : hover
+	// fo : focus
+	// mu : multi use -  color, background, border
+
+	// Base
+	// ==========================================================
+	$body-c			: color(mortar);
+	$body-bg		: color(white-smoke);
+
+	$a-c			: color(nero);
+	$a-ho			: color(ipreo-blue);
+
+	$selection-bg	: color(gainsboro,dark);
+
+	$hr-bd			: color(white-smoke,darker);
+
+	$browsehappy-c	: color(black);
+	$browsehappy-bg	: color(very-light-grey);
+
+
+  $ipreo-blue 		  	  : color(ipreo-blue);
+
+	// Layout
+	// ==========================================================
+
+	// Page
+	// -----------------------------
+	$page-header-bg       : color(white,dark);
+	$boxed-bg             : color(white);
+	$boxed-bd             : color(white-smoke,darker);
+	$boxed-bg-2           : color(white-smoke,dark);
+	$boxed-bd-2           : color(gainsboro);
+	$page-scroll-up-c     : color(white);
+	$page-scroll-up-bg    : color(ipreo-blue);
+	$page-scroll-up-ho    : color(ipreo-blue);
+	$page-scroll-up-bg-ho : color(nero);
+
+	// Grid
+	// -----------------------------
+	$grid-bg   : color(white-smoke,dark);
+	$grid-bd   : color(gainsboro,dark);
+
+	$grid-2-bg : color(jungle-green);
+	$grid-2-bd : color(jungle-green);
+
+	$grid-3-bg : color(dark-pink);
+	$grid-3-bd : color(dark-pink);
+
+	$grid-4-bg : color(yellow-sea);
+	$grid-4-bd : color(yellow-sea);
+
+	// Sidebar
+	// -----------------------------
+	$sidebar-t-1-c  : color(dark-grey, dark);
+	$sidebar-t-1-bg : color(nero, light);
+
+	$sidebar-t-2-bg : color(white, dark);
+	$sidebar-t-2-bd : color(gainsboro);
+
+	$sidebar-t-3-c  : color(dark-grey, dark);
+	$sidebar-t-3-bg : color(nero);
+	$sidebar-t-3-bd : color(nero,dark);
+
+	$sidebar-t-4-bg : color(white-smoke);
+	$sidebar-t-4-bd : color(gainsboro);
+
+	// Boxes and Panels
+	// -----------------------------
+
+	// Boxes
+	$box-bg				  	  : color(white);
+	$box-bd				  	  : color(white-smoke,darker);
+	$box-header-bg		  	  : color(white,dark);
+	$box-footer-bg 		  	  : color(white,dark);
+
+	$box-button-bg        	  : color(white,dark);
+	$box-button-header-bg 	  : color(white,darker);
+
+	$box-primary-c 		  	  : color(ipreo-blue);
+	$box-primary-bd    	      : color(ipreo-blue,light);
+	$box-primary-heading-bg   : color(ipreo-blue,lighter);
+
+	$box-success-c 		      : color(jungle-green);
+	$box-success-bd    	      : color(jungle-green,light);
+	$box-success-heading-bg   : color(jungle-green,lighter);
+
+	$box-info-c 		  	  : color(summer-sky);
+	$box-info-bd    	   	  : color(summer-sky,light);
+	$box-info-heading-bg 	  : color(summer-sky,lighter);
+
+	$box-warning-c 		      : color(yellow-sea);
+	$box-warning-bd    	      : color(yellow-sea,light);
+	$box-warning-heading-bg   : color(yellow-sea,lighter);
+
+	$box-danger-c 		      : color(dark-pink);
+	$box-danger-bd    	      : color(dark-pink,light);
+	$box-danger-heading-bg    : color(dark-pink,lighter);
+
+	$box-dark-c 		  	  : color(mortar);
+	$box-dark-bd    	  	  : color(mortar,light);
+	$box-dark-heading-bg      : color(mortar,lighter);
+
+	// Panels
+	$panel-bg			      : color(white);
+	$panel-bd			  	  : color(white-smoke,darker);
+	$panel-footer-bg		  : color(white,dark);
+
+	$panel-default-c 		  : color(mortar);
+	$panel-default-bd    	  : color(white-smoke,darker);
+	$panel-default-heading-bg : color(white,dark);
+
+	$panel-primary-c 		  : color(ipreo-blue);
+	$panel-primary-bd    	  : color(ipreo-blue,light);
+	$panel-primary-heading-bg : color(ipreo-blue,lighter);
+
+	$panel-success-c 		  : color(jungle-green);
+	$panel-success-bd    	  : color(jungle-green,light);
+	$panel-success-heading-bg : color(jungle-green,lighter);
+
+	$panel-info-c 		  	  : color(summer-sky);
+	$panel-info-bd    	   	  : color(summer-sky,light);
+	$panel-info-heading-bg 	  : color(summer-sky,lighter);
+
+	$panel-warning-c 		  : color(yellow-sea);
+	$panel-warning-bd    	  : color(yellow-sea,light);
+	$panel-warning-heading-bg : color(yellow-sea,lighter);
+
+	$panel-danger-c 		  : color(dark-pink);
+	$panel-danger-bd    	  : color(dark-pink,light);
+	$panel-danger-heading-bg  : color(dark-pink,lighter);
+
+	$panel-dark-c 		  	  : color(mortar);
+	$panel-dark-bd    	  	  : color(mortar,light);
+	$panel-dark-heading-bg    : color(mortar,lighter);
+
+
+	// Header
+	// -----------------------------
+	$header-1-bg 	   : color(white);
+	$header-slide-1-bg : color(white-smoke);
+	$header-slide-2-bg : color(white);
+	$header-slide-3-bg : color(nero);
+
+
+	// Footer
+	// -----------------------------
+	$footer-1-bg 	   : color(white);
+	$footer-1-bd       : color(white-smoke,darker);
+
+	$footer-slide-1-bg : color(white-smoke);
+
+
+	// Navigation
+	// -----------------------------
+	$nav-c			  	   : color(very-light-grey);
+	$nav-bg			  	   : color(nero, light);
+	$nav-ho			  	   : color(ipreo-blue);
+	$nav-bg-ho		  	   : color(ipreo-blue,dark);
+
+	$nav-open-c		  	   : color(white);
+	$nav-open-bg      	   : color(ipreo-blue);
+	$nav-active-c	  	   : color(white);
+
+	$nav-lvl1-open-bg      : color(nero,dark);
+	$nav-lvl2-open-bg 	   : color(nero,darker);
+	$nav-lvl3-open-bg 	   : color(nero,darkest);
+
+	$nav-lvl1-collapsed-bd : color(nero,darkest);
+
+//	$nav-info-c			   : color(white);
+//	$nav-info-bg		   : color(dark-pink);
+//	$nav-new-c			   : color(white);
+//	$nav-new-bg		   	   : color(jungle-green);
+//	$nav-soon-c			   : color(white);
+//	$nav-soon-bg		   : color(malibu);
+
+	$nav-info-c			   : color(dark-pink);
+	$nav-info-bg		   : none;
+	$nav-new-c			   : color(jungle-green);
+	$nav-new-bg		   	   : none;
+	$nav-soon-c			   : color(malibu);
+	$nav-soon-bg		   : none;
+
+	// Bootstrap Navigation
+	// -----------------------------
+	$navbar-cupcake-c					: color(mortar);
+	$navbar-cupcake-bg					: color(white);
+	$navbar-cupcake-bd					: color(white-smoke,darker);
+
+	$navbar-cupcake-nav-li-bd			: color(white-smoke,darker);
+
+	$navbar-cupcake-nav-a-bg-mu		: color(white-smoke);
+	$navbar-cupcake-nav-a-bd-mu		: color(white-smoke,darker);
+
+	// Navbar links
+	$navbar-cupcake-link-c				: color(mortar);
+	$navbar-cupcake-link-hover-c		: color(mortar,dark);
+	$navbar-cupcake-link-hover-bg		: transparent !default;
+	$navbar-cupcake-link-active-c		: color(nero);
+	$navbar-cupcake-link-active-bg		: color(white-smoke);
+	$navbar-cupcake-link-disabled-c	: color(white,dark) !default;
+	$navbar-cupcake-link-disabled-bg	: transparent !default;
+
+	// Navbar brand label
+	$navbar-cupcake-brand-c			: color(mortar);
+	$navbar-cupcake-brand-hover-c		: color(mortar,dark);
+	$navbar-cupcake-brand-hover-bg		: transparent !default;
+
+	// Navbar toggle
+	$navbar-cupcake-toggle-hover-bg    : color(white-smoke,dark);
+	$navbar-cupcake-toggle-icon-bar-bg : color(mortar);
+	$navbar-cupcake-toggle-bd    		: color(light-grey);
+
+
+
+	// Modules
+	// ==========================================================
+
+	// Forms
+	// ===========================================
+
+	// Elements
+	// -----------------------------
+	$input-bg 	 		      : color(white);
+	$input-bd 	 		      : color(gainsboro);
+	$input-bg-ho 		      : color(white,darker);
+	$input-bd-ho 		      : color(gainsboro);
+	$input-bg-fo 		      : color(white-smoke);
+	$input-bd-fo 		      : color(light-grey);
+	$input-disabled-bg-fo     : color(white-smoke,dark);
+	$input-disabled-bd-fo     : color(very-light-grey);
+
+	$switchery-default-c	  : color(white-smoke,darker);
+	$switchery-primary-c	  : color(ipreo-blue);
+	$switchery-success-c	  : color(jungle-green);
+	$switchery-info-c		  : color(summer-sky);
+	$switchery-warning-c	  : color(yellow-sea);
+	$switchery-danger-c		  : color(dark-pink);
+	$switchery-dark-c		  : color(mortar);
+
+	// Control States
+	$state-success-c          : color(jungle-green,dark);
+	$state-success-bd         : color(jungle-green,dark);
+	$state-success-bg         : color(jungle-green,dark);
+
+	$state-info-c             : color(summer-sky,dark);
+	$state-info-bd            : color(summer-sky,dark);
+	$state-info-bg            : color(summer-sky,dark);
+
+	$state-warning-c          : color(yellow-sea,dark);
+	$state-warning-bd         : color(yellow-sea,dark);
+	$state-warning-bg         : color(yellow-sea,dark);
+
+	$state-danger-c           : color(dark-pink,dark);
+	$state-danger-bd          : color(dark-pink,dark);
+	$state-danger-bg          : color(dark-pink,dark);
+
+	$state-dark-c             : color(mortar,dark);
+	$state-dark-bd            : color(mortar,dark);
+	$state-dark-bg            : color(mortar,dark);
+
+	// Input Groups and Addons
+	$input-group-addon-c      : color(mortar);
+	$input-group-addon-bg     : color(white-smoke);
+	$input-group-addon-bd     : color(gainsboro);
+
+	// Checkradios
+	$checkradios-c            : color(white);
+	$checkradios-default-mu   : color(gainsboro);
+	$checkradios-primary-mu   : color(ipreo-blue);
+	$checkradios-success-mu   : color(jungle-green);
+	$checkradios-info-mu	  : color(summer-sky);
+	$checkradios-warning-mu   : color(yellow-sea);
+	$checkradios-danger-mu	  : color(dark-pink);
+	$checkradios-dark-mu	  : color(mortar);
+	$checkradios-disabled     : color(light-grey);
+
+	// CheckBo
+	$checkbo-white-bg         : color(white);
+	$checkbo-default-mu       : color(gainsboro);
+	$checkbo-primary-mu       : color(ipreo-blue);
+	$checkbo-success-mu       : color(jungle-green);
+	$checkbo-info-mu	      : color(summer-sky);
+	$checkbo-warning-mu       : color(yellow-sea);
+	$checkbo-danger-mu	      : color(dark-pink);
+	$checkbo-dark-mu	      : color(mortar);
+	$checkbo-disabled-mu 	  : color(light-grey);
+
+	$checkbo-switcher         : color(gainsboro);
+
+	// FancySelect
+	$fancy-c                  : color(mortar);
+	$fancy-trigger-bg         : color(white,darker);
+	$fancy-trigger-bd         : color(light-grey);
+
+	$fancy-open-c             : color(white);
+	$fancy-trigger-open-bg    : color(mortar);
+	$fancy-trigger-open-bd    : color(mortar,dark);
+
+	$fancy-option-c           : color(white);
+	$fancy-option-bg          : color(mortar);
+
+	$fancy-selected-c         : color(ipreo-blue);
+	$fancy-selected-bg        : color(mortar,dark);
+
+	$fancy-option-ho          : color(ipreo-blue);
+
+	// Select 2
+	$select2-s-c              : color(mortar);
+	$select2-s-placeholder-c  : color(dark-grey);
+	$select2-s-bg    		  : color(white,darker);
+	$select2-s-bd      	      : color(light-grey);
+
+	$select2-dropdown-bg      : color(white);
+	$select2-dropdown-bd      : color(light-grey);
+
+	$select2-disabled-c       : color(light-grey);
+	$select2-disabled-bg      : color(white);
+
+	$select2-m-c              : color(mortar);
+	$select2-m-placeholder-c  : color(dark-grey);
+	$select2-m-bg    		  : color(white,darker);
+	$select2-m-bd      	      : color(light-grey);
+	$select2-m-focus-bd       : color(dark-grey);
+
+	$select2-m-choice-bg      : color(white);
+	$select2-m-choice-bd      : color(light-grey);
+
+	$select2-m-highlighted-c  : color(white);
+	$select2-m-highlighted-bg : color(mortar);
+
+	// On-Off Toggle Switch
+	$onoffswitch-bd           : color(silver);
+
+	$onoffswitch-default-bg   : color(dark-grey);
+	$onoffswitch-primary-bg   : color(ipreo-blue);
+	$onoffswitch-success-bg   : color(jungle-green);
+	$onoffswitch-info-bg	  : color(summer-sky);
+	$onoffswitch-warning-bg   : color(yellow-sea);
+	$onoffswitch-danger-bg	  : color(dark-pink);
+	$onoffswitch-dark-bg	  : color(mortar);
+
+
+	// Upload
+	// -----------------------------
+	$summer-bg                : color(white-smoke,dark);
+	$summer-bd 	              : color(white-smoke,darker);
+	$summer-dropzone-c        : color(mortar);
+	$summer-dropzone-active-c : color(mortar,dark);
+	$summeer-note-icon-bar-bd : color(mortar,light);
+
+
+	// Validation
+	// -----------------------------
+	$parsley-success-c  : color(jungle-green,dark);
+	$parsley-success-bg : color(jungle-green,lighter);
+	$parsley-success-bd : color(jungle-green,light);
+
+	$parsley-error-c    : color(dark-pink);
+	$parsley-error-bg   : color(dark-pink,lighter);
+	$parsley-error-bd   : color(dark-pink,light);
+
+	$validate-c         : color(dark-pink);
+	$validate-bg   		: color(dark-pink,lighter);
+	$validate-bd        : color(dark-pink,light);
+
+
+	// Wizard
+	// -----------------------------
+
+	$wizard-disabled-c         : color(dark-grey);
+	$wizard-disabled-bg        : color(white-smoke,dark);
+
+	$wizard-current-c          : color(white);
+	$wizard-current-bg         : color(mortar);
+
+	$wizard-done-c     	       : color(white);
+	$wizard-done-bg    	       : color(mortar,light);
+
+	$wizard-error-c            : color(white);
+	$wizard-error-bg           : color(dark-pink);
+
+	$wizard-bg     		       : color(white-smoke);
+	$wizard-bd     		       : color(white-smoke,darker);
+
+	$wizard-c-error-c          : color(dark-pink);
+	$wizard-c-error-bg         : color(dark-pink,lighter);
+	$wizard-c-error-bd         : color(dark-pink,light);
+
+	$wizard-action-c           : color(white);
+	$wizard-action-bg          : color(mortar);
+
+	$wizard-action-disabled-c  : color(dark-grey);
+	$wizard-action-disabled-bg : color(white-smoke,dark);
+
+
+	// Tables
+	// ===========================================
+
+	// Basic
+	// -----------------------------
+	$table-bd 		  			 : color(white-smoke,darker);
+	$table-accent-bg  			 : color(white,darker);
+	$table-hover-bg   			 : color(white,darker);
+	$table-active-bg  			 : color(white,darker);
+	$table-success-bg 			 : color(jungle-green,lighter);
+	$table-info-bg    			 : color(summer-sky,lighter);
+	$table-warning-bg 			 : color(yellow-sea,lighter);
+	$table-danger-bg  			 : color(dark-pink,lighter);
+
+
+	// DataTable
+	// -----------------------------
+	$data-table-thead-bd  		 : color(white-smoke,darker);
+	$data-table-tfoot-bd  		 : color(white-smoke,darker);
+	$data-table-tbody-bd  		 : color(white-smoke,darker);
+	$data-table-main-c    		 : color(mortar);
+	$data-table-active-c  		 : color(ipreo-blue);
+	$data-table-active-bd 		 : color(ipreo-blue);
+
+	$data-table-paginate-c 		 : color(mortar);
+	$data-table-paginate-cur-c   : color(mortar);
+	$data-table-paginate-cur-bg  : color(white);
+	$data-table-paginate-cur-bd  : color(ipreo-blue);
+
+	$data-table-paginate-hov-c   : color(mortar);
+	$data-table-paginate-hov-bg  : color(ipreo-blue);
+	$data-table-paginate-hov-bd  : color(ipreo-blue);
+
+	$data-table-paginate-act-bg  : color(ipreo-blue,dark);
+
+	$data-fill-bg    			 : color(mortar,light);
+	$data-fill-shadow    	     : color(mortar);
+
+	$data-reorder-cloned-bg      : color(white);
+	$data-reorder-pointer-bg     : color(ipreo-blue);
+
+	$data-reorder-cloned-bg      : color(white);
+	$data-reorder-pointer-bg     : color(ipreo-blue);
+
+	$data-resp-control-c    	 : color(white);
+	$data-resp-control-open-bg   : color(nero,light);
+	$data-resp-control-closed-bg : color(ipreo-blue,dark);
+	$data-resp-child-bd 		 : color(white-smoke,darker);
+
+	// FooTable
+	// -----------------------------
+	$foo-table-cell-detail-bg   : color(light-grey);
+	$foo-table-toggle-c   		: color(dark-grey);
+	$foo-table-odd-bg   		: color(white-smoke);
+
+
+	// Charts
+	// ===========================================
+
+	// C3
+	// -----------------------------
+	$c3-line-1-c   : color(jungle-green);
+	$c3-line-2-c   : color(summer-sky);
+	$c3-line-3-c   : color(dark-pink);
+
+	$c3-area-1-c   : color(ipreo-blue);
+	$c3-area-2-c   : color(dark-pink);
+
+	$c3-spline-1-c : color(nero);
+	$c3-spline-2-c : color(yellow-sea);
+	$c3-spline-3-c : color(ipreo-blue);
+
+	$c3-mixed-1-c  : color(summer-sky,light);
+	$c3-mixed-2-c  : color(summer-sky);
+	$c3-mixed-3-c  : color(summer-sky,dark);
+
+	$c3-pie-1-c    : color(malibu);
+	$c3-pie-2-c    : color(jungle-green);
+	$c3-pie-3-c    : color(summer-sky);
+	$c3-pie-4-c    : color(yellow-sea);
+	$c3-pie-5-c    : color(dark-pink);
+
+	$c3-donut-1-c  : color(ipreo-blue);
+	$c3-donut-2-c  : color(mortar);
+	$c3-donut-3-c  : color(nero);
+	$c3-donut-4-c  : color(yellow-sea);
+	$c3-donut-5-c  : color(dark-grey);
+
+
+	// Flot
+	// -----------------------------
+	$flot-realtime-c : color(ipreo-blue);
+
+	$flot-line-1-c   : color(jungle-green);
+	$flot-line-2-c   : color(summer-sky);
+
+ 	$flot-pie-1-c    : color(malibu);
+ 	$flot-pie-2-c    : color(jungle-green);
+ 	$flot-pie-3-c    : color(summer-sky);
+ 	$flot-pie-4-c    : color(yellow-sea);
+ 	$flot-pie-5-c    : color(dark-pink);
+
+	$flot-donut-1-c  : color(ipreo-blue);
+	$flot-donut-2-c  : color(mortar);
+	$flot-donut-3-c  : color(nero);
+	$flot-donut-4-c  : color(yellow-sea);
+	$flot-donut-5-c  : color(dark-grey);
+
+	$flot-bars-1     : color(summer-sky);
+	$flot-bars-2     : color(dark-pink);
+	$flot-bars-3     : color(jungle-green);
+	$flot-lines-1    : color(ipreo-blue);
+	$flot-lines-2    : color(yellow-sea);
+	$flot-lines-3    : color(mortar);
+
+
+	// Morris
+	// -----------------------------
+	$morris-area-1-c    : color(summer-sky);
+	$morris-area-2-c    : color(jungle-green);
+	$morris-area-3-c    : color(silver);
+
+	$morris-bar-1-c     : color(ipreo-blue,light);
+	$morris-bar-2-c     : color(ipreo-blue);
+	$morris-bar-3-c     : color(ipreo-blue,dark);
+
+	$morris-stacked-1-c : color(dark-pink,dark);
+	$morris-stacked-2-c : color(dark-pink);
+	$morris-stacked-3-c : color(dark-pink,light);
+
+	$morris-donut-1-c   : color(summer-sky);
+	$morris-donut-2-c   : color(dark-pink);
+	$morris-donut-3-c   : color(jungle-green);
+	$morris-donut-4-c   : color(yellow-sea);
+
+	$morris-line-1-c    : color(ipreo-blue);
+
+	// Rickshaw
+	// -----------------------------
+	$rickshaw-area-1-c    : color(yellow-sea);
+	$rickshaw-area-2-c    : color(mortar);
+	$rickshaw-area-3-c    : color(silver);
+
+	$rickshaw-bar-1-c     : color(nero);
+	$rickshaw-bar-2-c     : color(summer-sky);
+	$rickshaw-bar-3-c     : color(summer-sky,light);
+
+	$rickshaw-line-1-c    : color(dark-pink,dark);
+	$rickshaw-line-2-c    : color(dark-pink);
+	$rickshaw-line-3-c    : color(dark-pink,light);
+
+	$rickshaw-scatter-1-c : color(dark-pink);
+	$rickshaw-scatter-2-c : color(jungle-green);
+	$rickshaw-scatter-3-c : color(yellow-sea);
+
+	// Other
+	// -----------------------------
+	$other-skill-1-c        : color(summer-sky);
+	$other-skill-2-c        : color(dark-pink);
+	$other-skill-3-c        : color(jungle-green);
+	$other-skill-4-c        : color(ipreo-blue);
+	$other-skill-5-c        : color(yellow-sea);
+
+	$other-spark-bar-1-c    : color(ipreo-blue);
+	$other-spark-bar-2-c    : color(mortar);
+
+	$other-spark-line-1-c   : color(dark-pink);
+	$other-spark-line-2-c   : color(dark-pink,light);
+	$other-spark-line-3-c   : color(dark-pink,dark);
+
+	$other-spark-bullet-1-c : color(dark-pink);
+	$other-spark-bullet-2-c : color(mortar);
+	$other-spark-bullet-3-c : color(ipreo-blue);
+	$other-spark-bullet-4-c : color(ipreo-blue);
+	$other-spark-bullet-5-c : color(yellow-sea);
+
+	$other-spark-box-1-c    : color(summer-sky,dark);
+	$other-spark-box-2-c    : color(summer-sky,light);
+	$other-spark-box-3-c    : color(summer-sky);
+	$other-spark-box-4-c    : color(summer-sky);
+	$other-spark-box-5-c    : color(summer-sky,dark);
+
+	$other-spark-pie-1-c    : color(jungle-green,lighter);
+	$other-spark-pie-2-c    : color(jungle-green,light);
+	$other-spark-pie-3-c    : color(jungle-green);
+	$other-spark-pie-4-c    : color(jungle-green,dark);
+
+
+	// UI Elements
+	// ===========================================
+
+	// Accordion
+	// -----------------------------
+	$acc-c 		      : color(mortar);
+	$acc-bg		      : color(white);
+	$acc-bg-ho		  : color(white,dark);
+	$acc-bg-open	  : color(white-smoke);
+	$acc-bd    	      : color(white-smoke,darker);
+	$acc-heading-bg   : color(white,dark);
+
+	$acc-anim-bg      : color(light-grey);
+	$acc-anim-open-bg : color(white-smoke,darker);
+
+
+	// Breadcrumb
+	// -----------------------------
+	$bread-c			 : color(mortar);
+	$bread-active-c		 : color(dark-grey,dark);
+	$bread-bg			 : color(white,darker);
+	$bread-bd			 : color(white-smoke,darker);
+
+	$bread-page-c		 : color(mortar);
+	$bread-page-bg		 : transparent;
+	$bread-page-bd		 : transparent;
+	$bread-page-ho		 : color(ipreo-blue);
+	$bread-page-active-c : color(dark-grey,dark);
+
+
+    // Buttons
+	// -----------------------------
+    $color-button   : #333;
+
+	$btn-link-c	   	   : color(malibu);
+
+	$btn-default-c	   : color(mortar);
+	$btn-default-bg    : color(white);
+	$btn-default-bg-2  : color(white-smoke,darker);
+	$btn-default-bd    : color(white-smoke,darker);
+
+	$btn-primary-c	   : color(white);
+	$btn-primary-c-2   : color(ipreo-blue);
+	$btn-primary-bg    : color(ipreo-blue);
+	$btn-primary-bd    : color(ipreo-blue);
+
+	$btn-success-c	   : color(white);
+	$btn-success-c-2   : color(jungle-green);
+	$btn-success-bg    : color(jungle-green);
+	$btn-success-bd    : color(jungle-green);
+
+	$btn-info-c	   	   : color(white);
+	$btn-info-c-2	   : color(summer-sky);
+	$btn-info-bg       : color(summer-sky);
+	$btn-info-bd       : color(summer-sky);
+
+	$btn-warning-c	   : color(white);
+	$btn-warning-c-2   : color(yellow-sea);
+	$btn-warning-bg    : color(yellow-sea);
+	$btn-warning-bd    : color(yellow-sea);
+
+	$btn-danger-c	   : color(white);
+	$btn-danger-c-2	   : color(dark-pink);
+	$btn-danger-bg     : color(dark-pink);
+	$btn-danger-bd     : color(dark-pink);
+
+	$btn-dark-c	   	   : color(white);
+	$btn-dark-c-2	   : color(mortar);
+	$btn-dark-bg       : color(mortar);
+	$btn-dark-bd       : color(mortar);
+
+	$btn-eff-bg   	   : color(white);
+	$btn-eff-ho   	   : color(white);
+	$btn-eff-1-ho 	   : color(mortar);
+
+
+	// Calendar
+	// -----------------------------
+	$external-remove-bd   	: color(white-smoke,darker);
+
+	$fc-row-bd            	: color(white-smoke,darker);
+
+	$fc-popover-bg        	: color(white);
+	$fc-popover-bd        	: color(white-smoke,darker);
+	$fc-popover-header-bg 	: color(white-smoke);
+	$fc-popover-close-c   	: color(dark-grey);
+
+	$fc-divider-bg        	: color(gainsboro);
+
+	$fc-today-bg          	: color(ipreo-blue,lighter);
+	$fc-highlight         	: color(white-smoke,darker);
+
+	$fc-bgevent           	: color(jungle-green,lighter);
+	$fc-nonbusiness       	: color(white-smoke,darker);
+
+	$fc-state-default-c   	: color(mortar);
+	$fc-state-default-bg  	: color(white);
+	$fc-state-default-bd  	: color(white-smoke,darker);
+
+	$fc-state-hover-c     	: color(mortar);
+	$fc-state-hover-bg    	: color(white-smoke);
+
+	$fc-state-active-bg   	: color(white-smoke,dark);
+	$fc-head-bg           	: color(white-smoke);
+
+	$fc-event-c           	: color(mortar);
+	$fc-event-bg          	: color(white-smoke,dark);
+	$fc-event-bd          	: color(white-smoke,dark);
+	$fc-event-bg-ho       	: color(white-smoke,darker);
+
+	$fc-event-info-c      	: color(summer-sky);
+	$fc-event-info-bg     	: color(summer-sky,lighter);
+	$fc-event-info-bd     	: color(summer-sky,lighter);
+	$fc-event-info-bg-ho    : color(summer-sky,light);
+
+	$fc-event-warning-c     : color(yellow-sea);
+	$fc-event-warning-bg    : color(yellow-sea,lighter);
+	$fc-event-warning-bd    : color(yellow-sea,lighter);
+	$fc-event-warning-bg-ho : color(yellow-sea,light);
+
+	$fc-event-danger-c    	: color(dark-pink);
+	$fc-event-danger-bg   	: color(dark-pink,lighter);
+	$fc-event-danger-bd   	: color(dark-pink,lighter);
+	$fc-event-danger-bg-ho  : color(dark-pink,light);
+
+	$fc-event-success-c   	: color(jungle-green);
+	$fc-event-success-bg  	: color(jungle-green,lighter);
+	$fc-event-success-bd  	: color(jungle-green,lighter);
+	$fc-event-success-bg-ho : color(jungle-green,light);
+
+	$fc-event-dark-c     	: color(mortar,dark);
+	$fc-event-dark-bg    	: color(dark-grey);
+	$fc-event-dark-bd    	: color(dark-grey);
+	$fc-event-dark-bg-ho    : color(dark-grey,dark);
+
+	$fc-more-ho             : color(nero);
+
+
+	// Colorpicker
+	// -----------------------------
+	$colorpicker-bg        : color(white);
+	$colorpicker-bd        : color(white-smoke,darker);
+
+	$cp-swatch-bd         : color(very-light-grey);
+	$cp-swatches-bd       : color(mortar);
+	$cp-swatches-shadow   : color(mortar);
+
+
+	// Date Time
+	// -----------------------------
+
+	// Date Range Picker
+	$daterangepicker-bg              : color(white);
+	$daterangepicker-bd              : color(white-smoke,darker);
+
+	$daterangepicker-label-c       	 : color(mortar);
+
+	$daterangepicker-input-mini-c  	 : color(mortar);
+	$daterangepicker-input-mini-bg 	 : color(white-smoke);
+	$daterangepicker-input-mini-bd 	 : color(white-smoke,darker);
+
+	$daterangepicker-ranges-li-c     : color(mortar);
+	$daterangepicker-ranges-li-bg    : color(white-smoke,dark);
+	$daterangepicker-ranges-li-bd    : color(white-smoke,dark);
+
+	$daterangepicker-ranges-li-c-ho  : color(mortar,dark);
+	$daterangepicker-ranges-li-bg-ho : color(white-smoke,darker);
+	$daterangepicker-ranges-li-bd-ho : color(white-smoke,darker);
+
+	$daterangepicker-calendar-bg     : color(white);
+	$daterangepicker-calendar-bd     : color(white-smoke,darker);
+
+	$daterangepicker-disabled-c      : color(dark-grey);
+	$daterangepicker-available-bg    : color(gainsboro);
+	$daterangepicker-in-range-bg     : color(white-smoke,darker);
+
+	$daterangepicker-active-c        : color(white);
+	$daterangepicker-active-bg       : color(mortar);
+	$daterangepicker-active-bd       : color(mortar,dark);
+
+	// Date Time Picker
+	$datetimepicker-bg              : color(white);
+	$datetimepicker-bd              : color(white-smoke,darker);
+
+	$datetimepicker-active-c        : color(white);
+	$datetimepicker-active-bg       : color(mortar);
+
+	$datetimepicker-disabled-c      : color(dark-grey);
+	$datetimepicker-hover-bg        : color(white-smoke,darker);
+
+	// Clockface
+	$clockface-bg-ho                : color(white-smoke,darker);
+
+	$clockface-outer-active-c       : color(white);
+	$clockface-outer-active-bg      : color(mortar);
+
+	$clockface-inner-active-c       : color(white);
+	$clockface-inner-active-bg      : color(dark-grey);
+
+	$clockface-ampm-c               : color(mortar);
+	$clockface-ampm-bd              : color(mortar);
+
+	// Date Picker
+	$datepicker-bd 		    : color(gainsboro);
+	$datepicker-bd-2 		: color(white);
+
+	$datepicker-today-c     : color(white);
+	$datepicker-today-bg    : color(dark-grey);
+
+	$datepicker-active-c    : color(nero);
+	$datepicker-active-bg   : color(ipreo-blue);
+
+	$datepicker-selected-c  : color(white);
+	$datepicker-selected-bg : color(empress);
+
+	$datepicker-old-new-c   : color(empress);
+	$datepicker-disabled-mu : color(gainsboro);
+	$datepicker-th-bg-ho 	: color(gainsboro);
+
+
+	// Documentation
+	// -----------------------------
+	$doc-c 		   : color(white);
+
+	$doc-default   : color(white-smoke);
+	$doc-primary   : color(ipreo-blue,light);
+	$doc-success   : color(jungle-green,light);
+	$doc-info	   : color(summer-sky,light);
+	$doc-warning   : color(yellow-sea,light);
+	$doc-danger    : color(dark-pink,light);
+	$doc-dark      : color(mortar,light);
+	$doc-light     : color(white);
+
+	$doc-default-1 : color(white-smoke);
+	$doc-primary-1 : color(ipreo-blue);
+	$doc-success-1 : color(jungle-green);
+	$doc-info-1	   : color(summer-sky);
+	$doc-warning-1 : color(yellow-sea);
+	$doc-danger-1  : color(dark-pink);
+	$doc-dark-1    : color(mortar);
+
+
+	// Draggable
+	// -----------------------------
+	$ui-drag-placeholder-bg : color(white-smoke,dark);
+	$ui-drag-placeholder-bd : color(gainsboro,dark);
+
+	// Icon
+	// -----------------------------
+	$icon-header-a-c  : color(ipreo-blue);
+	$icon-header-a-ho : color(nero);
+	$icon-header-bd   : color(white-smoke,darker);
+
+	$icon-hover-c     : color(mortar);
+	$icon-hover-c-ho  : color(white);
+	$icon-hover-bg-ho : color(ipreo-blue);
+	$icon-select-bg   : color(ipreo-blue,dark);
+
+
+	// Map
+	// -----------------------------
+	$map-mu           : color(nero);
+
+
+	// Modal
+	// -----------------------------
+
+	// Bootstrap
+	$modal-content-bg   : color(white);
+	$modal-content-bd   : color(white);
+	$modal-backdrop-bg  : color(black);
+
+	$modal-header-bd    : color(white-smoke,darker);
+	$modal-footer-bd    : color(white-smoke,darker);
+
+	$modal-header-bg    : color(white);
+	$modal-body-bg      : color(white);
+	$modal-footer-bg    : color(white);
+
+	// Remodal
+	$remodal-overlay-bg : color(black);
+	$remodal-c          : color(mortar);
+	$remodal-bg         : color(white-smoke);
+
+	$remodal-close-c    : color(white-smoke);
+	$remodal-close-bg   : color(mortar);
+
+	// Magnific Popup
+	$mfp-bg             : color(black);
+	$mfp-preloader-c    : color(very-light-grey);
+	$mfp-preloader-ho   : color(white);
+
+	$mfp-close-c        : color(white);
+	$mfp-close-btn-in   : color(nero,light);
+	$mfp-counter-c      : color(very-light-grey);
+	$mfp-arrow-inner-bd : color(white);
+	$mfp-arrow-outer-bd : color(mortar);
+
+
+	// Notification
+	// -----------------------------
+
+	// jGrowl
+	$jGrowl-c  			 : color(white,darker);
+	$jGrowl-bg 			 : color(mortar);
+	$jGrowl-closer-bg-ho : color(nero,light);
+	$jGrowl-close-ho     : color(nero,light);
+
+	// Toastr
+	$toast-message-c     : color(white);
+	$toast-close-btn-c   : color(white);
+	$toast-close-btn-ho  : color(white,darker);
+	$toast-container-c   : color(white);
+
+	$toast-default-bg    : color(nero);
+	$toast-success-bg    : color(jungle-green);
+	$toast-error-bg      : color(summer-sky);
+	$toast-info-bg       : color(yellow-sea);
+	$toast-warning-bg    : color(dark-pink);
+
+	$toast-progress-bg   : color(black);
+
+
+	// Page Progressbar
+	// -----------------------------
+	$page-progressbar-c		    : color(ipreo-blue);
+	$page-progressbar-active-bg : color(white,darker);
+
+
+	// Pagination and Pager
+	// -----------------------------
+
+	// Pagination
+	$pagination-c           : color(mortar);
+	$pagination-bg          : color(white);
+	$pagination-bd          : color(white-smoke,darker);
+
+	$pagination-hover-c     : color(white);
+	$pagination-hover-bg    : color(ipreo-blue);
+	$pagination-hover-bd    : color(ipreo-blue);
+
+	$pagination-active-c    : color(white);
+	$pagination-active-bg   : color(mortar);
+	$pagination-active-bd   : color(mortar);
+
+	$pagination-disabled-c  : color(dark-grey);
+	$pagination-disabled-bg : color(white-smoke,dark);
+	$pagination-disabled-bd : color(white-smoke,darker);
+
+	// Pager
+	$pager-c  		   : color(mortar);
+	$pager-bg 		   : color(white);
+	$pager-bd 		   : color(white-smoke,darker);
+
+	$pager-hover-c     : color(white);
+	$pager-hover-bg    : color(ipreo-blue);
+	$pager-hover-bd    : color(ipreo-blue);
+
+	$pager-disabled-c  : color(dark-grey);
+	$pager-disabled-bg : color(white-smoke,dark);
+	$pager-disabled-bd : color(white-smoke,darker);
+
+
+	// Pricing Table
+	// -----------------------------
+	$plan-bordered         : color(white-smoke,darker);
+
+	// Plan 1
+	$plan-1-bg 		  	   : color(white);
+
+	$plan-1-price-c   	   : color(white);
+	$plan-1-price-bg       : color(mortar);
+
+	$plan-1-btn-bd	  	   : color(mortar);
+	$plan-1-btn-bg-ho 	   : color(white-smoke,dark);
+
+	$plan-1-title-c   	   : color(white);
+	$plan-1-title-bg       : color(mortar);
+
+	$plan-1-best-price-bg  : color(ipreo-blue);
+
+	$plan-1-best-btn-c	   : color(white);
+	$plan-1-best-btn-bg	   : color(ipreo-blue);
+	$plan-1-best-btn-bd	   : color(ipreo-blue);
+	$plan-1-best-btn-bg-ho : color(ipreo-blue,dark);
+
+	// Plan 2
+	$plan-2-c 		  	    : color(mortar);
+	$plan-2-bg 		  	    : color(white);
+
+	$plan-2-price-nr-c      : color(mortar);
+
+	$plan-2-bd 		  	    : color(white-smoke,darker);
+	$plan-2-title-bg 	    : color(white-smoke,darker);
+	$plan-2-price-bd 	    : color(white-smoke,darker);
+
+	$plan-2-btn-c	   	    : color(white);
+	$plan-2-btn-bg	   	    : color(mortar);
+	$plan-2-btn-bd	   	    : color(mortar);
+
+	$plan-2-btn-bg-ho	    : color(ipreo-blue);
+	$plan-2-btn-bd-ho	    : color(ipreo-blue);
+
+	$plan-2-best-price-nr-c : color(nero,light);
+
+	$plan-2-best-c 	   	    : color(white);
+	$plan-2-best-bd 	    : color(dark-grey);
+	$plan-2-best-title-bg   : color(dark-grey);
+	$plan-2-best-price-bd   : color(dark-grey);
+
+	$plan-2-best-btn-c	    : color(white);
+	$plan-2-best-btn-bg	    : color(nero,light);
+	$plan-2-best-btn-bd	    : color(nero,light);
+
+	// Plan 3
+	$plan-3-bg 		  	    : color(white-smoke);
+	$plan-3-bd 		  	    : color(light-grey);
+
+	$plan-3-title-bd        : color(gainsboro);
+
+	$plan-3-btn-c	   	    : color(white);
+	$plan-3-btn-bg	   	    : color(mortar);
+	$plan-3-btn-bd	   	    : color(mortar);
+
+	$plan-3-btn-bg-ho	    : color(nero,light);
+	$plan-3-btn-bd-ho	    : color(nero,light);
+
+	$plan-3-best-bg 		: color(white);
+
+	$plan-3-best-btn-c	    : color(white);
+	$plan-3-best-btn-bg	    : color(nero,light);
+	$plan-3-best-btn-bd	    : color(nero,light);
+
+	$plan-3-best-btn-bg-ho	: color(black);
+	$plan-3-best-btn-bd-ho	: color(black);
+
+	// Theme
+	$t-pt-row-1 		    : color(white-smoke,dark);
+
+
+	// Progressbar
+	// -----------------------------
+	$progressbar-bd			: color(white-smoke,darker);
+	$progressbar-default-bg : color(mortar,light);
+	$progressbar-primary-bg : color(ipreo-blue);
+	$progressbar-success-bg : color(jungle-green);
+	$progressbar-info-bg    : color(summer-sky);
+	$progressbar-warning-bg : color(yellow-sea);
+	$progressbar-danger-bg  : color(dark-pink);
+	$progressbar-dark-bg    : color(mortar);
+
+
+	// Scrollbar
+	// -----------------------------
+	$scrollbar-bg         : #aaa;
+	$scrollbar-hover-bg   : #999;
+	$scrollbar-rail-bg    : #eee;
+
+
+	// Slider
+	// -----------------------------
+	$ui-slider-bg 				   			 : color(white-smoke,darker);
+	$ui-slider-bd 				   			 : none;
+	$ui-slider-handle-bg    	   			 : color(white);
+	$ui-slider-handle-bd    	   			 : color(mortar);
+	$ui-slider-handle-before-bg    			 : color(mortar);
+	$ui-slider-handle-bd-ho 	   			 : color(ipreo-blue);
+	$ui-slider-handle-before-bg-ho 			 : color(ipreo-blue);
+	$ui-slider-range-bg			   			 : color(mortar);
+
+	$ui-amount-c                   			 : color(nero);
+
+	$ui-slider-pip-selected-initial-first-c  : color(jungle-green);
+	$ui-slider-pip-selected-initial-second-c : color(summer-sky);
+	$ui-slider-pip-selected-c 				 : color(yellow-sea);
+
+	$ui-slider-colored-ho					 : color(mortar);
+	$ui-slider-primary-c 					 : color(ipreo-blue);
+	$ui-slider-success-c 					 : color(jungle-green);
+	$ui-slider-info-c    					 : color(summer-sky);
+	$ui-slider-warning-c 					 : color(yellow-sea);
+	$ui-slider-danger-c  					 : color(dark-pink);
+
+
+	// Spinner
+	// -----------------------------
+	$spinner-overlay-color: color(gainsboro,dark);
+	$spinner-base-color: #555;
+
+	$spinner-bar-color: rgba(0, 0, 0, .5);
+
+	$spinner-blade-color: #555;
+
+	$spinner-double-up-color-one : #555;
+
+	$spinner-duo-color-one: #333;
+	$spinner-duo-color-two: #999;
+
+	$spinner-helicopter-color: #555;
+
+	$spinner-line-color: rgba(0, 0, 0, .5);
+
+	$spinner-ring-beam-color: #181818;
+	$spinner-ring-color: #555;
+
+	$spinner-box-shadow-color: rgba(0, 0, 0, .5);
+
+	$spinner-sphere-color: rgba(0, 0, 0, .5);
+
+	$spinner-traditional-color-one: #777;
+	$spinner-traditional-color-two: #999;
+	$spinner-traditional-color-three: #BBB;
+
+	$spinner-dashed-color: #181818;
+
+	$spinner-audiowave-color-one: #777;
+	$spinner-audiowave-color-two: #181818;
+
+	$spinner-snake-color-one: #181818;
+	$spinner-snake-color-two: #999;
+	$spinner-snake-color-three: rgba(0,0,0,.52);
+
+	$spinner-spinningdisc-color-one: #181818;
+	$spinner-spinningdisc-color-two: #999;
+	$spinner-spinningdisc-color-three: rgba(0,0,0,.52);
+
+	$spinner-glisteningwindow-color-one: #3c3c3c;
+	$spinner-glisteningwindow-color-two: #999;
+	$spinner-glisteningwindow-color-three: #181818;
+	$spinner-glisteningwindow-color-four: rgba(0,0,0,.52);
+
+
+	// Tab
+	// -----------------------------
+
+	// Bootstrap
+	$nav-tabs-bd 				   : color(white-smoke,darker);
+
+	$nav-tabs-bg-ho 			   : color(white,dark);
+	$nav-tabs-bd-ho 			   : color(white-smoke,darker);
+
+	$nav-tabs-active-link-c  	   : color(ipreo-blue);
+	$nav-tabs-active-link-hover-c  : color(mortar);
+	$nav-tabs-active-link-hover-bg : color(white);
+	$nav-tabs-active-link-hover-bd : color(white-smoke,darker);
+
+	// Easy Responsive
+	$resp-tabs-cont-bg 			   : color(white);
+	$resp-tabs-cont-bd			   : color(white-smoke,darker);
+
+	$resp-tabs-active-c		   	   : color(ipreo-blue);
+	$resp-tabs-active-bg		   : color(white);
+	$resp-tabs-active-bd		   : color(white-smoke,darker);
+
+	$resp-tabs-acc-arrow-bg  	   : color(light-grey);
+
+	$resp-tabs-acc-active-bg	   : color(white-smoke);
+	$resp-tabs-acc-active-arrow-bg : color(dark-grey);
+
+	$resp-tabs-hover-c 			   : color(ipreo-blue);
+
+	$resp-tabs-t-1-active-c        : color(mortar);
+	$resp-tabs-t-1-active-bg       : color(gainsboro);
+	$resp-tabs-t-1-active-bd       : color(gainsboro,darker);
+	$resp-tabs-t-1-active-fc-bd    : color(white-smoke);
+	$resp-tabs-t-1-cont-bg         : color(white,dark);
+
+
+	// Responsive Tabs
+	$r-tabs-c 		  : color(mortar);
+	$r-tabs-bg 		  : color(white);
+	$r-tabs-bd 		  : color(white-smoke,darker);
+
+	$r-tabs-active-c  : color(ipreo-blue);
+	$r-tabs-active-bg : color(white,dark);
+
+	// Tabslet
+
+	$tabslet-c         : color(mortar);
+	$tabslet-bd 	   : color(white-smoke,darker);
+
+	$tabslet-active-c  : color(ipreo-blue);
+	$tabslet-active-bg : color(white-smoke);
+
+
+	// Tag
+	// -----------------------------
+
+	// Tag Editor
+	$tags-c		   	      	 : color(ipreo-blue);
+	$tags-bg		      	 : color(white-smoke);
+	$tags-bd		      	 : color(white-smoke,darker);
+
+	$tags-c-placeholder   	 : color(mortar);
+
+	$tags-tag-c		   	  	 : color(ipreo-blue);
+	$tags-tag-bg		  	 : color(gainsboro);
+	$tags-tag-active-c	  	 : color(nero);
+	$tags-delete-bg		  	 : color(gainsboro,dark);
+
+	$tags-s1-bg		      	 : color(white,darker);
+	$tags-s1-tag-c		  	 : color(white);
+	$tags-s1-tag-bg		  	 : color(mortar);
+	$tags-s1-tag-active-c 	 : color(nero);
+
+	$tags-autocomplete-c  	 : color(mortar);
+	$tags-autocomplete-bg 	 : color(white-smoke);
+	$tags-autocomplete-bd 	 : color(white-smoke,darker);
+	$tags-autocomplete-bg-ho : color(gainsboro);
+
+	// Tagging
+	$tagging-c		   	  	 : color(white);
+	$tagging-bg		      	 : color(white,darker);
+	$tagging-bd		      	 : color(gainsboro,dark);
+
+	$tagging-tag-c		  	 : color(white);
+	$tagging-tag-bg		  	 : color(ipreo-blue);
+	$tagging-tag-span-bg  	 : color(ipreo-blue,dark);
+
+	$tagging-tagi-c		  	 : color(mortar);
+	$tagging-tagi-ho	  	 : color(black);
+
+	$tagging-tag-input-c	 : color(mortar);
+	$tagging-tag-input-bg	 : color(white-smoke);
+
+	// Masterblaster
+	$mb-tag-c		   	  	 : color(mortar);
+	$mb-tag-bg		      	 : color(gainsboro);
+	$mb-tag-bd		      	 : color(gainsboro,dark);
+
+	$mb-tag-error-bd		 : color(dark-pink);
+
+	$mb-add-button-c         : color(white);
+	$mb-add-button-bg        : color(ipreo-blue);
+
+	$mb-add-button-ho        : color(ipreo-blue);
+	$mb-add-button-bg-ho     : color(nero);
+
+
+	// Tooltip
+	// -----------------------------
+
+	// Bootstrap
+	$tooltip-c  			 : color(white-smoke);
+	$tooltip-bg 			 : color(nero);
+	$tooltip-bd 			 : color(nero);
+
+	// Tooltipster
+	$tipster-default-c       : color(white);
+	$tipster-default-bg      : color(nero,light);
+	$tipster-default-bd      : color(nero,dark);
+
+	$tipster-light-c         : color(mortar);
+	$tipster-light-bg        : color(white,darker);
+	$tipster-light-bd        : color(white-smoke,darker);
+
+	$tipster-noir-c         : color(mortar);
+	$tipster-noir-bg        : color(white,darker);
+	$tipster-noir-bd        : color(mortar);
+
+	$tipster-punk-c         : color(white);
+	$tipster-punk-bg        : color(mortar);
+	$tipster-punk-bd        : color(dark-pink);
+
+	$tipster-shadow-c       : color(nero);
+	$tipster-shadow-bg      : color(white);
+
+	$tipster-cool-c         : color(white);
+	$tipster-cool-bg        : color(nero);
+	$tipster-cool-bd        : color(ipreo-blue,dark);
+
+	// Popover
+	$popover-bg				: color(white);
+	$popover-bd				: color(light-grey);
+
+	$popover-title-bg       : color(white-smoke);
+	$popover-title-bd       : color(white-smoke,darker);
+
+	$popover-arrow-c        : color(white);
+
+	// Webui Popover
+	$web-popover-bg			: color(white);
+	$web-popover-bd			: color(light-grey);
+
+	$web-popover-title-bg   : color(white-smoke);
+	$web-popover-title-bd   : color(white-smoke,darker);
+
+	$web-popover-arrow-c    : color(white);
+
+	$web-popover-inv-c		: color(white-smoke);
+	$web-popover-inv-bg		: color(nero,light);
+
+
+	// Typography
+	// -----------------------------
+	$sep-bottom   		    : color(white-smoke,darker);
+	$label-badge-primary-c  : color(mortar);
+	$bg-primary-c 		    : color(mortar);
+
+	$mark-bg                : color(yellow-sea,light);
+
+	$code-c					: color(dark-pink);
+	$code-bg				: transparent;
+
+	$text-primary-c 		: color(ipreo-blue);
+	$text-success-c 		: color(jungle-green);
+	$text-info-c    		: color(summer-sky);
+	$text-warning-c 		: color(yellow-sea);
+	$text-danger-c  		: color(dark-pink);
+	$text-dark-c    		: color(mortar);
+
+	$bg-primary-bg  		: color(ipreo-blue,light);
+	$bg-success-bg  		: color(jungle-green,light);
+	$bg-info-bg     		: color(summer-sky,light);
+	$bg-warning-bg  		: color(yellow-sea,light);
+	$bg-danger-bg   		: color(dark-pink,light);
+	$bg-dark-bg     		: color(mortar,light);
+
+	$label-badge-default-bg : color(white-smoke,darker);
+	$label-badge-primary-bg : color(ipreo-blue);
+	$label-badge-success-bg : color(jungle-green);
+	$label-badge-info-bg    : color(summer-sky);
+	$label-badge-warning-bg : color(yellow-sea);
+	$label-badge-danger-bg  : color(dark-pink);
+	$label-badge-dark-bg    : color(mortar);
+
+	$alert-success-c  		: color(jungle-green);
+	$alert-success-bg 		: color(jungle-green,lighter);
+	$alert-success-bd 		: color(jungle-green,light);
+
+	$alert-info-c  	  		: color(summer-sky);
+	$alert-info-bg    		: color(summer-sky,lighter);
+	$alert-info-bd    		: color(summer-sky,light);
+
+	$alert-warning-c  		: color(yellow-sea);
+	$alert-warning-bg 		: color(yellow-sea,lighter);
+	$alert-warning-bd 		: color(yellow-sea,light);
+
+	$alert-danger-c   		: color(dark-pink);
+	$alert-danger-bg  		: color(dark-pink,lighter);
+	$alert-danger-bd  		: color(dark-pink,light);
+
+	$alert-dark-c     		: color(mortar);
+	$alert-dark-bg    		: color(mortar,lighter);
+	$alert-dark-bd    		: color(mortar,light);
+
+
+	// Pages
+	// ===========================================
+
+	// Error
+	// -----------------------------
+	$color-error-bg          : color(white-smoke);
+	$color-error-dot         : color(gainsboro,dark);
+	$color-error-line        : color(gainsboro,dark);
+
+	$error-403-bg            : color(white);
+	$error-403-bd            : color(white-smoke,darker);
+
+	$error-404-bg            : color(white);
+
+	$error-405-bg     		 : color(white-smoke,dark);
+	$error-405-content-bg    : color(white);
+
+	$error-500-bg     		 : color(white);
+
+	$error-503-header-bg     : color(white-smoke,darker);
+	$error-503-body-bg       : color(white);
+
+
+	// Faqs
+	// -----------------------------
+
+
+	// Invoice
+	// -----------------------------
+
+
+	// Login, Lock Screen, Register,
+	// Change and Forgot Password
+	// -----------------------------
+	$login-btn-c	         : color(white);
+
+	$login-wrapper-bg        : color(black);
+	$login-wrapper-bd        : color(mortar);
+
+	$login-error-c    	     : color(dark-pink);
+
+	$login-or-c    	         : color(white-smoke);
+	$login-options-c         : color(white);
+	$login-options-ho        : color(mortar);
+
+	$login-input-bd          : color(white);
+	$login-input-bd-ho       : color(ipreo-blue);
+	$login-input-bd-fo       : color(ipreo-blue,dark);
+
+	$login-facebook-bg       : color(facebook);
+	$login-facebook-bg-ho    : color(facebook,dark);
+	$login-facebook-bg-fo    : color(facebook,darker);
+	$login-twitter-bg        : color(twitter);
+	$login-twitter-bg-ho     : color(twitter,dark);
+	$login-twitter-bg-fo     : color(twitter,darker);
+
+	$login-register-c        : color(mortar);
+	$login-checkradios-bd    : color(empress);
+
+	$login-lock-screen-bd    : color(white);
+	$login-lock-screen-bd-ho : color(ipreo-blue);
+
+
+	// Profile
+	// -----------------------------
+	$profile-header-c       : color(white);
+	$profile-header-ho      : color(ipreo-blue);
+	$profile-header-bd      : color(light-grey);
+	$profile-info-bg        : color(black);
+	$profile-info-span-c    : color(white-smoke,darker);
+	$profile-contact-info-c : color(nero);
+
+	$profile-friends-c      : color(ipreo-blue);
+	$profile-friends-bg     : color(nero);
+	$profile-friends-h3-c   : color(white);
+	$profile-friends-info-c : color(white);
+
+
+	// Search Page
+	// -----------------------------
+	$search-page-classic-row-bd   : color(white-smoke,darker);
+	$search-page-grid-list-row-bd : color(white-smoke,darker);
+
+
+	// Widgets
+	// ===========================================
+
+	// Widget Header
+	// -----------------------------
+	$widget-header-bd : color(white-smoke,darker);
+
+
+	// Shared
+	// -----------------------------
+	$dropdown-in-header-toggle-c       : color(mortar);
+	$dropdown-in-header-toggle-bd      : color(white);
+
+	$dropdown-in-header-toggle-ho      : color(black);
+	$dropdown-in-header-toggle-ho-bg   : color(white,darker);
+
+
+	$dropdown-in-header-toggle-open-bg : color(white-smoke);
+	$dropdown-in-header-toggle-open-bd : color(white-smoke,darker);
+
+	$dropdown-menu-header-bd           : color(white-smoke,darker);
+	$dropdown-menu-header-bg           : color(white-smoke);
+
+	$dropdown-menu-footer-bd           : color(white-smoke,darker);
+	$dropdown-menu-footer-bg           : color(white,darker);
+
+
+	// Active Users
+	// -----------------------------
+	$active-users-bg     : color(white);
+	$active-users-bd     : color(gainsboro);
+	$active-users-info-c : color(mortar,light);
+	$active-users-time-c : color(mortar);
+	$active-users-img-bd : color(mortar,lighter);
+
+
+	// Activity
+	// -----------------------------
+	$activity-header-a-ho     : color(ipreo-blue);
+	$activity-header-a-bg-ho  : color(white);
+	$activity-header-a-bd-ho  : color(white-smoke,darker);
+
+	$activity-item-bg         : color(white-smoke,dark);
+	$activity-status-bd       : color(gainsboro);
+	$activity-text-bg         : color(white-smoke,dark);
+
+
+	// Chat
+	// -----------------------------
+	$chat-header-a-ho     : color(ipreo-blue);
+	$chat-header-a-bg-ho  : color(white);
+	$chat-header-a-bd-ho  : color(white-smoke,darker);
+
+	$chat-header-a-c      : color(dark-grey,dark);
+	$chat-header-a-c-ho   : color(ipreo-blue);
+
+	$chat-row-bd          : color(white-smoke,darker);
+	$chat-mood-c          : color(dark-grey,dark);
+	$chat-conversation-bg : color(white-smoke,darker);
+
+	$chat-user-ho         : color(nero);
+	$chat-user-bg-ho      : color(white-smoke);
+
+	$chat-user-open-c     : color(ipreo-blue);
+	$chat-user-open-bg    : color(nero);
+
+	$chat-user-bd         : color(gainsboro);
+	$chat-user-1-bg       : color(white);
+	$chat-user-2-bg       : color(white-smoke);
+
+	$chat-input-bd        : color(gainsboro);
+	$chat-input-bg        : color(white-smoke);
+
+	$chat-more-message-bd : color(gainsboro);
+
+
+	// Chat Setting
+	// -----------------------------
+	$chat-setting-toggle-open-bg : color(white);
+	$chat-setting-toggle-open-bd : color(white-smoke,darker);
+
+
+	// Group
+	// -----------------------------
+	$group-header-a-ho    : color(ipreo-blue);
+	$group-header-a-bg-ho : color(white);
+	$group-header-a-bd-ho : color(white-smoke,darker);
+
+	$group-header-a-c    : color(dark-grey,dark);
+	$group-header-a-c-ho : color(ipreo-blue);
+
+
+	// Info
+	// -----------------------------
+	$info-bg            : color(white);
+
+	$info-t-1-c         : color(white);
+	$info-t-1-ho        : color(nero);
+	$info-t-1-mu        : color(mortar,light);
+	$info-t-1-spark-1-c : color(white);
+
+
+	$info-t-2-c         : color(white);
+	$info-t-2-ho        : color(nero);
+	$info-t-2-mu        : color(jungle-green);
+	$info-t-2-spark-1-c : color(jungle-green);
+	$info-t-2-spark-2-c : color(white,dark);
+	$info-t-2-spark-3-c : color(mortar,dark);
+
+
+	$info-t-3-c         : color(white);
+	$info-t-3-ho        : color(nero);
+	$info-t-3-mu        : color(summer-sky);
+	$info-t-3-spark-1-c : color(white);
+
+
+
+	$info-t-4-c         : color(white);
+	$info-t-4-ho        : color(nero);
+	$info-t-4-mu        : color(yellow-sea);
+	$info-t-4-spark-1-c : color(white);
+
+
+	// Latest News
+	// -----------------------------
+	$latest-news-title-bg         : color(white);
+	$latest-news-content-bg       : color(white,darker);
+	$latest-news-bd   	          : color(gainsboro,dark);
+	$latest-news-bd-ho   	      : color(ipreo-blue);
+	$latest-news-date 	          : color(mortar,light);
+	$latest-news-collapse-open-bg : color(white-smoke,dark);
+
+
+	// Latest Orders
+	// -----------------------------
+	$latest-order-bg 	  : color(white);
+	$latest-order-bd 	  : color(white-smoke,darker);
+	$latest-order-body-bg : color(white,dark);
+	$latest-order-body-bd : color(white-smoke,darker);
+	$latest-order-col-1-c : color(mortar,light);
+	$latest-order-col-3-c : color(dark-grey);
+	$latest-order-col-4-c : color(dark-grey);
+	$latest-order-col-5-c : color(mortar);
+	$latest-order-th-c 	  : color(dark-pink);
+
+
+	// Logo
+	// -----------------------------
+	$logo-bg    	   : color(ipreo-blue);
+	$logo-bg-ho 	   : color(white);
+	$logo-bg-header-ho : color(black);
+
+	// Members
+	// -----------------------------
+	$members-bg       : color(white);
+	$members-bd 	  : color(white-smoke,darker);
+	$members-bg-ho 	  : color(white-smoke,dark);
+
+
+	// Message
+	// -----------------------------
+	$message-in-header-toggle-open-c      : color(summer-sky);
+	$message-a-bd              			  : color(white-smoke,darker);
+	$message-a-ho         			  	  : color(black);
+	$message-a-bg-ho         			  : color(white,darker);
+
+
+	// Navigation
+	// -----------------------------
+	$nav-t-1-a-ho 	    : color(white,darker);
+	$nav-t-1-a-bd       : color(gainsboro);
+	$nav-t-1-icon-bg-ho : color(white);
+	$nav-t-1-icon-bd    : color(gainsboro);
+	$nav-t-1-icon-bd-ho : color(ipreo-blue);
+
+	$nav-t-2-a-ho 	    : color(white,darker);
+	$nav-t-3-a-ho 	    : color(white);
+
+
+	// Notification
+	// -----------------------------
+	$notification-in-header-toggle-open-c : color(jungle-green);
+	$notification-a-ho         			  : color(black);
+	$notification-a-bg-ho         	      : color(white,darker);
+
+
+	// Options
+	// -----------------------------
+
+
+	// Page Summary
+	// -----------------------------
+	$page-summary-bg                : color(white,dark);
+	$page-summary-switcher-bg       : color(white);
+	$page-summary-switcher-bd       : color(white-smoke,darker);
+	$page-sub-title-c               : color(ipreo-blue);
+	$page-switchery-settings-c      : color(ipreo-blue);
+	$page-switchery-unit-c     	    : color(dark-pink);
+	$page-summary-views-c           : color(dark-pink);
+	$page-summary-followers-c       : color(summer-sky);
+	$page-summary-comments-c        : color(jungle-green);
+	$page-summary-chart-i-c         : color(mortar,light);
+	$page-summary-update-chart-i-c  : color(mortar,light);
+	$page-summary-update-chart-i-ho : color(mortar);
+	$page-summary-clock-bd 		    : color(mortar,light);
+
+
+	// Profile
+	// -----------------------------
+	$profile-lock-bg                : color(white,dark);
+	$profile-lock-bd                : color(white-smoke,darker);
+	$profile-power-bg               : color(white,dark);
+	$profile-menu-ho          		: color(ipreo-blue);
+
+	$profile-in-header-btn-active-c : color(ipreo-blue);
+	$profile-in-header-btn-bg       : color(white);
+	$profile-in-header-btn-bd       : color(white-smoke,darker);
+
+	$profile-in-header-menu-bd      : color(white);
+	$profile-in-header-menu-bg-ho   : color(white);
+
+	$profile-in-side-btn-bg         : color(white);
+	$profile-in-side-btn-bd         : color(white-smoke,darker);
+
+
+	// Profile 2
+	// -----------------------------
+	$profile-2-t-h3-c                : color(white-smoke);
+	$profile-2-t-a-c                 : color(dark-grey);
+	$profile-2-t-a-c-ho              : color(ipreo-blue);
+	$profile-2-t-a-bg-ho             : color(nero,darker);
+	$profile-2-t-details-bd          : color(nero);
+
+	$profile-2-dropdown-bg           : color(nero,dark);
+
+	$profile-2-status-c-1            : color(jungle-green);
+	$profile-2-status-c-2            : color(yellow-sea);
+	$profile-2-status-c-3            : color(dark-pink);
+	$profile-2-status-c-4            : color(dark-grey);
+
+	$profile-2-t-3-bd 		         : color(nero,dark);
+	$profile-2-t-3-h3-c              : color(white-smoke);
+	$profile-2-t-3-a-c               : color(dark-grey);
+	$profile-2-t-3-a-c-ho            : color(ipreo-blue);
+	$profile-2-t-3-a-bg-ho           : color(nero,darker);
+	$profile-2-t-3-details-bd        : color(nero);
+	$profile-2-t-3-toggle-bg         : color(nero,light);
+	$profile-2-t-3-toggle-bg-ho      : color(nero,dark);
+	$profile-2-t-3-wrapper-bg        : color(nero);
+	$profile-2-t-3-btn-dark-bg       : color(nero,dark);
+	$profile-2-t-3-btn-dark-bg-ho    : color(nero,light);
+	$profile-2-t-3-btn-dark-bd       : color(nero,darker);
+	$profile-2-t-3-social-stats-bg   : color(nero,dark);
+	$profile-2-t-3-rickshaw-visitors : color(ipreo-blue);
+	$profile-2-t-3-chart-bg 		 : color(nero,darker);
+
+
+	// Revenue
+	// -----------------------------
+	$revenue-bg           : color(white);
+	$revenue-bd 	  	  : color(white-smoke,darker);
+
+	$revenue-spline-svg-c : color(mortar);
+
+	$revenue-spline-1-c   : color(jungle-green,light);
+	$revenue-spline-2-c   : color(jungle-green);
+	$revenue-spline-3-c   : color(yellow-sea,dark);
+	$revenue-spline-4-c   : color(yellow-sea);
+	$revenue-spline-5-c   : color(summer-sky);
+
+
+	// Search
+	// -----------------------------
+	$search-btn-ho       	 : color(ipreo-blue);
+
+	$search-in-header-bd     : color(white);
+	$search-in-header-btn-fo : color(mortar);
+
+	$search-in-side-bd       : color(white-smoke,darker);
+
+	$search-t-1-btn-c     	 : color(white);
+	$search-t-2-btn-c    	 : color(white-smoke,darker);
+	$search-t-2-btn-bd       : color(white-smoke,darker);
+
+	$search-t-3-btn-c    	 : color(dark-grey,dark);
+
+	$search-t-4-input-c      : color(light-grey);
+	$search-t-4-input-bg     : color(nero);
+	$search-t-4-input-bd     : color(nero,dark);
+
+	$search-t-4-input-bg-ho  : color(nero,dark);
+	$search-t-4-input-bd-ho  : color(nero,darker);
+
+
+	// Search Expanding
+	// -----------------------------
+	$search-exp-input-c  		  : color(mortar);
+	$search-exp-input-bg 		  : color(white);
+	$search-exp-input-placeholder : color(ipreo-blue);
+
+	$search-exp-icon-c  		  : color(white);
+	$search-exp-icon-bg 		  : color(mortar);
+
+	$search-exp-submit-bg 		  : color(white);
+
+
+	// Server Stats
+	// -----------------------------
+	$server-stats-t-1-btn-c-ho  : color(empress);
+	$server-stats-t-1-btn-bg-ho : color(white-smoke);
+	$server-stats-t-1-btn-bd 	: color(white-smoke,darker);
+	$server-stats-content-bg    : color(white,darker);
+	$server-stats-header-bg     : color(white-smoke,dark);
+	$server-stats-footer-bg     : color(white-smoke,dark);
+	$server-stats-content-bd    : color(gainsboro);
+	$server-stats-increase-c    : color(jungle-green);
+	$server-stats-decrease-c    : color(dark-pink);
+
+	$server-stats-pcu-1-c       : color(dark-pink,dark);
+	$server-stats-pcu-2-c       : color(dark-pink);
+
+	$server-stats-memory-1-c    : color(jungle-green);
+	$server-stats-memory-2-c    : color(jungle-green,light);
+
+	$server-stats-temp-1-c      : color(yellow-sea);
+
+	$server-stats-user-1-c      : color(summer-sky,dark);
+	$server-stats-user-2-c      : color(summer-sky);
+
+	// Settings
+	// -----------------------------
+	$settings-bd 	  : color(white-smoke,darker);
+
+
+	// Socials
+	// -----------------------------
+	$social-bg                : color(white);
+	$social-t-c               : color(white);
+	$social-t-facebook-bg     : color(facebook);
+	$social-t-twitter-bg      : color(twitter);
+	$social-t-youtube-bg      : color(youtube);
+	$social-t-google-plus-bg  : color(google-plus);
+	$social-t-instagram-bg    : color(instagram);
+
+
+	// Stats
+	// -----------------------------
+	$stat-c          : color(mortar);
+	$stat-ho         : color(ipreo-blue);
+	$stat-bg         : color(white);
+	$stat-sep-bd     : color(white-smoke,darker);
+	$stat-data-c     : color(mortar,dark);
+
+	$stat-t-1-c      : color(very-light-grey);
+	$stat-t-1-ho     : color(ipreo-blue);
+	$stat-t-1-bg     : color(nero,light);
+	$stat-t-1-sep-bd : color(nero,darker);
+	$stat-t-1-data-c : color(white-smoke,dark);
+
+
+	// Stats 2
+	// -----------------------------
+
+	$stat-2-c          : color(mortar);
+	$stat-2-bg         : color(white-smoke,darker);
+	$stat-2-sep-bd     : color(gainsboro);
+
+	$stat-2-t-1-c      : color(white);
+	$stat-2-t-1-bg     : color(yellow-sea);
+	$stat-2-t-1-sep-bd : color(yellow-sea,dark);
+
+	$stat-2-t-2-c      : color(white);
+	$stat-2-t-2-bg     : color(dark-pink);
+	$stat-2-t-2-sep-bd : color(dark-pink,dark);
+
+	$stat-2-t-3-c      : color(white);
+	$stat-2-t-3-bg     : color(jungle-green);
+	$stat-2-t-3-sep-bd : color(jungle-green,dark);
+
+	$stat-2-t-4-c      : color(white);
+	$stat-2-t-4-bg     : color(summer-sky);
+	$stat-2-t-4-sep-bd : color(summer-sky,dark);
+
+	$stat-2-t-5-c      : color(white);
+	$stat-2-t-5-bg     : color(mortar);
+	$stat-2-t-5-sep-bd : color(mortar,dark);
+
+	$stat-2-t-6-c      : color(white);
+	$stat-2-t-6-bg     : color(nero,dark);
+	$stat-2-t-6-sep-bd : color(nero,darkest);
+
+
+	// Statistic
+	// -----------------------------
+	$statistic-bg           	    : color(white,dark);
+	$statistic-bd           	    : color(white-smoke,darker);
+
+	$statistic-header-bg    	    : color(white,darker);
+
+	$statistic-options-bd   	    : color(mortar,light);
+	$statistic-options-c    	    : color(mortar,light);
+	$statistic-options-ho   	    : color(mortar);
+
+
+	$statistic-chart-1-1-c  	    : color(ipreo-blue);
+	$statistic-chart-1-2-c  	    : color(ipreo-blue,light);
+	$statistic-chart-2-1-c  	    : color(summer-sky);
+	$statistic-chart-3-1-c  	    : color(jungle-green,light);
+	$statistic-chart-4-1-c  	    : color(dark-pink);
+
+	$statistic-item-1-c     	    : color(white);
+	$statistic-item-1-bg    	    : color(summer-sky);
+	$statistic-item-2-c     	    : color(nero,light);
+	$statistic-item-2-bg    	    : color(gainsboro,dark);
+	$statistic-item-3-c     	    : color(white);
+	$statistic-item-3-bg    	    : color(nero);
+	$statistic-item-4-c     	    : color(white);
+	$statistic-item-4-bg    	    : color(dark-pink);
+
+	$statistic--switchery-unit-c    : color(mortar,dark);
+
+	$statistic-chart-c3-1-c         : color(facebook);
+	$statistic-chart-c3-2-c         : color(yellow-sea);
+	$statistic-chart-c3-3-c         : color(jungle-green);
+	$statistic-chart-c3-4-c         : color(nero);
+	$statistic-chart-c3-5-c         : color(summer-sky,dark);
+	$statistic-chart-c3-6-c         : color(summer-sky);
+	$statistic-chart-c3-7-c         : color(jungle-green,dark);
+	$statistic-chart-c3-8-c         : color(youtube);
+	$statistic-chart-c3-9-c         : color(dark-pink);
+
+	$statistic-chart-c3-10-c        : color(ipreo-blue);
+	$statistic-chart-c3-11-c        : color(summer-sky,dark);
+
+	$statistic-chart-5-c  	 	    : color(summer-sky);
+	$statistic-chart-6-c  	 	    : color(jungle-green,light);
+	$statistic-chart-7-c  	 	    : color(dark-pink);
+
+	$statistic-activity-row-bg-ho   : color(white-smoke);
+	$statistic-activity-row-bd 	    : color(white-smoke,darker);
+	$statistic-activity-img-mu 	    : color(ipreo-blue);
+	$statistic-activity-time-c 	    : color(dark-grey);
+	$statistic-activity-settings-c  : color(mortar,light);
+	$statistic-activity-settings-ho : color(mortar);
+
+
+	// Status
+	// -----------------------------
+	$status-toggle-open-bg : color(white);
+	$status-toggle-open-bd : color(white-smoke,darker);
+
+
+	// Switcher
+	// -----------------------------
+	$switcher-t-header-bg-ho  : color(white,dark);
+
+	$switcher-t-side-c        : color(nero);
+	$switcher-t-side-bg       : color(white);
+	$switcher-t-side-bd       : color(nero,dark);
+	$switcher-t-side-ho       : color(ipreo-blue);
+	$switcher-t-side-bg-ho    : color(white-smoke);
+
+
+	// Tabs
+	// -----------------------------
+	$tabs-nav-bg   : color(white);
+	$tabs-nav-a-bd : color(white-smoke,darker);
+
+
+	// Tabs 2
+	// -----------------------------
+	$tabs-2-bg    	 	  		  : color(white,dark);
+	$tabs-2-bd           	 	  : color(white-smoke,darker);
+	$tabs-2-active-c              : color(nero);
+	$tabs-2-active-bg             : color(white);
+	$tabs-2-info-c                : color(dark-grey);
+	$tabs-2-list-li-c             : color(white-smoke,darker);
+	$tabs-2-list-li-bg-ho         : color(white,darker);
+	$tabs-2-chart-update-c        : color(mortar,light);
+	$tabs-2-chart-update-ho       : color(mortar);
+	$tabs-2-chart-c               : color(empress);
+	$tabs-2-tab-chart-track-color : color(gainsboro,dark);
+	$tabs-2-tab-chart-1-color     : color(dark-pink,dark);
+	$tabs-2-tab-chart-2-color     : color(jungle-green,dark);
+	$tabs-2-tab-chart-3-color     : color(yellow-sea,dark);
+	$tabs-2-tab-chart-4-color     : color(summer-sky,dark);
+
+
+	// Task
+	// -----------------------------
+	$task-in-header-toggle-open-c : color(dark-pink);
+
+
+	// Theme Settings
+	// -----------------------------
+	$theme-setting-bg 		   		  : color(white,dark);
+	$theme-setting-bd 		   		  : color(gainsboro);
+	$theme-setting-header-bg   		  : color(white-smoke,dark);
+	$theme-settings-info-bg    		  : color(gainsboro);
+	$theme-settings-info-bg-ho 		  : color(nero);
+
+	$theme-setting-clear-cache-c 	  : color(mortar);
+	$theme-setting-clear-cache-ho 	  : color(ipreo-blue);
+
+	$theme-skin-title-bd       		  : color(gainsboro);
+
+	$theme-settings-default-skin-bg-1       : #161616;
+	$theme-settings-default-skin-bg-2       : #0079bd;
+	$theme-settings-default-skin-bg-3       : #F8F8F8;
+
+	$theme-settings-medium-purple-skin-bg-1 : #1F1F1F;
+	$theme-settings-medium-purple-skin-bg-2 : #756ddd;
+	$theme-settings-medium-purple-skin-bg-3 : #ee5077;
+	$theme-settings-medium-purple-skin-bg-4 : #fafafa;
+
+	$theme-settings-soon-skin-bg 	  : color(white-smoke,dark);
+
+
+	// Todo
+	// -----------------------------
+	$todo-bg          : color(white);
+	$todo-bd 	  	  : color(white-smoke,darker);
+	$todo-sep-bd      : color(white-smoke,darker);
+	$todo-a-c         : color(dark-grey);
+	$todo-a-ho        : color(ipreo-blue);
+
+	$todo-t-1-c       : color(mortar);
+	$todo-t-1-bg      : color(white-smoke,dark);
+	$todo-t-1-bd 	  : color(gainsboro,darker);
+	$todo-t-1-sep-bd  : color(silver);
+
+
+	// Weather Forecast
+	// -----------------------------
+	$weather-forecast-c       	      : color(white);
+	$weather-forecast-sep-bd  	      : color(black);
+	$weather-forecast-day-c     	  : color(white);
+	$weather-forecast-day-bg-ho       : color(nero,light);
+	$weather-forecast-date-c	      : color(dark-grey);
+	$weather-forecast-icon-c          : color(ipreo-blue);
+	$weather-forecast-description-c	  : color(dark-grey,dark);
+	$weather-forecast-check-bg		  : color(nero);
+	$weather-forecast-check-bd		  : color(nero,dark);
+
+	$weather-forecast-input-addon-c	  : color(ipreo-blue);
+	$weather-forecast-input-addon-bg  : color(mortar,dark);
+	$weather-forecast-input-addon-bd  : color(mortar,dark);
+
+	$weather-forecast-form-control-c  : color(white);
+	$weather-forecast-form-control-bg : color(mortar);
+
+	$forecast-geo-location-c          : color(ipreo-blue);
+	$forecast-geo-location-ho         : color(gainsboro);
+
+
+	// Apps
+	// ===========================================
+
+	// New App
+	// -----------------------------
+	$btn-mail-c	    	  	        	: color(nero);
+	$btn-mail-bg    	  	        	: color(white-smoke);
+	$btn-mail-bd    	  	        	: color(gainsboro);
+
+	$btn-mail-send-c	    	  	    : color(ipreo-blue,darker);
+	$btn-mail-send-bg    	  	        : color(ipreo-blue,light);
+	$btn-mail-send-bd    	  	        : color(ipreo-blue);
+
+	$btn-mail-compose-c	    	  	    : color(white);
+	$btn-mail-compose-bg				: color(ipreo-blue);
+	$btn-mail-compose-bg-ho				: color(ipreo-blue,darker);
+
+	$drop-mail-c	    	        	: color(mortar,dark);
+	$drop-mail-bg    	  	        	: color(white,darker);
+	$drop-mail-bd    	  	        	: color(gainsboro);
+
+	$mail-caret-c 		  	        	: color(dark-grey);
+	$mail-cb-inner-bd 		        	: color(dark-grey);
+	$mail-star-c                    	: color(yellow-sea);
+	$mail-star-o-c                  	: color(mortar);
+
+	$mail-options-bg 	  	        	: color(white,dark);
+	$mail-options-bd 	  	        	: color(white-smoke,darker);
+	$mail-btn-label-bg-ho 	        	: color(white-smoke);
+	$mail-btn-label-bd-ho 	        	: color(gainsboro);
+
+	$mail-list-container-bg         	: color(white,dark);
+
+	$mail-details-bg                	: color(white);
+
+	$mail-details-header-bg         	: color(white,darker);
+	$mail-details-header-bd         	: color(white-smoke,darker);
+
+	$mail-details-message-bd        	: color(white-smoke,darker);
+
+	$mail-details-message-header-bg 	: color(white,dark);
+	$mail-details-message-header-bd 	: color(white-smoke,darker);
+
+	$mail-details-message-body-c 		: color(empress);
+	$mail-details-message-body-bg 		: color(white);
+
+	$mail-details-message-attachment-bg : color(white,dark);
+	$mail-details-message-attachment-bd : color(white-smoke,darker);
+
+	$new-message-bg                     : color(white);
+
+	$new-message-title-bg               : color(white,darker);
+	$new-message-title-bd               : color(white-smoke,darker);
+
+	$new-message-header-bg 				: color(white,dark);
+	$new-message-header-bd 				: color(white-smoke,darker);
+
+	$new-message-footer-bg 				: color(white,dark);
+	$new-message-footer-bd 				: color(white-smoke,darker);
+
+	$new-message-note-editor-bd 		: color(gainsboro);
+	$new-message-note-toolbar-bg 		: color(white,dark);
+
+	$input-upload-bg                    : color(white);
+	$input-upload-bd                    : color(gainsboro);
+
+	$mail-side-sep-bd                   : color(nero,dark);
+	$mail-side-header-c                 : color(very-light-grey);
+	$mail-side-header-ho                : color(ipreo-blue);
+
+	$btn-add-more-c						: color(very-light-grey);
+	$btn-add-more-ho					: color(ipreo-blue);
+
+	$mail-list-container-bd             : color(white-smoke,darker);
+
+	$mail-label-1-mu                    : color(jungle-green);
+	$mail-label-2-mu                    : color(summer-sky);
+	$mail-label-3-mu                    : color(yellow-sea);
+	$mail-label-4-mu                    : color(dark-pink);
+	$mail-label-5-mu                    : color(dark-grey);
+
+
+	// Helpers
+	// ==========================================================

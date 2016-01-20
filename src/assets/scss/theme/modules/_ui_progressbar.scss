@@ -1,0 +1,36 @@
+/*
+    Progressbar
+    ========================================================================== */
+
+/*
+    Progressbar - Bootstrap
+    ------------------------------------- */
+	.progress			  { border: 1px solid $progressbar-bd; }
+	.progress-bar 	 	  { background-color: $progressbar-default-bg; }
+	.progress-bar-primary { background-color: $progressbar-primary-bg; }
+    .progress-bar-success { background-color: $progressbar-success-bg; }
+    .progress-bar-info    { background-color: $progressbar-info-bg;    }
+    .progress-bar-warning { background-color: $progressbar-warning-bg; }
+    .progress-bar-danger  { background-color: $progressbar-danger-bg;  }
+	.progress-bar-dark    { background-color: $progressbar-dark-bg;  }
+
+	.progress-no-border   { border: none; }
+
+
+//  Media Queries
+//  ==========================================================================
+    @include breakpoint($screen-lg-maxx){
+
+    }
+
+    @include breakpoint($screen-md-maxx){
+
+    }
+
+    @include breakpoint($screen-sm-maxx){
+
+    }
+
+    @include breakpoint($screen-xs-maxx){
+
+    }
