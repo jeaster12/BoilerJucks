@@ -42,7 +42,7 @@ var basePath = {
 
 var src = {
     html:   [basePath.src + 'html/**/*.html', '!' + basePath.src + 'html/layout.html'],
-    sass:   basePath.src + 'assets/sass/',
+    sass:   basePath.src + 'assets/scss/',
     js:     basePath.src + 'assets/js/',
     img:    basePath.src + 'assets/img/*',
     bower:  './bower_components/'
@@ -102,7 +102,7 @@ gulp.task('htmlProd', ['html'], function() {
 // -------------------------------------------------------------
 
 gulp.task('sass', function() {
-    return gulp.src(src.scss + 'basic.scss', 'general.scss', 'theme.scss', 'theme_b.scss')
+    return gulp.src(src.sass + '**/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({
             outputStyle: 'expanded',
@@ -111,7 +111,7 @@ gulp.task('sass', function() {
         }))
         .pipe(autoprefixer('last 2 version'))
         .pipe(sourcemaps.write('./maps'))
-        .pipe(gulp.dest(dev.scss))
+        .pipe(gulp.dest(dev.sass))
         .pipe(browserSync.reload({stream:true}));
 });
 
@@ -183,7 +183,7 @@ gulp.task('browserSyncProd', function() {
 // -------------------------------------------------------------
 
 gulp.task('watch', ['browserSync'], function(callback) {
-    gulp.watch(src.scss + '**/*.scss', ['sass']);
+    gulp.watch(src.sass + '**/*.scss', ['sass']);
     gulp.watch(src.js + '*.js', ['jshint' ,'js']);
     gulp.watch(src.html, ['html']);
 });
