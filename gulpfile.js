@@ -29,6 +29,7 @@ var gulp            = require('gulp'),
     runSequence     = require('run-sequence'),
     ghPages         = require('gulp-gh-pages');
     sourcemaps      = require('gulp-sourcemaps');
+    notify          = require("gulp-notify");
 
 // -------------------------------------------------------------
 // # Config
@@ -87,6 +88,7 @@ gulp.task('html', function() {
             searchPaths: ['./src/html']
         }))
         .pipe(gulp.dest(dev.html))
+        .pipe(notify({ message: 'Templates Nujucked!', onLast: true }))
         .pipe(browserSync.reload({stream:true}));
 });
 
@@ -112,6 +114,7 @@ gulp.task('sass', function() {
         .pipe(autoprefixer('last 2 version'))
         .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest(dev.sass))
+        .pipe(notify({ message: 'Sass got sassy!', onLast: true }))
         .pipe(browserSync.reload({stream:true}));
 });
 
@@ -164,7 +167,7 @@ gulp.task('browserSync', function() {
             baseDir: basePath.dev,
         },
         notify: false,
-        open: false
+        open: true
     });
 });
 
