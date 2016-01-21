@@ -2,10 +2,11 @@
 <html>
 
 <head>
-		<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Cupcake AppKit</title>
+	    <title>Cupcake</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
  	<!-- Global stylesheets -->
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
 	<link href="css/basic.css" rel="stylesheet" type="text/css">
@@ -16,10 +17,50 @@
 	<!-- BEGIN VENDOR JS -->
 
 		<!-- Core JS files -->
-	<script type="text/javascript" src="assets/js/plugins/loaders/pace.min.js"></script>
-	<script type="text/javascript" src="assets/js/core/libraries/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/js/core/libraries/bootstrap.min.js"></script>
-	<script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js"></script>
+    <!-- ===== JS =====-->
+    <!-- jQuery-->
+    <script src="js/basic/jquery.min.js"></script>
+    <script src="js/basic/jquery-migrate.min.js"></script>
+    <!-- General-->
+    <script src="js/basic/modernizr.min.js"></script>
+    <script src="js/basic/bootstrap.min.js"></script>
+    <script src="js/shared/jquery.cupcakeWidget.js"></script>
+    <script src="js/plugins/plugins.js"></script>
+    <script src="js/general.js"></script>
+    <!-- Semi general-->
+    <script type="text/javascript">
+      var paceSemiGeneral = { restartOnPushState: false };
+      if (typeof paceSpecific != 'undefined'){
+      	var paceOptions = $.extend( {}, paceSemiGeneral, paceSpecific );
+      	paceOptions = paceOptions;
+      }else{
+      	paceOptions = paceSemiGeneral;
+      }
+    </script>
+    <script src="js/plugins/pageprogressbar/pace.min.js"></script>
+    <!-- Specific-->
+    <script src="js/shared/jquery.cookie.min.js"></script>
+    <script src="js/shared/jquery.easing.1.3.js"></script>
+    <script src="js/shared/perfect-scrollbar.min.js"></script>
+    <script src="js/plugins/accordions/jquery.collapsible.min.js"></script>
+    <script src="js/plugins/charts/c3/c3.min.js"></script>
+    <script src="js/plugins/charts/c3/d3.v3.min.js"></script>
+    <script src="js/plugins/charts/other/jquery.easypiechart.min.js"></script>
+    <script src="js/plugins/charts/rickshaw/rickshaw.min.js"></script>
+    <script src="js/plugins/datetime/jqClock.min.js"></script>
+    <script src="js/plugins/forms/elements/jquery.bootstrap-touchspin.min.js"></script>
+    <script src="js/plugins/forms/elements/jquery.checkBo.min.js"></script>
+    <script src="js/plugins/forms/elements/jquery.switchery.min.js"></script>
+    <script src="js/plugins/table/footable.all.min.js"></script>
+    <script src="js/plugins/tabs/jquery.easyResponsiveTabs.js"></script>
+    <script src="js/plugins/textrotator/jquery.simple-text-rotator.min.js"></script>
+    <script src="js/plugins/tooltip/jquery.tooltipster.min.js"></script>
+    <script src="js/plugins/weather/jquery.simpleWeather.min.js"></script>
+    <script src="js/calls/dashboard.1.js"></script>
+    <script src="js/calls/part.header.1.js"></script>
+    <script src="js/calls/part.sidebar.2.js"></script>
+    <script src="js/calls/part.theme.setting.js"></script>
+    <script src="js/calls/shared.tooltipster.js"></script>
 	<!-- /core JS files -->
  
 	<!-- <script type="text/javascript" src="assets/js/plugins/velocity/velocity.min.js"></script>
@@ -1604,11 +1645,17 @@
 				<!-- END PAGE CONTENT -->
 				<!-- START COPYRIGHT -->
 				<!-- START CONTAINER FLUID -->
-	<!-- Footer -->
-					<div class="footer text-muted">
-						&copy; 2015. <a href="#">Cupcake Web App Kit</a>
-					</div>
-					<!-- /footer -->
+        <!--FOOTER-->
+        <footer class="l-footer l-footer-1 t-footer-1">
+          <div class="group pt-10 pb-10 ph">
+            <div class="copyright pull-left">
+              © Copyright 2016
+              <a href="#">Ipreo, LLC.</a>
+            </div>
+            <div class="version pull-right">v 0.1</div>
+          </div>
+        </footer>
+      </section>
 
 				<!-- END COPYRIGHT -->
 			</div>

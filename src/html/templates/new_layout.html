@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	{% include "partials/meta_header.html" %} {% include "partials/_core_css.html" %} {% block css_dependencies %}{% endblock %}
+	<!-- BEGIN VENDOR JS -->
+
+
+	<!-- <script src="assets/js/scripts.js" type="text/javascript"></script> -->
+
+	<!-- END PAGE LEVEL JS -->
+	<!--[if lte IE 9]>
+	<link href="assets/plugins/codrops-dialogFx/dialog.ie.css" rel="stylesheet" type="text/css" media="screen" />
+	<![endif]-->
+</head>
+
+ <body class="l-dashboard">
+	 {% include "partials/_header-slide.html" %}
+
+
+	<!-- Page container -->
+	<section class="l-main-container">
+
+{% include "partials/aside.html" %}
+		<!-- Page content -->
+			<!-- END SIDEBAR -->
+			<!-- END SIDEBPANEL-->
+
+			<!-- Main content -->
+<section class="l-container">
+				<!-- START HEADER -->
+ {% include "partials/main-head.html" %}
+				<!-- END HEADER -->
+				<!-- START PAGE CONTENT -->
+				<!-- Content area -->
+				  <!--Main Content-->
+		      <section class="l-container">
+					{% block page %}{% endblock %}
+
+				</section>
+				<!-- END PAGE CONTENT -->
+				<!-- START COPYRIGHT -->
+				<!-- START CONTAINER FLUID -->
+{% include "partials/_copy_right.html" %}
+{% include "partials/right-sidebar.html" %}
+				<!-- END COPYRIGHT -->
+			</section>
+			<!-- END PAGE CONTENT WRAPPER -->
+	</section>
+		<!-- END PAGE CONTAINER -->
+
+	{% include "partials/_core_plugins_js.html" %} {% block page_js_dependencies %}{% endblock %}
+
+	<!-- END VENDOR JS -->
+
+	<!-- BEGIN CORE TEMPLATE JS -->
+
+	{% block addition_core_pages_js %}{% endblock %} {% block addition_js %}{% endblock %}
+</body>
+
+</html>

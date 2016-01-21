@@ -1,0 +1,18 @@
+{% set TITLE = "- New" %}
+{% set partials = "partials" %}
+{% set active_parent = "tables" %}
+{% set active_page = "basic" %}
+{% extends "templates/new_layout.html" %}
+{% set render = "html" %}
+
+{% block page_js_dependencies %}
+	<!-- <script type="text/javascript" src="assets/js/plugins/velocity/velocity.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/velocity/velocity.ui.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/buttons/spin.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/buttons/ladda.min.js"></script>
+		<script type="text/javascript" src="assets/js/core/app.js"></script>
+	<script type="text/javascript" src="assets/js/pages/components_buttons.js"></script> -->
+{% endblock %}
+	{% block page %}
+	{% include "modules/buttons.html"%}
+	{% endblock %}

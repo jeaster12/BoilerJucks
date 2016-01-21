@@ -1,0 +1,16 @@
+{% set TITLE = "- New" %}
+{% set partials = "partials" %}
+{% set active_parent = "index" %}
+{% set active_page = "index" %}
+{% extends "templates/new_layout.html" %}
+{% set render = "html" %}
+
+{% block page_js_dependencies %}
+    <!-- ===== JS =====-->
+    <!-- jQuery-->
+    <!-- <script src="js/basic/jquery.min.js"></script>
+    <script src="js/basic/jquery-migrate.min.js"></script> -->
+{% endblock %}
+	{% block page %}
+	{% include "modules/dash.html"%}
+{% endblock %}
