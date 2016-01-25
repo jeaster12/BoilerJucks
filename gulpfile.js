@@ -15,6 +15,7 @@ var gulp            = require('gulp'),
     nunjucks        = require('gulp-nunjucks-html'),
     minifyHTML      = require('gulp-minify-html'),
     sass            = require('gulp-sass'),
+    less            = require('gulp-less'),
     autoprefixer    = require('gulp-autoprefixer'),
     minifyCSS       = require('gulp-minify-css'),
     uglify          = require('gulp-uglify'),
@@ -44,6 +45,7 @@ var basePath = {
 var src = {
     html:   [basePath.src + 'html/**/*.html', '!' + basePath.src + 'html/layout.html'],
     sass:   basePath.src + 'assets/scss/',
+    less:   basePath.src + 'assets/less/',
     js:     basePath.src + 'assets/js/',
     img:    basePath.src + 'assets/img/*',
     bower:  './bower_components/'
@@ -52,6 +54,7 @@ var src = {
 var dev = {
     html:   basePath.dev,
     sass:   basePath.dev + 'css/',
+    less:   basePath.dev + 'css/',
     js:     basePath.dev + 'js/',
     img:    basePath.dev + 'img/'
 };
@@ -59,6 +62,7 @@ var dev = {
 var prod = {
     html:   basePath.prod,
     sass:   basePath.prod + 'css/',
+    less:   basePath.prod + 'css/',
     js:     basePath.prod + 'js/',
     img:    basePath.prod + 'img/'
 };
@@ -103,26 +107,51 @@ gulp.task('htmlProd', ['html'], function() {
 // # SASS
 // -------------------------------------------------------------
 
-gulp.task('sass', function() {
-    return gulp.src(src.sass + '**/*.scss')
+// gulp.task('sass', function() {
+//     return gulp.src(src.sass + '**/*.scss')
+//         .pipe(sourcemaps.init())
+//         .pipe(sass({
+//             outputStyle: 'expanded',
+//             errLogToConsole: true,
+//             // onError: handleError // Broken in latest gulp-sass
+//         }))
+//         .pipe(autoprefixer('last 2 version'))
+//         .pipe(sourcemaps.write('./maps'))
+//         .pipe(gulp.dest(dev.sass))
+//         .pipe(notify({ message: 'Sass got sassy!', onLast: true }))
+//         .pipe(browserSync.reload({stream:true}));
+// });
+//
+// gulp.task('sassProd', ['sass'], function() {
+//     return gulp.src(dev.sass + '**/*.css')
+//         .pipe(minifyCSS())
+//         .pipe(gulp.dest(prod.sass));
+// });
+
+
+// -------------------------------------------------------------
+// # less
+// -------------------------------------------------------------
+
+gulp.task('less', function() {
+    return gulp.src(src.less + '*.less')
         .pipe(sourcemaps.init())
-        .pipe(sass({
-            outputStyle: 'expanded',
-            errLogToConsole: true,
-            // onError: handleError // Broken in latest gulp-sass
+        .pipe(less({
+            outputStyle: 'expanded'
         }))
         .pipe(autoprefixer('last 2 version'))
         .pipe(sourcemaps.write('./maps'))
-        .pipe(gulp.dest(dev.sass))
-        .pipe(notify({ message: 'Sass got sassy!', onLast: true }))
+        .pipe(gulp.dest(dev.less))
+        .pipe(notify({ message: 'Lessified!', onLast: true }))
         .pipe(browserSync.reload({stream:true}));
 });
 
-gulp.task('sassProd', ['sass'], function() {
-    return gulp.src(dev.sass + '**/*.css')
+gulp.task('lessProd', ['less'], function() {
+    return gulp.src(dev.less + '**/*.css')
         .pipe(minifyCSS())
-        .pipe(gulp.dest(prod.sass));
+        .pipe(gulp.dest(prod.less));
 });
+
 
 
 // -------------------------------------------------------------
@@ -186,7 +215,8 @@ gulp.task('browserSyncProd', function() {
 // -------------------------------------------------------------
 
 gulp.task('watch', ['browserSync'], function(callback) {
-    gulp.watch(src.sass + '**/*.scss', ['sass']);
+    // gulp.watch(src.sass + '**/*.scss', ['sass']);
+    gulp.watch(src.less + '**/*.less', ['less']);
     gulp.watch(src.js + '*.js', ['jshint' ,'js']);
     gulp.watch(src.html, ['html']);
 });
@@ -221,9 +251,10 @@ gulp.task('report', function () {
 gulp.task('default', ['clean'], function (cb) {
     runSequence([
         'html',
-        'sass',
-        'jshint',
-        'js',
+        // 'sass',
+        'less',
+        // 'jshint',
+        // 'js',
         'browserSync',
         'watch'
     ], cb);
@@ -237,7 +268,8 @@ gulp.task('default', ['clean'], function (cb) {
 gulp.task('prod', ['cleanProd'], function (cb) {
     runSequence([
         'htmlProd',
-        'sassProd',
+        // 'sassProd',
+        'lessProd',
         'jsProd',
         'browserSyncProd',
     ], function() {

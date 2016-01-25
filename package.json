@@ -15,6 +15,7 @@
     "gulp-concat": "*",
     "gulp-gh-pages": "^0.5.3",
     "gulp-jshint": "^1.11.2",
+    "gulp-less": "^3.0.5",
     "gulp-minify-css": "*",
     "gulp-minify-html": "^1.0.4",
     "gulp-notify": "^2.2.0",
