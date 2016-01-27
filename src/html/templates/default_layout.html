@@ -1,60 +1,60 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-	{% include "partials/meta_header.html" %} {% include "partials/_core_css.html" %} {% block css_dependencies %}{% endblock %}
-	<!-- BEGIN VENDOR JS -->
+	<head>
+		{% include "partials/meta_header.html" %} {% include "partials/_core_css.html" %} {% block css_dependencies %}{% endblock %}
 
-	{% include "partials/_core_plugins_js.html" %} {% block page_js_dependencies %}{% endblock %}
+		<!-- BEGIN VENDOR JS -->
+		{% include "partials/_core_js.html" %} {% block page_js_dependencies %}{% endblock %}
+		<!-- END VENDOR JS -->
 
-	<!-- END VENDOR JS -->
+		<!-- BEGIN CORE TEMPLATE JS -->
+		{% block addition_core_pages_js %}{% endblock %} {% block addition_js %}{% endblock %}
 
-	<!-- BEGIN CORE TEMPLATE JS -->
+		<!-- <script src="assets/js/scripts.js" type="text/javascript"></script> -->
 
-	{% block addition_core_pages_js %}{% endblock %} {% block addition_js %}{% endblock %}
-	<!-- <script src="assets/js/scripts.js" type="text/javascript"></script> -->
+		<!-- END PAGE LEVEL JS -->
 
-	<!-- END PAGE LEVEL JS -->
-	<!--[if lte IE 9]>
-	<link href="assets/plugins/codrops-dialogFx/dialog.ie.css" rel="stylesheet" type="text/css" media="screen" />
-	<![endif]-->
-</head>
+		<!--[if lte IE 9]>
+		<link href="assets/plugins/codrops-dialogFx/dialog.ie.css" rel="stylesheet" type="text/css" media="screen" />
+		<![endif]-->
+	</head>
 
-<body>
+	<body>
 
 
-	<!-- Page container -->
-	<div class="page-container">
+		<!-- Page container -->
+		<div class="page-container">
 
-		<!-- Page content -->
-		<div class="page-content">
-			<!-- BEGIN SIDEBPANEL-->
-			{% include "partials/sidebar.html" %}
-			<!-- END SIDEBAR -->
-			<!-- END SIDEBPANEL-->
+			<!-- Page content -->
+			<div class="page-content">
+				<!-- BEGIN SIDEBPANEL-->
+				{% include "partials/sidebar.html" %}
+				<!-- END SIDEBAR -->
+				<!-- END SIDEBPANEL-->
 
-			<!-- Main content -->
-			<div class="content-wrapper">
-				<!-- START HEADER -->
-				{% if active_parent =="calendar" %} {% include "partials/_calendar_header.html" %} {% else%} {% include "partials/_page_header.html" %} {% endif %}
-				<!-- END HEADER -->
-				<!-- START PAGE CONTENT -->
-				<!-- Content area -->
-				<div class="content">
-					{% block page %}{% endblock %}
+				<!-- Main content -->
+				<div class="content-wrapper">
+					<!-- START HEADER -->
+					{% include "partials/_page_header.html" %}
+					<!-- END HEADER -->
 
+					<!-- START PAGE CONTENT -->
+					<div class="content">
+						{% block page %}{% endblock %}
+
+					</div>
+					<!-- END PAGE CONTENT -->
+
+					<!-- START COPYRIGHT -->
+					{% include "partials/_copy_right.html" %}
+					<!-- END COPYRIGHT -->
 				</div>
-				<!-- END PAGE CONTENT -->
-				<!-- START COPYRIGHT -->
-				<!-- START CONTAINER FLUID -->
-{% include "partials/_copy_right.html" %}
-				<!-- END COPYRIGHT -->
+				<!-- END PAGE CONTENT WRAPPER -->
 			</div>
-			<!-- END PAGE CONTENT WRAPPER -->
+			<!-- END PAGE CONTAINER -->
 		</div>
-		<!-- END PAGE CONTAINER -->
 
-
-</body>
+	</body>
 
 </html>

@@ -1,0 +1,1 @@
+$(function(){var e=dimple.newSvg("#dimple-pie-basic",420,300);d3.tsv("assets/demo_data/dimple/demo_data.tsv",function(a){var d=new dimple.chart(e,a);d.setBounds(0,0,"100%","100%"),d.setMargins(5,5,5,5);var i=d.addMeasureAxis("p","Unit Sales");d.addSeries("Owner",dimple.plot.pie),i.fontSize="12",i.fontFamily="Open Sans",d.draw()})});

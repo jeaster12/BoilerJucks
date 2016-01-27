@@ -45,7 +45,7 @@ var basePath = {
 var src = {
     html:   [basePath.src + 'html/**/*.html', '!' + basePath.src + 'html/layout.html'],
     sass:   basePath.src + 'assets/scss/',
-    less:   basePath.src + 'assets/less/',
+    less:   basePath.src + 'less/',
     js:     basePath.src + 'assets/js/',
     img:    basePath.src + 'assets/img/*',
     bower:  './bower_components/'
@@ -154,6 +154,13 @@ gulp.task('lessProd', ['less'], function() {
 
 
 
+
+gulp.task('move', [], function() {
+  console.log("Moving all files in assets folder");
+  gulp.src("src/assets/**")
+      .pipe(gulp.dest('dev/assets'));
+});
+
 // -------------------------------------------------------------
 // # JS
 // -------------------------------------------------------------
@@ -190,11 +197,14 @@ gulp.task('jsProd', ['js'], function() {
 // # BrowserSync
 // -------------------------------------------------------------
 
-gulp.task('browserSync', function() {
+gulp.task('browserSync', ['less'], function() {
     browserSync({
         server: {
             baseDir: basePath.dev,
         },
+        port: 4000,
+        browser: "google chrome",
+        reloadDelay: 1000,
         notify: false,
         open: true
     });
@@ -251,6 +261,7 @@ gulp.task('report', function () {
 gulp.task('default', ['clean'], function (cb) {
     runSequence([
         'html',
+        'move',
         // 'sass',
         'less',
         // 'jshint',
