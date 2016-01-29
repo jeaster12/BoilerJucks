@@ -1,0 +1,168 @@
+/*
+* Base Button Style
+*
+* The default values for the .button class
+*/
+#{$cbtn-namespace} {
+  color: $cbtn-font-color;
+  background-color: $cbtn-bgcolor;
+  border-color: $cbtn-bgcolor;
+  font-weight: $cbtn-font-weight;
+  font-size: $cbtn-font-size;
+  font-family: $cbtn-font-family;
+  text-decoration: none;
+  text-align: center;
+  line-height: $cbtn-height;
+  height: $cbtn-height;
+  padding: 0 $cbtn-height;
+  margin: 0;
+  display: inline-block;
+  appearance: none;
+  cursor: pointer;
+  border: none;
+  box-sizing: border-box;
+
+  // Compass Mixins
+  @if $cbtn-use-compass {
+    @include transition-property(all);
+    @include transition-duration(.3s);
+  }
+  @else {
+    transition-property: all;
+    transition-duration:.3s;
+  }
+
+
+  &:visited {
+    color: $cbtn-font-color;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: lighten($cbtn-bgcolor, 3%);
+    text-decoration: none;
+    outline: none;
+  }
+
+  &:active,
+  &.active,
+  &.is-active {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .3);
+    text-decoration: none;
+    background-color: desaturate($cbtn-bgcolor, 10%);
+    border-color: darken($cbtn-bgcolor, 12%);
+    color: darken($cbtn-bgcolor, 10%);
+
+    // Compass Mixin
+    @if $cbtn-use-compass {
+      @include transition-duration(0s);
+      @include box-shadow(inset 0 1px 3px rgba(0, 0, 0, .2));
+    }
+    @else {
+      transition-duration: 0s;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+    }
+  }
+
+  /*
+  * Disabled State
+  *
+  * The disabled state uses the class .disabled, is-disabled,
+  * and the form attribute disabled="disabled".
+  * The use of !important is only added because this is a state
+  * that must be applied to all buttons when in a disabled state.
+  */
+  &.disabled,
+  &.is-disabled,
+  &:disabled {
+    top: 0 !important;
+    background: #EEE !important;
+    border: 1px solid #DDD !important;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 1) !important;
+    color: #CCC !important;
+    cursor: default !important;
+    appearance: none !important;
+
+    // Compass Mixin
+    @if $cbtn-use-compass {
+      @include box-shadow(0 1px 2px rgba(0, 0, 0, .10) !important);
+      @include opacity(.8 !important);
+    }
+    @else {
+      box-shadow: none !important;
+      opacity:.8 !important;
+    }
+  }
+}
+
+
+/*
+* Base Button Tyography
+*
+*/
+#{$cbtn-namespace}-uppercase {
+  text-transform: uppercase;
+}
+#{$cbtn-namespace}-lowercase {
+  text-transform: lowercase;
+}
+#{$cbtn-namespace}-capitalize {
+  text-transform: capitalize;
+}
+#{$cbtn-namespace}-small-caps {
+  font-variant: small-caps;
+}
+
+#{$cbtn-namespace}-icon-txt-large {
+  font-size: 36px !important;
+}
+
+/*
+* Base padding
+*
+*/
+#{$cbtn-namespace}-width-small {
+  padding: 0 10px !important;
+}
+
+
+
+/*
+* Base Colors
+*
+* Create colors for buttons
+* (.button-primary, .button-secondary, etc.)
+*/
+@each $cbtn-color in $cbtn-colors {
+  $cbtn-name: nth($cbtn-color, 1);
+  $cbtn-background: nth($cbtn-color, 2);
+  $cbtn-color: nth($cbtn-color, 3);
+
+  // Crete class for .button-primary
+  // and legacy flat .button-primary-flat
+  #{$cbtn-namespace}-#{$cbtn-name},
+  #{$cbtn-namespace}-#{$cbtn-name}-flat {
+    background-color: $cbtn-background;
+    border-color: $cbtn-background;
+    color: $cbtn-color;
+
+    &:visited {
+      color: $cbtn-color;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: lighten($cbtn-background, 10%);
+      border-color: lighten($cbtn-background, 10%);
+      color: $cbtn-color;
+    }
+
+    &:active,
+    &.active,
+    &.is-active {
+      background-color: desaturate($cbtn-background, 10%);
+      border-color: desaturate($cbtn-background, 10%);
+      color: darken($cbtn-background, 10%);
+    }
+  }
+}

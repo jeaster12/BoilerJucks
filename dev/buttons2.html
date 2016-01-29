@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		    <title>Cupcake</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+ 	<!-- Global stylesheets -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+	<!-- /global stylesheets -->
+ 
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href="css/modules/buttons/buttons.css" rel="stylesheet" type="text/css">
+
+
+
+		<!-- BEGIN VENDOR JS -->
+		    <!-- BEGIN CORE TEMPLATE JS -->
+	<!-- Core JS files -->
+	<script type="text/javascript" src="assets/js/plugins/loaders/pace.min.js"></script>
+	<script type="text/javascript" src="assets/js/core/libraries/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/core/libraries/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js"></script>
+	<!-- /core JS files -->
+	<!-- /core JS files -->
+    
+    <!-- END CORE TEMPLATE JS -->
+    <!-- BEGIN PAGE LEVEL JS -->
+    
+    <!-- <script src="assets/js/scripts.js" type="text/javascript"></script> -->
+    <!-- END PAGE LEVEL JS -->
+ 
+	<!-- <script type="text/javascript" src="assets/js/plugins/velocity/velocity.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/velocity/velocity.ui.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/buttons/spin.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/buttons/ladda.min.js"></script>
+	<script type="text/javascript" src="assets/js/core/app.js"></script>
+	<script type="text/javascript" src="assets/js/pages/components_buttons.js"></script> -->
+
+		<!-- END VENDOR JS -->
+
+		<!-- BEGIN CORE TEMPLATE JS -->
+		 
+
+		<!-- <script src="assets/js/scripts.js" type="text/javascript"></script> -->
+
+		<!-- END PAGE LEVEL JS -->
+
+		<!--[if lte IE 9]>
+		<link href="assets/plugins/codrops-dialogFx/dialog.ie.css" rel="stylesheet" type="text/css" media="screen" />
+		<![endif]-->
+	</head>
+
+<body class="navbar-top-md-xs">
+	<!-- Multiple navbars wrapper -->
+	<div class="navbar-fixed-top">
+
+		<!-- Main navbar -->
+		<div class="navbar navbar-inverse">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">Cupcake AppKit</a>
+
+				<ul class="nav navbar-nav pull-right visible-xs-block">
+					<li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
+				</ul>
+			</div>
+
+			<div class="navbar-collapse collapse" id="navbar-mobile">
+				<ul class="nav navbar-nav">
+					<li><a href="../index.html"><i class="icon-arrow-left8 position-left"></i> Back to Dashboard</a></li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Text link</a></li>
+
+					<li>
+						<a href="#">
+							<i class="icon-cog3"></i>
+							<span class="visible-xs-inline-block position-right">Icon link</span>
+						</a>
+					</li>
+
+					<li class="dropdown dropdown-user">
+						<a class="dropdown-toggle" data-toggle="dropdown">
+							<img src="assets/images/image.png" alt="">
+							<span>Victoria</span>
+							<i class="caret"></i>
+						</a>
+
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
+							<li><a href="#"><i class="icon-coins"></i> My balance</a></li>
+							<li><a href="#"><span class="badge badge-warning pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
+							<li class="divider"></li>
+							<li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
+							<li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- /main navbar -->
+
+
+		<!-- Second navbar -->
+		<div class="navbar navbar-default navbar-xs">
+			<ul class="nav navbar-nav no-border visible-xs-block">
+				<li><a class="text-center collapsed" data-toggle="collapse" data-target="#navbar-second-toggle"><i class="icon-circle-down2"></i></a></li>
+			</ul>
+
+			<div class="navbar-collapse collapse" id="navbar-second-toggle">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#"><i class="icon-git-branch position-left"></i> Link</a></li>
+					<li><a href="#"><i class="icon-git-merge position-left"></i> Another link <span class="badge bg-warning-400 badge-inline position-right">28</span></a></li>
+					<li>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-git-pull-request position-left"></i> Dropdown <span class="caret"></span></a>
+
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">One more separated line</a></li>
+						</ul>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><i class="icon-upload10 position-left"></i> Right link</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<i class="icon-share4"></i>
+							<span class="visible-xs-inline-block position-right">Share</span>
+							<span class="caret"></span>
+						</a>
+
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">One more separated line</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- /second navbar -->
+
+	</div>
+	<!-- /multiple navbars wrapper -->
+
+
+		<!-- Page container -->
+		<div class="page-container">
+
+			<!-- Page content -->
+			<div class="page-content">
+				<!-- Main content -->
+				<div class="content-wrapper" style="width: 970px; margin:50px;">
+
+
+					<!-- START PAGE CONTENT -->
+					<div class="content">
+						
+	
+  <!-- BUTTON EXAMPLES -->
+  <!-- SHAPES & SIZES -->
+  <section id="buttons-sizes" class="showcase background-light">
+    <div class="l-under">
+      <div class="arrow arrow-half arrow-light arrow-top-left">
+        <i class="icon-arrow-top-left"></i>
+      </div>
+      <div class="arrow arrow-half arrow-light arrow-top-right">
+        <i class="icon-arrow-top-right"></i>
+      </div>
+    </div>
+
+    <div class="l-over showcase-content">
+      <h3 class="showcase-title l-center">Shapes &amp; Sizes</h3>
+      <h4 class="showcase-sub-title l-center">Choose from a variety of shapes and sizes.</h4>
+
+  <div class="showcase-examples l-center">
+  <a class="button button-tiny">Go</a>
+  <a class="button button-rounded button-tiny">Go</a>
+  <a class="button button-pill button-tiny">Go</a>
+  <button class="button button-square button-tiny"><i class="fa fa-plus"></i></button>
+  <button class="button button-box button-tiny"><i class="fa fa-plus"></i></button>
+  <button class="button button-circle button-tiny"><i class="fa fa-plus"></i></button>
+  <br/>
+  <a class="button button-primary button-small">Go</a>
+  <a class="button button-primary button-rounded button-small">Go</a>
+  <a class="button button-primary button-pill button-small">Go</a>
+  <button class="button button-primary button-square button-small"><i class="fa fa-plus"></i></button>
+  <button class="button button-primary button-box button-small"><i class="fa fa-plus"></i></button>
+  <button class="button button-primary button-circle button-small"><i class="fa fa-plus"></i></button>
+  <br/>
+  <a class="button button-action">Go</a>
+  <a class="button button-action button-rounded">Go</a>
+  <a class="button button-action button-pill">Go</a>
+  <button class="button button-action button-square"><i class="fa fa-plus"></i></button>
+  <button class="button button-action button-box"><i class="fa fa-plus"></i></button>
+  <button class="button button-action button-circle"><i class="fa fa-plus"></i></button>
+  <br/>
+  <a class="button button-highlight button-large">Go</a>
+  <a class="button button-highlight button-rounded button-large">Go</a>
+  <a class="button button-highlight button-pill button-large">Go</a>
+  <button class="button button-highlight button-square button-large"><i class="fa fa-plus"></i></button>
+  <button class="button button-highlight button-box button-large"><i class="fa fa-plus"></i></button>
+  <button class="button button-highlight button-circle button-large"><i class="fa fa-plus"></i></button>
+  <br/>
+  <a class="button button-caution button-jumbo">Go</a>
+  <a class="button button-caution button-rounded button-jumbo">Go</a>
+  <a class="button button-caution button-pill button-jumbo">Go</a>
+  <button class="button button-caution button-square button-jumbo"><i class="fa fa-plus"></i></button>
+  <button class="button button-caution button-box button-jumbo"><i class="fa fa-plus"></i></button>
+  <button class="button button-caution button-circle button-jumbo"><i class="fa fa-plus"></i></button>
+  <br/>
+  <a class="button button-royal button-giant">Go</a>
+  <a class="button button-royal button-rounded button-giant">Go</a>
+  <a class="button button-royal button-pill button-giant">Go</a>
+  <button class="button button-royal button-square button-giant"><i class="fa fa-plus"></i></button>
+  <button class="button button-royal button-box button-giant"><i class="fa fa-plus"></i></button>
+  <button class="button button-royal button-circle button-giant"><i class="fa fa-plus"></i></button></div>
+
+    </div>
+  </section>
+  <!-- BORDER BUTTONS -->
+  <div id="buttons-border" class="background-dark l-margin-bottom-60" style="background:blue;">
+    <section class="showcase showcase-phone background-arrow-top-right">
+
+      <div class="showcase-content">
+        <header class="l-center">
+          <h3 class="showcase-title">Border &amp; Borderless Buttons</h3>
+          <h4 class="showcase-sub-title ">
+            Icons provided by <a target="_blank" href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> Great for mobile devices</h4>
+        </header>
+
+  <div class="showcase-examples l-center">
+  <button class="button button-large button-plain button-border button-circle"><i class="fa fa-reply"></i></button>
+  <button class="button button-large button-plain button-border button-box"><i class="fa fa-star"></i></button>
+  <button class="button button-large button-plain button-border button-square"><i class="fa fa-trash-o"></i></button>
+  <button class="button button-large button-plain button-borderless"><i class="fa fa-tag"></i></button>
+  </div>
+
+      <!-- Phone Demo -->
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="phone-status-bar"></div>
+
+          <header class="phone-header">
+            <button aria-label="Back" class="button-left button button-small button-borderless button-plain"><i class="fa fa-chevron-left"></i> Back</button>
+            <h3>Buttons App</h3>
+            <button aria-label="Email" class="button-right button button-borderless button-plain"><i class="fa fa-envelope-o"></i></button>
+          </header>
+
+          <div class="phone-body l-center">
+            <button class="button button-large button-plain button-border button-circle"><i class="fa fa-bitcoin"></i></button>
+            <button class="button button-large button-plain button-border button-circle"><i class="fa fa-refresh"></i></button>
+            <button class="button button-large button-plain button-border button-circle"><i class="fa fa-angle-left"></i></button>
+            <button class="button button-large button-plain button-border button-circle"><i class="fa fa-angle-right"></i></button>
+            <button class="button button-large button-plain button-border button-box"><i class="fa fa-reply"></i></button>
+            <button class="button button-large button-plain button-border button-box"><i class="fa fa-star"></i></button>
+            <button class="button button-large button-plain button-border button-box"><i class="fa fa-trash-o"></i></button>
+            <button class="button button-large button-plain button-border button-box"><i class="fa fa-tag"></i></button>
+            <button class="button button-large button-plain button-border button-box"><i class="fa fa-volume-down"></i></button>
+            <button class="button button-large button-plain button-border button-box"><i class="fa fa-volume-up"></i></button>
+            <button class="button button-large button-plain button-border button-square"><i class="fa fa-reply"></i></button>
+            <button class="button button-large button-plain button-border button-square"><i class="fa fa-star"></i></button>
+            <button class="button button-large button-plain button-border button-square"><i class="fa fa-trash-o"></i></button>
+            <button class="button button-large button-plain button-border button-square"><i class="fa fa-tag"></i></button>
+            <button class="button button-large button-plain button-border button-square"><i class="fa fa-volume-down"></i></button>
+            <button class="button button-large button-plain button-border button-square"><i class="fa fa-volume-up"></i></button>
+            <button class="button button-large button-plain button-borderless"><i class="fa fa-reply"></i></button>
+            <button class="button button-large button-plain button-borderless"><i class="fa fa-star"></i></button>
+            <button class="button button-large button-plain button-borderless"><i class="fa fa-trash-o"></i></button>
+            <button class="button button-large button-plain button-borderless"><i class="fa fa-tag"></i></button>
+            <button class="button button-large button-plain button-borderless"><i class="fa fa-volume-down"></i></button>
+            <button class="button button-large button-plain button-borderless"><i class="fa fa-volume-up"></i></button>
+            <button class="button button-large button-plain button-borderless"><i class="fa fa-volume-up"></i></button>
+            <button class="button button-large button-plain button-borderless"><i class="fa fa-volume-up"></i></button>
+                    </div>
+
+          <footer class="phone-footer">
+            <a class="button button-plain button-border button-pill button-block button-uppercase">Sign Up Free</a>
+          </footer>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+
+
+  <!-- 3D BUTTONS -->
+  <section id="buttons-3d" class="showcase showcase-content background-light">
+    <header class="l-center">
+      <h3 class="showcase-title">3D Buttons</h3>
+      <h4 class="showcase-sub-title">Mimics the appearance of a real life button</h4>
+    </header>
+
+  <div class="showcase-examples l-center">
+  <button class="button button-3d button-box button-jumbo"><i class="fa fa-thumbs-up"></i></button>
+  <a class="button button-3d button-primary button-rounded">Check out the new site!</a>
+  <a class="button button-3d button-action button-pill">Visit Us!</a>
+  <button class="button button-3d button-action button-circle button-jumbo"><i class="fa fa-thumbs-up"></i></button>
+  <a class="button button-3d button-caution"><i class="fa fa-camera"></i> Go</a>
+  <a class="button button-3d button-royal">Say Hi!</a></div>
+
+  </section>
+  <!-- Raised BUTTONS -->
+  <section id="buttons-raised" class="showcase showcase-content background-light">
+      <header class="l-center">
+        <h3 class="showcase-title">Raised Buttons</h3>
+        <h4 class="showcase-sub-title">A classic looking button that offers great depth and affordance</h4>
+      </header>
+
+  <div class="showcase-examples l-center">
+  <a class="button button-raised button-primary button-pill">Visit Us!</a>
+  <button class="button button-raised button-action button-circle button-jumbo"><i class="fa fa-thumbs-up"></i></button>
+  <a class="button button-raised button-caution"><i class="fa fa-camera"></i> Go</a>
+  <a class="button button-raised button-royal">Say Hi!</a>
+  <a class="button button-raised button-pill button-inverse">Say Hi!</a>
+  </div>
+
+    </div>
+  </section>
+  <!-- LONG SHADOW -->
+  <section id="buttons-longshadow" class="showcase showcase-content background-light">
+    <h3 class="showcase-title l-center">Long Shadows</h3>
+    <h4 class="showcase-sub-title l-center">A visual effect adding a flat shadow to the text of a button</h4>
+
+  <div class="showcase-examples l-center l-longshadows">
+  <button class="button button-primary button-box button-giant button-longshadow-right">
+    <i class="fa fa-twitter"></i>
+  </button>
+
+  <button class="button button-caution button-box button-raised button-giant button-longshadow">
+    <i class="fa fa-google-plus"></i>
+  </button>
+
+  <button class="button button-action button-box button-giant button-longshadow-left">
+    <i class="fa fa-share-alt"></i>
+  </button>
+
+  <button class="button button-highlight button-box button-giant button-longshadow-right button-longshadow-expand">
+    <i class="fa fa-rss"></i>
+  </button>
+
+  <button class="button button-primary button-circle button-giant button-longshadow">
+    <i class="fa fa-gear"></i>
+  </button></div>
+
+  </section>
+  <!-- GLOWING BUTTONS -->
+  <section id="buttons-glow" class="showcase">
+    <div class="l-over showcase-content">
+      <header class="text-nuetral l-center">
+        <h3 class="showcase-title">Glowing</h3>
+        <h4 class="showcase-sub-title">A pulse like glow around the edges of a button</h4>
+      </header>
+
+  <div class="showcase-examples l-over l-center">
+  <a class="button button-glow button-rounded button-raised button-primary">Go</a>
+  <a class="button button-glow button-border button-rounded button-primary">Go</a>
+  <button class="button button-glow button-circle button-action button-jumbo"><i class="fa fa-thumbs-up"></i></button>
+  <a class="button button-glow button-rounded button-highlight">Go</a>
+  <a class="button button-glow button-rounded button-caution">Go</a>
+  <a class="button button-glow button-rounded button-royal">Go</a>
+  </div>
+
+    </div>
+
+  </section>
+
+  <!-- DROPDOWN BUTTONS -->
+  <section  id="buttons-dropdown" class="showcase  showcase-content background-light">
+    <header class="l-center">
+      <h3 class="showcase-title">Dropdown Buttons</h3>
+      <h4 class="showcase-sub-title">A dropdown menu appears when the button is pressed</h4>
+    </header>
+
+
+  <div class="showcase-examples l-center">
+  <span class="button-dropdown" data-buttons="dropdown">
+    <button class="button button-rounded">
+      Select Me <i class="fa fa-caret-down"></i>
+    </button>
+
+    <ul class="button-dropdown-list">
+      <li><a href="http://unicorn-ui.com/">Option Link 1</a></li>
+      <li><a href="http://unicorn-ui.com/">Option Link 2</a></li>
+      <li class="button-dropdown-divider">
+        <a href="#">Option Link 3</a>
+      </li>
+    </ul>
+  </span>
+
+  <span class="button-dropdown button-dropdown-primary" data-buttons="dropdown">
+    <button class="button button-primary button-large">
+      <i class="fa fa-bars"></i> Select Me
+    </button>
+
+    <ul class="button-dropdown-list is-below">
+      <li><a href="http://unicorn-ui.com/"><i class="fa fa-heart-o"></i> Option Link 1</a></li>
+      <li><a href="http://unicorn-ui.com/">Option Link 2</a></li>
+      <li class="button-dropdown-divider">
+        <a href="#">Option Link 3</a>
+      </li>
+    </ul>
+  </span>
+
+
+  <span class="button-dropdown button-dropdown-action" data-buttons="dropdown">
+    <button class="button button-action">
+      Select Me <i class="fa fa-caret-up"></i>
+    </button>
+
+    <ul class="button-dropdown-list is-above">
+      <li><a href="http://unicorn-ui.com/">Option Link 1</a></li>
+      <li><a href="http://unicorn-ui.com/">Option Link 2</a></li>
+      <li class="button-dropdown-divider">
+        <a href="#">Option Link 3</a>
+      </li>
+    </ul>
+  </span>
+
+  <span class="button-dropdown button-dropdown-plain" data-buttons="dropdown">
+    <button class="button button-caution button-pill">
+      Select Me <i class="fa fa-caret-down"></i>
+    </button>
+
+    <ul class="button-dropdown-list">
+      <li><a href="http://unicorn-ui.com/">Option Link 1</a></li>
+      <li class="button-dropdown-divider">
+        <a href="http://unicorn-ui.com/">Option Link 2</a>
+      </li>
+      <li>
+        <a href="#">Option Link 3</a>
+      </li>
+    </ul>
+  </span>
+
+  <span class="button-dropdown button-dropdown-inverse" data-buttons="dropdown">
+    <a href="#" class="button button-inverse">
+        <i class="fa fa-envelope"></i> Select Me <i class="fa fa-caret-down"></i>
+    </a>
+
+    <ul class="button-dropdown-list is-below">
+      <li><a href="http://unicorn-ui.com/">Option Link 1</a></li>
+      <li class="button-dropdown-divider">
+        <a href="http://unicorn-ui.com/">Option Link 2</a>
+      </li>
+      <li>
+        <a href="#">Option Link 3</a>
+      </li>
+    </ul>
+  </span></div>
+  </section>
+
+  <!-- GROUP BUTTONS -->
+  <section id="buttons-group" class="showcase showcase-content background-light">
+    <header class="l-center">
+      <h3 class="showcase-title">Buttons Groups</h3>
+      <h4 class="showcase-sub-title">A group of related buttons displayed edge to edge</h4>
+    </header>
+
+  <div class="showcase-examples l-center">
+  <div class="button-group">
+    <button type="button" class="button button-primary">Option 1</button>
+    <button type="button" class="button button-primary">Option 2</button>
+    <button type="button" class="button button-primary">Option 3</button>
+
+    <!-- DROPDOWN MENU -->
+    <span class="button-dropdown button-dropdown-primary" data-buttons="dropdown">
+      <a href="#" class="button button-primary"> Select Me <i class="fa fa-caret-down"></i></a>
+
+      <ul class="button-dropdown-list is-below">
+        <li><a href="http://unicorn-ui.com/">Option Link 1</a></li>
+        <li><a href="http://unicorn-ui.com/">Option Link 2</a></li>
+        <li class="button-dropdown-divider"><a href="#">Option Link 3</a></li>
+      </ul>
+    </span>
+  </div>
+
+  <div class="button-group">
+    <button type="button" class="button button-pill button-action">Option 1</button>
+    <button type="button" class="button button-pill button-action">Option 2</button>
+    <button type="button" class="button button-pill button-action">Option 3</button>
+  </div>
+
+  <div class="button-group">
+    <button type="button" class="button button-royal button-rounded button-raised">Option 1</button>
+    <button type="button" class="button button-royal button-rounded button-raised">Option 2</button>
+    <button type="button" class="button button-royal button-rounded button-raised">Option 3</button>
+  </div></div>
+  </section>
+
+  <!-- BLOCK BUTTONS -->
+  <section id="buttons-block" class="showcase showcase-content background-light">
+    <header class="l-center">
+      <h3 class="showcase-title">Stacked Buttons</h3>
+      <h4 class="showcase-sub-title">Block level buttons that expand the width of their container</h4>
+    </header>
+
+  <div class="showcase-examples l-center">
+  <a class="button button-block button-rounded button-large">Go</a>
+  <a class="button button-block button-rounded button-primary button-large">Go</a>
+  <a class="button button-block button-rounded button-action button-large">Go</a>
+  <a class="button button-block button-rounded button-highlight button-large">Go</a>
+  <a class="button button-block button-rounded button-caution button-large">Go</a>
+  <a class="button button-block button-rounded button-royal button-large">Go</a></div>
+  </section>
+  <!-- BUTTONS WRAPPERS-->
+  <section id="buttons-wrapper" class="showcase showcase-content background-light">
+    <header class="l-center">
+      <h3 class="showcase-title">Button Wrappers</h3>
+      <h4 class="showcase-sub-title">A wrap around effect to highlight the shape of the button and offer a subtle visual effect</h4>
+    </header>
+
+  <div class="showcase-examples l-center">
+  <span class="button-wrap">
+    <button class="button button-circle">
+      <i class="fa fa-cloud"></i>
+    </button>
+  </span>
+
+  <span class="button-wrap">
+    <button class="button button-circle button-raised button-primary">
+      <i class="fa fa-cloud"></i>
+    </button>
+  </span>
+
+  <span class="button-wrap">
+    <a class="button button-pill ">Go</a>
+  </span>
+  <span class="button-wrap">
+    <a class="button button-pill button-raised button-primary">Go</a>
+  </span></div>
+
+  </section>
+  <!-- FORM BUTTONS -->
+  <section id="buttons-form" class="showcase  showcase-content background-light">
+    <header class="l-center">
+      <h3 class="showcase-title">Form Buttons</h3>
+      <h4 class="showcase-sub-title">Buttons works great on form elements too</h4>
+    </header>
+
+  <div class="showcase-examples l-center">
+  <input type="submit" value="Go" class="button button-pill button-primary"/>
+  <button class="button button-pill button-primary">Go</button>
+
+  <!-- DISABLED BUTTONS -->
+  <input  disabled type="submit"  value="Go" class="button button-pill button-primary"/>
+  <button disabled class="button  button-pill button-primary">Go</button>
+  <button disabled class="button button-pill button-flat-primary">Go</button>
+  <a href="#" class="button disabled button-pill button-primary ">Go</a></div>
+
+  </section>
+  <!-- BLOCK BUTTONS -->
+  <section id="buttons-type" class="showcase showcase-content background-light">
+    <header class="l-center">
+      <h3 class="showcase-title">Tyographic Styles</h3>
+      <h4 class="showcase-sub-title">A variety of tyographic styles for buttons</h4>
+    </header>
+
+  <div class="showcase-examples l-center">
+  <a class="button button-uppercase button-primary">uppercase</a>
+  <a class="button button-lowercase button-primary ">lowercase</a>
+  <a class="button button-capitalize button-primary">capitalize</a>
+  <a class="button button-small-caps button-primary">small caps</a></div>
+  </section>
+
+
+
+    </div>
+  </footer>
+
+	
+
+					</div>
+					<!-- END PAGE CONTENT -->
+
+				</div>
+				<!-- END PAGE CONTENT WRAPPER -->
+			</div>
+			<!-- END PAGE CONTAINER -->
+		</div>
+
+	</body>
+
+</html>

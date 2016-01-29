@@ -1,0 +1,109 @@
+/*
+* Border Buttons
+*
+* These buttons have no fill they only have a
+* border to define their hit target.
+*/
+
+#{$cbtn-namespace}-border {
+  background: none;
+  border-width: 2px;
+  border-style: solid;
+  line-height: $cbtn-height - 4;
+
+  &:hover {
+    background-color: rgba(lighten($cbtn-bgcolor, 10%), .9)
+  }
+
+  &:active,
+  &.active,
+  &.is-active {
+    box-shadow: none;
+    text-shadow: none;
+
+    @if $cbtn-use-compass {
+      @include transition-property(all);
+      @include transition-duration(.3s);
+    }
+    @else {
+      transition-property: all;
+      transition-duration:.3s;
+    }
+  }
+}
+
+
+/*
+* Border Optional Sizes
+*
+* A slight variation in border thickness
+*/
+#{$cbtn-namespace}-border-thin {
+  @extend #{$cbtn-namespace}-border;
+  border-width: 1px;
+}
+#{$cbtn-namespace}-border-thick {
+  @extend #{$cbtn-namespace}-border;
+  border-width: 3px;
+}
+
+
+
+/*
+* Border Button Colors
+*
+* Create colors for buttons
+* (.button-primary, .button-secondary, etc.)
+*/
+
+#{$cbtn-namespace}-border,
+#{$cbtn-namespace}-border-thin,
+#{$cbtn-namespace}-border-thick {
+
+  @each $cbtn-color in $cbtn-colors {
+    $cbtn-name: nth($cbtn-color, 1);
+    $cbtn-background: nth($cbtn-color, 2);
+    $cbtn-color: nth($cbtn-color, 3);
+    $cbtn-color-namespace: $cbtn-namespace + '-' + $cbtn-name;
+
+    &#{$cbtn-color-namespace} {
+      color: $cbtn-background;
+
+      &:hover,
+      &:focus {
+        background-color: rgba(lighten($cbtn-background, 10%), .9);
+        color: rgba($cbtn-color, .9);
+      }
+
+      &:active,
+      &.active,
+      &.is-active {
+        background-color: rgba(desaturate($cbtn-background, 10%), .7);
+        color: rgba($cbtn-color, .5);
+
+        @if $cbtn-use-compass {
+          @include opacity(.3);
+        }
+        @else {
+          opacity: .3;
+        }
+      }
+    }
+  }
+
+  /*
+  * Border Button Size Adjustment
+  *
+  * The line-height must be adjusted to compinsate for
+  * the width of the border.
+  */
+  @each $cbtn-sizes-hash in $cbtn-sizes {
+    $cbtn-size: nth($cbtn-sizes-hash, 1);
+    $cbtn-multiplier : nth($cbtn-sizes-hash, 2);
+    $cbtn-size-namespace: #{$cbtn-namespace}-#{$cbtn-size};
+
+    &#{$cbtn-size-namespace} {
+      line-height: $cbtn-height * $cbtn-multiplier - 4;
+    }
+  }
+}

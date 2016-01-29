@@ -1,0 +1,76 @@
+/*
+* Border Buttons
+*
+* These buttons have no fill they only have a
+* border to define their hit target.
+*/
+
+#{$cbtn-namespace}-borderless {
+  background: none;
+  border: none;
+  padding: 0 8px !important;
+  color: $cbtn-bgcolor;
+  font-size: $cbtn-font-size * 1.3;
+  font-weight: 200;
+
+  &:hover,
+  &:focus {
+    background: none;
+  }
+
+  &:active,
+  &.active,
+  &.is-active {
+    box-shadow: none;
+    text-shadow: none;
+
+    @if $cbtn-use-compass {
+      @include transition-property(all);
+      @include transition-duration(.3s);
+      @include opacity(.3);
+    }
+    @else {
+      transition-property: all;
+      transition-duration:.3s;
+      opacity: .3;
+    }
+  }
+
+
+  /*
+  * Borderless Button Colors
+  *
+  * Create colors for buttons
+  * (.button-primary, .button-secondary, etc.)
+  */
+  @each $cbtn-color in $cbtn-colors {
+    $cbtn-name: nth($cbtn-color, 1);
+    $cbtn-background: nth($cbtn-color, 2);
+    $cbtn-color: nth($cbtn-color, 3);
+    $cbtn-color-namespace: $cbtn-namespace + '-' + $cbtn-name;
+
+    &#{$cbtn-color-namespace} {
+      color: $cbtn-background;
+    }
+  }
+
+
+  /*
+  * Borderles Size Adjustment
+  *
+  * The font-size must be large to compinsate for
+  * the lack of a hit target.
+  */
+  @each $cbtn-sizes-hash in $cbtn-sizes {
+    $cbtn-size: nth($cbtn-sizes-hash, 1);
+    $cbtn-multiplier : nth($cbtn-sizes-hash, 2);
+    $cbtn-size-namespace: #{$cbtn-namespace}-#{$cbtn-size};
+    $cbtn-borderless-fontsize: $cbtn-font-size * $cbtn-multiplier * 1.3;
+
+    &#{$cbtn-size-namespace} {
+      font-size: $cbtn-borderless-fontsize;
+      height: $cbtn-borderless-fontsize + 16;
+      line-height: $cbtn-borderless-fontsize + 16;
+    }
+  }
+}

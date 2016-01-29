@@ -1,0 +1,122 @@
+/*
+* Glowing Buttons
+*
+* A pulse like glow that appears
+* rythmically around the edges of
+* a button.
+*/
+
+$cbtn-default-glow-color: #2c9adb !default;
+
+
+/*
+* Glow animation mixin for Compass users
+*
+*/
+
+@mixin glow($animation-name) {
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: $animation-name;
+}
+
+
+/*
+* Glowing Keyframes
+*
+*/
+
+@if($cbtn-use-compass) {
+  @include keyframes(glowing) {
+    from { @include box-shadow(0 0 0 rgba($cbtn-default-glow-color, 0.3));}
+    50% { @include box-shadow(0 0 20px rgba($cbtn-default-glow-color, 0.8));}
+    to { @include box-shadow(0 0 0 rgba($cbtn-default-glow-color, 0.3));}
+  }
+}
+@else {
+  @keyframes glowing {
+  from { box-shadow: 0 0 0 rgba($cbtn-default-glow-color, 0.3);}
+  50% { box-shadow: 0 0 20px rgba($cbtn-default-glow-color, 0.8);}
+  to { box-shadow: 0 0 0 rgba($cbtn-default-glow-color, 0.3);}
+  }
+}
+
+
+/*
+* Glowing Keyframes for various colors
+*
+*/
+
+@each $cbtn-color in $cbtn-colors {
+  $cbtn-name: nth($cbtn-color, 1);
+  $cbtn-background: nth($cbtn-color, 2);
+  $cbtn-color: nth($cbtn-color, 3);
+
+  @if($cbtn-use-compass) {
+    @include keyframes(glowing-#{$cbtn-name}) {
+      from { @include box-shadow(0 0 0 rgba($cbtn-background, 0.3));}
+      50% { @include box-shadow(0 0 20px rgba($cbtn-background, 0.8));}
+      to { @include box-shadow(0 0 0 rgba($cbtn-background, 0.3));}
+    }
+  }
+  @else {
+    @keyframes glowing-#{$cbtn-name} {
+    from { box-shadow: 0 0 0 rgba($cbtn-background, 0.3);}
+    50% { box-shadow: 0 0 20px rgba($cbtn-background, 0.8);}
+    to { box-shadow: 0 0 0 rgba($cbtn-background, 0.3);}
+    }
+  }
+}
+
+
+/*
+* Glowing Buttons Base Styes
+*
+* A pulse like glow that appears
+* rythmically around the edges of
+* a button.
+*/
+
+#{$cbtn-namespace}-glow {
+  @if($cbtn-use-compass) {
+    @include glow(glowing);
+
+    &:active,
+    &.active,
+    &.is-active {
+      @include no_animation;
+    }
+  }
+  @else {
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: glowing;
+
+    &:active,
+    &.active,
+    &.is-active {
+      animation-name: none;
+    }
+  }
+}
+
+
+/*
+* Glowing Button Colors
+*
+* Create colors for glowing buttons
+*/
+
+#{$cbtn-namespace}-glow {
+  @each $cbtn-color in $cbtn-colors {
+    $cbtn-name: nth($cbtn-color, 1);
+    $cbtn-background: nth($cbtn-color, 2);
+    $cbtn-color: nth($cbtn-color, 3);
+    $cbtn-color-namespace: $cbtn-namespace + '-' + $cbtn-name;
+
+    &#{$cbtn-color-namespace} {
+      animation-name: glowing-#{$cbtn-name};
+    }
+  }
+}
+

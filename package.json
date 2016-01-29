@@ -20,6 +20,7 @@
     "gulp-minify-html": "^1.0.4",
     "gulp-notify": "^2.2.0",
     "gulp-nunjucks-html": "^2.0.0",
+    "gulp-rucksack": "^0.1.2",
     "gulp-sass": "^2.0.4",
     "gulp-sizereport": "*",
     "gulp-sourcemaps": "^1.6.0",

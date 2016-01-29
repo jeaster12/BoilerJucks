@@ -1,0 +1,23 @@
+{% set TITLE = "Buttons" %}
+{% set partials = "partials" %}
+{% set active_parent = "components" %}
+{% set active_page = "buttons" %}
+{% extends "templates/layout_nav_fixed.html" %}
+{% set render = "html" %}
+{% block css_dependencies %}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href="css/modules/buttons/buttons.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+{% block page_js_dependencies %}
+	<!-- <script type="text/javascript" src="assets/js/plugins/velocity/velocity.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/velocity/velocity.ui.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/buttons/spin.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/buttons/ladda.min.js"></script>
+	<script type="text/javascript" src="assets/js/core/app.js"></script>
+	<script type="text/javascript" src="assets/js/pages/components_buttons.js"></script> -->
+{% endblock %}
+	{% block page %}
+	{% include "modules/buttons2.html"%}
+	{% endblock %}
