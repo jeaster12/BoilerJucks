@@ -22,23 +22,25 @@
 
 	<body>
 
-
+					<!-- START HEADER -->
+					{% include "partials/_page_header-full.html" %}
+					<!-- END HEADER -->
 		<!-- Page container -->
 		<div class="page-container">
 
 			<!-- Page content -->
 			<div class="page-content">
+
 				<!-- BEGIN SIDEBPANEL-->
 				{% include "partials/sidebar.html" %}
+
 				<!-- END SIDEBAR -->
-				<!-- END SIDEBPANEL-->
+
 
 				<!-- Main content -->
 				<div class="content-wrapper">
-					<!-- START HEADER -->
-					{% include "partials/_page_header.html" %}
-					<!-- END HEADER -->
 
+						{% include "partials/_page_header.html" %}
 					<!-- START PAGE CONTENT -->
 					<div class="content">
 						{% block page %}{% endblock %}

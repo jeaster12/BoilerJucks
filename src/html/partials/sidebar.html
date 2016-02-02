@@ -31,10 +31,7 @@
 		<!-- Main navigation -->
 		<div class="sidebar-category sidebar-category-visible">
 			<div class="category-content no-padding">
-
-
 				<ul class="navigation navigation-main navigation-accordion">
-
 					<!-- Main -->
 					<li class="navigation-header">
 						<span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
@@ -46,7 +43,6 @@
 						</ul>
 					</li>
 
-
 					<li {% if active_parent=="layouts" %} class="open active" {% endif %}>
 						<a href="#"><i class="icon-copy"></i> <span>Flavors</span><span class="{% if active_parent =="layouts" %} open {% endif %} arrow"></span></a>
 						<ul>
@@ -55,11 +51,11 @@
 							<li class="disabled"><a href="../../layout_3/index.html" id="layout3">Flavor 3<span class="label">Coming soon</span></a></li>
 						</ul>
 					</li>
-					<li>
+					<li {% if active_parent=="colors" %} class="open active" {% endif %}>
 						<a href="#"><i class="icon-droplet2"></i> <span>Color system</span></a>
 						<ul>
-							<li><a href="colors_primary.html">Primary palette</a></li>
-							<li><a href="colors_danger.html">Danger palette</a></li>
+							<li {% if active_page=="Colors Primary" %} class="active" {% endif %}><a href="colors-primary.html">Primary palette</a></li>
+							<li {% if active_page=="Colors Danger" %} class="active" {% endif %}><a href="colors-danger.html">Danger palette</a></li>
 							<li><a href="colors_success.html">Success palette</a></li>
 							<li><a href="colors_warning.html">Warning palette</a></li>
 							<li><a href="colors_info.html">Info palette</a></li>
@@ -96,9 +92,7 @@
 						</ul>
 					</li>
 					<li><a href="changelog.html"><i class="icon-list-unordered"></i> <span>Changelog <span class="label bg-blue-400">0.0.1</span></span></a></li>
-
 					<!-- /main -->
-
 					<!-- Appearance -->
 					<li class="navigation-header">
 						<span>Appearance</span> <i class="icon-menu" title="Appearance"></i></li>
@@ -138,14 +132,10 @@
 						</ul>
 					</li>
 					<!-- /appearance -->
-
-
-
 				</ul>
 			</div>
 		</div>
 		<!-- /main navigation -->
-
 	</div>
 </div>
 <!-- /main sidebar -->

@@ -1,0 +1,28 @@
+{% set TITLE = "Colors Danger" %}
+{% set partials = "partials" %}
+{% set active_parent = "colors" %}
+{% set active_page = "Colors Danger" %}
+{% extends "templates/default_layout.html" %}
+{% set render = "html" %}
+{% block css_dependencies %}
+
+{% endblock %}
+{% block page_js_dependencies %}
+	<!-- Theme JS files -->
+	<script type="text/javascript" src="assets/js/core/libraries/jquery_ui/core.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/forms/styling/uniform.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/forms/styling/switchery.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/forms/selects/select2.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/forms/selects/selectboxit.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/forms/selects/bootstrap_select.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/notifications/pnotify.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/notifications/noty.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/notifications/jgrowl.min.js"></script>
+	<script type="text/javascript" src="assets/js/core/app.js"></script>
+<script type="text/javascript" src="assets/js/pages/colors_danger.js"></script>
+	<!-- /theme JS files -->
+{% endblock %}
+	{% block page %}
+	{% include "modules/colors-danger.html"%}
+{% endblock %}
